@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/ukm', 'UKMController@index');
 Route::get('/ukm/{id}', 'UKMController@show');
 Route::get('/berita', 'BeritaController@index');
@@ -26,13 +27,6 @@ Route::get('/registrasi', 'RegistrasiController@create');
 Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
 
 
-
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-// Admin
-Route::get('/admin', 'ty@admin')->name('admin');
-Route::get('/dashboard', 'ty@dashboard');
 Route::get('/charts', 'ty@charts');
 Route::get('/dashboardukm', 'ty@dashboardukm');
 Route::get('/icons', 'ty@icons');
