@@ -27,8 +27,25 @@ Route::get('/registrasi', 'RegistrasiController@create');
 Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
 
 
-Route::get('/charts', 'ty@charts');
+// Admin
+Route::get('/admin', 'ty@admin');
+
+Route::get('/dashboard', 'ty@dashboard');
+Route::get('/notifikasidetail', 'ty@notifikasidetail');
+
+
 Route::get('/dashboardukm', 'ty@dashboardukm');
+Route::get('/dashboardanggotaukm', 'ty@dashboardanggotaukm');
+
+
+Route::get('/dashboardberita', 'ty@dashboardberita');
+Route::get('/dashboardagenda', 'ty@dashboardagenda');
+Route::get('/dashboardprestasi', 'ty@dashboardprestasi');
+Route::get('/dashboardjadwal', 'ty@dashboardjadwal');
+
+
+Route::get('/charts', 'ty@charts');
+
 Route::get('/icons', 'ty@icons');
 Route::get('/index', 'ty@index');
 Route::get('/notifications', 'ty@notifications');

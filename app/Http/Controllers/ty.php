@@ -66,4 +66,60 @@ class ty extends Controller
         return view('masuk');
     }
 
+
+    // Admin
+    public function admin()
+    {
+        return view('admin');
+    }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
+    public function notifikasidetail()
+    {
+        return view('notifikasidetail');
+    }
+
+    public function dashboardukm()
+    {
+        return view('dashboardukm');
+    }
+
+    public function dashboardanggotaukm()
+    {
+        return view('dashboardanggotaukm');
+    }
+
+    public function dashboardgaleri()
+    {
+        return view('dashboardgaleri');
+    }
+
+    public function dashboardberita()
+    {
+        return view('dashboardberita');
+    }
+
+    public function dashboardagenda()
+    {
+        return view('dashboardagenda');
+    }
+
+    public function dashboardtentang()
+    {
+        return view('dashboardtentang');
+    }
+
+    public function dashboardprestasi()
+    {
+        return view('dashboardprestasi');
+    }
+
+    public function dashboardjadwal()
+    {
+        return view('dashboardjadwal');
+    }
 }

@@ -5,472 +5,134 @@
 @section ('content')
 
 
-		<div class="main">
-			<div class="main-content">
-				<div class="container-fluid">
-					<div class="panel panel-headline">
+<div class="main">
+	<div class="main-content">
+		<div class="container-fluid">
+			<!-- BEM -->
+			<div class="panel panel-headline">
+				<div class="panel-heading">
+					<h3 class="panel-title">Dashboard</h3>
+					<p class="panel-subtitle">Unit Kegiatan Mahasiswa UNPAD</p>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+                        <div class="col-md-3">
+							<div class="metric">
+                                <p style="text-align:center">
+                                    <span class="number">20</span>
+                                    <span class="title">Jumlah UKM</span>
+                                </p>
+							</div>
+                        </div>
+					</div>
+				</div>
+			</div>
+				
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Dashboard</h3>
-							<p class="panel-subtitle">Unit Kegiatan Mahasiswa UNPAD</p>
+							<h3 class="panel-title">Notifikasi</h3>
 						</div>
 						<div class="panel-body">
-							<div class="row">
-								<div class="col-md-3">
-									<div class="metric">
-										<!-- <span class="icon"><i class="fa fa-eye"></i></span> -->
-										<p style="text-align:center">
-											<span class="number">20</span>
-											<span class="title">Jumlah UKM</span>
-										</p>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="metric">
-										<!-- <span class="icon"><i class="fa fa-eye"></i></span> -->
-										<p style="text-align:center">
-											<span class="number">20</span>
-											<span class="title">Jumlah UKM</span>
-										</p>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="metric">
-										<!-- <span class="icon"><i class="fa fa-eye"></i></span> -->
-										<p style="text-align:center">
-											<span class="number">20</span>
-											<span class="title">Jumlah UKM</span>
-										</p>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="metric">
-										<!-- <span class="icon"><i class="fa fa-eye"></i></span> -->
-										<p style="text-align:center">
-											<span class="number">20</span>
-											<span class="title">Jumlah UKM</span>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="col-md-12">
-						<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">Lalalala</h3>
-								</div>
-								<div class="panel-body">
-									<table class="table table-bordered">
-										<thead>
-											<tr>
-												<th>No.</th>
-												<th>Kategori</th>
-												<th>Judul</th>
-												<th>Lampiran</th>
-												<th>Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Berita</td>
-												<td>ABC</td>
-												<td>-</td>
-												<td>
-													<button type="button" class="btn btn-primary btn-toastr" data-context="detail" data-message="This is general theme info" data-position="top-right">Detail</button>
-													<button type="button" class="btn btn-warning btn-toastr" data-context="edit" data-message="This is general theme info" data-position="top-right">Edit</button>
-													<button type="button" class="btn btn-danger btn-toastr" data-context="delete" data-message="This is general theme info" data-position="top-right">Delete</button>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Agenda</td>
-												<td>DEF</td>
-												<td>file.pdf</td>
-												<td>
-													<button type="button" class="btn btn-primary btn-toastr" data-context="detail" data-message="This is general theme info" data-position="top-right">Detail</button>
-													<button type="button" class="btn btn-warning btn-toastr" data-context="edit" data-message="This is general theme info" data-position="top-right">Edit</button>
-													<button type="button" class="btn btn-danger btn-toastr" data-context="delete" data-message="This is general theme info" data-position="top-right">Delete</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<br>
-
-									<table class="table table-bordered">
-										<thead>
-											<tr>
-												<th>No.</th>
-												<th>Kategori</th>
-												<th>Judul</th>
-												<th>Lampiran</th>
-												<th>Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Berita</td>
-												<td>ABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABC</td>
-												<td>-</td>
-												<td>
-													<button type="button" class="btn btn-primary btn-toastr" data-context="detail" data-message="This is general theme info" data-position="top-right">Detail</button>
-													<button type="button" class="btn btn-warning btn-toastr" data-context="edit" data-message="This is general theme info" data-position="top-right">Edit</button>
-													<button type="button" class="btn btn-danger btn-toastr" data-context="delete" data-message="This is general theme info" data-position="top-right">Delete</button>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Agenda</td>
-												<td>DEF</td>
-												<td>file.pdf</td>
-												<td>
-													<button type="button" class="btn btn-primary btn-toastr" data-context="detail" data-message="This is general theme info" data-position="top-right">Detail</button>
-													<button type="button" class="btn btn-warning btn-toastr" data-context="edit" data-message="This is general theme info" data-position="top-right">Edit</button>
-													<button type="button" class="btn btn-danger btn-toastr" data-context="delete" data-message="This is general theme info" data-position="top-right">Delete</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									<br>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-7">
-							
-							<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">To-Do List</h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
-								</div>
-								<div class="panel-body">
-									<ul class="list-unstyled todo-list">
-										<li>
-											<label class="control-inline fancy-checkbox">
-												<input type="checkbox"><span></span>
-											</label>
-											<p>
-												<span class="title">Restart Server</span>
-												<span class="short-description">Dynamically integrate client-centric technologies without cooperative resources.</span>
-												<span class="date">Oct 9, 2016</span>
-											</p>
-											<div class="controls">
-												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
-											</div>
-										</li>
-										<li>
-											<label class="control-inline fancy-checkbox">
-												<input type="checkbox"><span></span>
-											</label>
-											<p>
-												<span class="title">Retest Upload Scenario</span>
-												<span class="short-description">Compellingly implement clicks-and-mortar relationships without highly efficient metrics.</span>
-												<span class="date">Oct 23, 2016</span>
-											</p>
-											<div class="controls">
-												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
-											</div>
-										</li>
-										<li>
-											<label class="control-inline fancy-checkbox">
-												<input type="checkbox"><span></span>
-											</label>
-											<p>
-												<strong>Functional Spec Meeting</strong>
-												<span class="short-description">Monotonectally formulate client-focused core competencies after parallel web-readiness.</span>
-												<span class="date">Oct 11, 2016</span>
-											</p>
-											<div class="controls">
-												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							
-						</div>
-						<div class="col-md-5">
-							
-							<div class="panel panel-scrolling">
-								<div class="panel-heading">
-									<h3 class="panel-title">Recent User Activity</h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
-								</div>
-								<div class="panel-body">
-									<ul class="list-unstyled activity-list">
-										<li>
-											<img src="assets/img/user1.png" alt="Avatar" class="img-circle pull-left avatar">
-											<p><a href="#">Michael</a> has achieved 80% of his completed tasks <span class="timestamp">20 minutes ago</span></p>
-										</li>
-										<li>
-											<img src="assets/img/user2.png" alt="Avatar" class="img-circle pull-left avatar">
-											<p><a href="#">Daniel</a> has been added as a team member to project <a href="#">System Update</a> <span class="timestamp">Yesterday</span></p>
-										</li>
-										<li>
-											<img src="assets/img/user3.png" alt="Avatar" class="img-circle pull-left avatar">
-											<p><a href="#">Martha</a> created a new heatmap view <a href="#">Landing Page</a> <span class="timestamp">2 days ago</span></p>
-										</li>
-										<li>
-											<img src="assets/img/user4.png" alt="Avatar" class="img-circle pull-left avatar">
-											<p><a href="#">Jane</a> has completed all of the tasks <span class="timestamp">2 days ago</span></p>
-										</li>
-										<li>
-											<img src="assets/img/user5.png" alt="Avatar" class="img-circle pull-left avatar">
-											<p><a href="#">Jason</a> started a discussion about <a href="#">Weekly Meeting</a> <span class="timestamp">3 days ago</span></p>
-										</li>
-									</ul>
-									<button type="button" class="btn btn-primary btn-bottom center-block">Load More</button>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4">
-							
-							<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">My Tasks</h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
-								</div>
-								<div class="panel-body">
-									<ul class="list-unstyled task-list">
-										<li>
-											<p>Updating Users Settings <span class="label-percent">23%</span></p>
-											<div class="progress progress-xs">
-												<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width:23%">
-													<span class="sr-only">23% Complete</span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<p>Load &amp; Stress Test <span class="label-percent">80%</span></p>
-											<div class="progress progress-xs">
-												<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-													<span class="sr-only">80% Complete</span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<p>Data Duplication Check <span class="label-percent">100%</span></p>
-											<div class="progress progress-xs">
-												<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-													<span class="sr-only">Success</span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<p>Server Check <span class="label-percent">45%</span></p>
-											<div class="progress progress-xs">
-												<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-													<span class="sr-only">45% Complete</span>
-												</div>
-											</div>
-										</li>
-										<li>
-											<p>Mobile App Development <span class="label-percent">10%</span></p>
-											<div class="progress progress-xs">
-												<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-													<span class="sr-only">10% Complete</span>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							
-						</div>
-						<div class="col-md-4">
-							
-							<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">Website Visits</h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
-								</div>
-								<div class="panel-body">
-									<div id="visits-chart" class="ct-chart"></div>
-								</div>
-							</div>
-							
-						</div>
-						<div class="col-md-4">
-							
-							<div class="panel">
-								<div class="panel-heading">
-									<h3 class="panel-title">System Load</h3>
-									<div class="right">
-										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-									</div>
-								</div>
-								<div class="panel-body">
-									<div id="system-load" class="easy-pie-chart" data-percent="70">
-										<span class="percent">70</span>
-									</div>
-									<h4>CPU Load</h4>
-									<ul class="list-unstyled list-justify">
-										<li>High: <span>95%</span></li>
-										<li>Average: <span>87%</span></li>
-										<li>Low: <span>20%</span></li>
-										<li>Threads: <span>996</span></li>
-										<li>Processes: <span>259</span></li>
-									</ul>
-								</div>
-							</div>
-							
+							<p class="demo-button">
+								<button type="button" class="btn btn-primary">Add Prestasi</button>
+							</p>
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Kategori</th>
+										<th>UKM</th>
+										<th>Judul</th>
+										<!-- <th>Isi</th> -->
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Berita</td>
+										<td>PSM</td>
+										<td>ABC</td>
+										<!-- <td>-</td> -->
+										<td>
+											<a href="/notifikasidetail"><button type="button" class="btn btn-primary btn-toastr">Detail</button></a>
+											<a href="/"><button type="button" class="btn btn-warning btn-toastr">Edit</button>
+											<a href="/"><button type="button" class="btn btn-danger btn-toastr">Delete</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
 			
-		</div>
-		
-		<div class="clearfix"></div>
-		<footer>
-			<div class="container-fluid">
-				<p class="copyright">Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-</p>
+
+
+			<!-- UKM -->
+			<div class="panel panel-headline">
+				<div class="panel-heading">
+					<h3 class="panel-title">Dashboard</h3>
+					<p class="panel-subtitle">Paduan Suara Mahasiswa</p>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+                        <div class="col-md-3">
+							<div class="metric">
+                                <p style="text-align:center">
+                                    <span class="number">100</span>
+                                    <span class="title">Jumlah Anggota</span>
+                                </p>
+							</div>
+                        </div>
+					</div>
+				</div>
 			</div>
-		</footer>
+				
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">Permintaan Anggota Baru</h3>
+						</div>
+						<div class="panel-body table-responsive">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>NPM</th>
+										<th>Angkatan</th>
+										<th>Nama</th>
+										<th>Fakultas</th>
+										<th>Jurusan</th>
+										<th>Email</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>140810150019</td>
+										<td>2015</td>
+										<td>Tyara Salsabila</td>
+										<td>FMIPA</td>
+										<td>Teknik Informatika</td>
+										<td>tyarasalsabila@yahoo.co.id</td>
+										<td>Belum Disetujui</td>
+										<td>
+											<button type="button" class="btn btn-primary btn-toastr"><i style="width:10px" class="fa fa-check"></i></button>
+											<button type="button" class="btn btn-danger btn-toastr"><i style="width:10px" class="fa fa-times"></i></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
 	</div>
-	
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<!-- <script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-	<script src="assets/vendor/chartist/js/chartist.min.js"></script> -->
-	<script src="assets/scripts/klorofil-common.js"></script>
-	<script>
-	// $(function() {
-	// 	var data, options;
+</div>
 
-	// 	data = {
-	// 		labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-	// 		series: [
-	// 			[23, 29, 24, 40, 25, 24, 35],
-	// 			[14, 25, 18, 34, 29, 38, 44],
-	// 		]
-	// 	};
-
-	// 	options = {
-	// 		height: 300,
-	// 		showArea: true,
-	// 		showLine: false,
-	// 		showPoint: false,
-	// 		fullWidth: true,
-	// 		axisX: {
-	// 			showGrid: false
-	// 		},
-	// 		lineSmooth: false,
-	// 	};
-
-	// 	new Chartist.Line('#headline-chart', data, options);
-
-
-	// 	data = {
-	// 		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-	// 		series: [{
-	// 			name: 'series-real',
-	// 			data: [200, 380, 350, 320, 410, 450, 570, 400, 555, 620, 750, 900],
-	// 		}, {
-	// 			name: 'series-projection',
-	// 			data: [240, 350, 360, 380, 400, 450, 480, 523, 555, 600, 700, 800],
-	// 		}]
-	// 	};
-
-	// 	options = {
-	// 		fullWidth: true,
-	// 		lineSmooth: false,
-	// 		height: "270px",
-	// 		low: 0,
-	// 		high: 'auto',
-	// 		series: {
-	// 			'series-projection': {
-	// 				showArea: true,
-	// 				showPoint: false,
-	// 				showLine: false
-	// 			},
-	// 		},
-	// 		axisX: {
-	// 			showGrid: false,
-
-	// 		},
-	// 		axisY: {
-	// 			showGrid: false,
-	// 			onlyInteger: true,
-	// 			offset: 0,
-	// 		},
-	// 		chartPadding: {
-	// 			left: 20,
-	// 			right: 20
-	// 		}
-	// 	};
-
-	// 	new Chartist.Line('#visits-trends-chart', data, options);
-
-
-	// 	data = {
-	// 		labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-	// 		series: [
-	// 			[6384, 6342, 5437, 2764, 3958, 5068, 7654]
-	// 		]
-	// 	};
-
-	// 	options = {
-	// 		height: 300,
-	// 		axisX: {
-	// 			showGrid: false
-	// 		},
-	// 	};
-
-	// 	new Chartist.Bar('#visits-chart', data, options);
-
-
-	// 	var sysLoad = $('#system-load').easyPieChart({
-	// 		size: 130,
-	// 		barColor: function(percent) {
-	// 			return "rgb(" + Math.round(200 * percent / 100) + ", " + Math.round(200 * (1.1 - percent / 100)) + ", 0)";
-	// 		},
-	// 		trackColor: 'rgba(245, 245, 245, 0.8)',
-	// 		scaleColor: false,
-	// 		lineWidth: 5,
-	// 		lineCap: "square",
-	// 		animate: 800
-	// 	});
-
-	// 	var updateInterval = 3000; // in milliseconds
-
-	// 	setInterval(function() {
-	// 		var randomVal;
-	// 		randomVal = getRandomInt(0, 100);
-
-	// 		sysLoad.data('easyPieChart').update(randomVal);
-	// 		sysLoad.find('.percent').text(randomVal);
-	// 	}, updateInterval);
-
-	// 	function getRandomInt(min, max) {
-	// 		return Math.floor(Math.random() * (max - min + 1)) + min;
-	// 	}
-
-	// });
-	// </script>
 @endsection  
 </html>
 

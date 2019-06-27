@@ -867,23 +867,7 @@ fieldset[disabled] .btn {
     color: #8d99a8;
 }
 .panel.panel-scrolling .btn-bottom {
-    margin-bottom: 30px;
-}
-.panel .table > thead > tr > td:first-child,
-.panel .table > thead > tr > th:first-child,
-.panel .table > tbody > tr > td:first-child,
-.panel .table > tbody > tr > th:first-child,
-.panel .table > tfoot > tr > td:first-child,
-.panel .table > tfoot > tr > th:first-child {
-    /* padding-left: 25px; */
-}
-.panel .table > thead > tr > td:last-child,
-.panel .table > thead > tr > th:last-child,
-.panel .table > tbody > tr > td:last-child,
-.panel .table > tbody > tr > th:last-child,
-.panel .table > tfoot > tr > td:last-child,
-.panel .table > tfoot > tr > th:last-child {
-    /* padding-left: 25px; */
+    margin-bottom: 0px;
 }
 
 .panel-footer {
@@ -2316,7 +2300,6 @@ ul.activity-timeline > li .activity-icon {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
-    float: left;
     width: 34px;
     height: 34px;
     background-color: #00aaff;
