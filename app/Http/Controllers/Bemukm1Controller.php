@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Bemukm1;
 use Illuminate\Http\Request;
 
-class BemukmController extends Controller
+class Bemukm1Controller extends Controller
 {
     /**
      * Display a listing of the resource.
-     
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('dashbemukm');
-
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class BemukmController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Bemukm1  $bemukm1
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Bemukm1 $bemukm1)
     {
         //
     }
@@ -53,10 +52,10 @@ class BemukmController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Bemukm1  $bemukm1
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Bemukm1 $bemukm1)
     {
         //
     }
@@ -65,10 +64,10 @@ class BemukmController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Bemukm1  $bemukm1
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Bemukm1 $bemukm1)
     {
         //
     }
@@ -76,10 +75,10 @@ class BemukmController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Bemukm1  $bemukm1
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Bemukm1 $bemukm1)
     {
         //
     }
