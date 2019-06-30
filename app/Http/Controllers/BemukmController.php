@@ -14,7 +14,7 @@ class BemukmController extends Controller
      */
     public function index()
     {
-        return view('dashbemukm');
+        return view('bemukm');
 
     }
 
