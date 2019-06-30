@@ -76,7 +76,7 @@ class ty extends Controller
     public function dashboardbem()
     {
         $data['data'] = 'Data';
-        return view('dashboardbem',$data);
+        return view('dashboardbem', $data);
     }
 
     public function bemukm()
