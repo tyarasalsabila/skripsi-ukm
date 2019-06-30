@@ -27,7 +27,7 @@ Route::get('/registrasi', 'RegistrasiController@create');
 Route::get('/dashbem', 'DashboardbemController@index');
 Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
 Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem');
-Route::get('/bemukm', 'BemukmController@show');
+Route::get('/dashbemukm', 'BemukmController@show');
 
 
 
