@@ -37,7 +37,7 @@
 									<td>Paduan Suara Mahasiswa</td>
 									<td>PSM</td>
 									<td>Malih</td>
-									<td>08123456789</td>
+									<td>08121423409</td>
 								</tr>
 							</tbody>
 						</table>
@@ -77,7 +77,7 @@
 
 								<div class="form-group">
 									<label> No. HP </label>
-									<input type="text" name="nohp" class="form-control" placeholder="Masukkan No. HP Ketua UKM">
+									<input type="text" name="nohp" class="form-control" placeholder="Masukkan Kontak UKM">
 								</div>
 							</div>
 							<div class="modal-footer">

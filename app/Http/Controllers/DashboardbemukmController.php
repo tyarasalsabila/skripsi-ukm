@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Dashboardbemukm;
+use App\Ukm;
 use Illuminate\Http\Request;
 
-class BemukmController extends Controller
+
+class DashboardbemukmController extends Controller
 {
     /**
      * Display a listing of the resource.
-     
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('bemukm');
-
+    {   
+        return view('dashboardbemukm');
     }
 
     /**
@@ -36,7 +37,7 @@ class BemukmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Dashboardbemukm::create($request->all());
     }
 
     /**

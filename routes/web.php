@@ -25,9 +25,15 @@ Route::get('/agenda', 'AgendaController@index');
 Route::get('/agenda/{id}', 'AgendaController@show');
 Route::get('/registrasi', 'RegistrasiController@create');
 Route::get('/dashbem', 'DashboardbemController@index');
+
 Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
+
 Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem');
-Route::get('/dashbemukm', 'BemukmController@index');
+
+
+Route::get('/dashbemukm', 'DashboardbemukmController@index');
+Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm');
+
 
 
 
@@ -36,7 +42,7 @@ Route::get('/notifikasi', 'NotifikasiController@index');
 // Admin BEM
 Route::get('/adminbem', 'ty@adminbem');
 Route::get('/dashboardbem', 'ty@dashboardbem');
-Route::get('/bemukm', 'ty@bemukm');
+Route::get('/dashboardbemukm', 'ty@dashboardbemukm');
 Route::get('/bemberita', 'ty@bemberita');
 Route::get('/bemagenda', 'ty@bemagenda');
 
