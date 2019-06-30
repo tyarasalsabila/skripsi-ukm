@@ -1,6 +1,6 @@
-@extends ('admin')
+@extends ('adminbem')
 
-@section ('title','Dashboard Prestasi')
+@section ('title','Dashboard BEM - Agenda')
 
 @section ('content')
 

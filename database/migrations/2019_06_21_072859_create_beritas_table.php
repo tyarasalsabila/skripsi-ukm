@@ -20,6 +20,7 @@ class CreateBeritasTable extends Migration
             $table->integer('id_ukm')->unsigned();
             $table->integer('id_user')->unsigned();
             $table->string('foto');
+            $table->boolean('confirmed');
             $table->timestamps();
 
             $table->foreign('id_ukm')

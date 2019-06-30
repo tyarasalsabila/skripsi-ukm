@@ -91,9 +91,8 @@
 		<div class="container">
 		@if($message!=NULL)
 			<div class="alert alert-success">
-				
-				{{$message}}
-				@endif
+			{{$message}}
+			@endif
 			</div>
 			<div class="row">
 				<div class="col-lg-12 p-b-30">

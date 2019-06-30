@@ -11,7 +11,7 @@ class Anggota extends Model
         'jurusan',
         'fakultas',
         'angkatan',
-        'aktif',
+        'status',
         'id_ukm',
     ];
 

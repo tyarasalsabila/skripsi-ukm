@@ -53,14 +53,10 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-                        <li><a href="/dashboard" class="active"><span>Dashboard</span></a></li>
-                        <li><a href="/dashboardukm" class=""><span>UKM</span></a></li>
-                        <li><a href="/dashboardanggotaukm" class=""><span>Anggota</span></a></li>
-						<li><a href="/dashboardgaleri" class=""><span>Galeri</span></a></li>
-						<li><a href="/dashboardberita" class=""><span>Berita</span></a></li>
-                        <li><a href="/dashboardagenda" class=""><span>Agenda</span></a></li>
-                        <li><a href="/dashboardprestasi" class=""><span>Prestasi</span></a></li>
-                        <li><a href="/dashboardjadwal" class=""><span>Jadwal</span></a></li>
+                        <li><a href="/dashboardbem" class="active"><span>Dashboard</span></a></li>
+                        <li><a href="/bemukm" class=""><span>UKM</span></a></li>
+						<li><a href="/bemberita" class=""><span>Berita</span></a></li>
+                        <li><a href="/bemagenda" class=""><span>Agenda</span></a></li>
 					</ul>
 				</nav>
 			</div>

@@ -1,6 +1,6 @@
-@extends ('admin')
+@extends ('adminbem')
 
-@section ('title','Dashboard UKM')
+@section ('title','Dashboard BEM - UKM')
 
 @section ('content')
 
@@ -13,11 +13,11 @@
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Anggota UKM</h3>
+							<h3 class="panel-title">List UKM</h3>
 						</div>
 					<div class="panel-body">
 						<p class="demo-button">
-							<button type="button" class="btn btn-primary">Add Anggota</button>
+							<button type="button" class="btn btn-primary">Add UKM</button>
 							<button type="button" class="btn btn-warning">Edit</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</p>
@@ -25,21 +25,19 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Nama</th>
-									<th>Fakultas</th>
-									<th>Jurusan</th>
-									<th>Angkatan</th>
-									<th>Status</th>
+									<th>UKM</th>
+									<th>Nama Pendek</th>
+									<th>Ketua</th>
+									<th>No. HP</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>No</td>
-									<td>Bambang</td>
-									<td>MIPA</td>
-									<td>Teknik Informatika</td>
-									<td>2019</td>
-									<td>Aktif</td>
+									<td>Paduan Suara Mahasiswa</td>
+									<td>PSM</td>
+									<td>Malih</td>
+									<td>08123456789</td>
 								</tr>
 							</tbody>
 						</table>

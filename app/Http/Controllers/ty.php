@@ -67,15 +67,31 @@ class ty extends Controller
     }
 
 
-    // Admin
-    public function admin()
+    // Admin BEM
+    public function adminbem()
     {
-        return view('admin');
+        return view('adminbem');
     }
 
-    public function dashboard()
+    public function dashboardbem()
     {
-        return view('dashboard');
+        $data['data'] = 'Data';
+        return view('dashboardbem',$data);
+    }
+
+    public function bemukm()
+    {
+        return view('bemukm');
+    }
+
+    public function bemagenda()
+    {
+        return view('bemagenda');
+    }
+
+    public function bemberita()
+    {
+        return view('bemberita');
     }
 
     public function notifikasidetail()
@@ -83,43 +99,45 @@ class ty extends Controller
         return view('notifikasidetail');
     }
 
+
+    // Admin UKM
+    public function adminukm()
+    {
+        return view('adminukm');
+    }
+
     public function dashboardukm()
     {
         return view('dashboardukm');
     }
 
-    public function dashboardanggotaukm()
+    public function anggotaukm()
     {
-        return view('dashboardanggotaukm');
+        return view('anggotaukm');
     }
 
-    public function dashboardgaleri()
+    public function galeriukm()
     {
-        return view('dashboardgaleri');
+        return view('galeriukm');
     }
 
-    public function dashboardberita()
+    public function beritaukm()
     {
-        return view('dashboardberita');
+        return view('beritaukm');
     }
 
-    public function dashboardagenda()
+    public function agendaukm()
     {
-        return view('dashboardagenda');
+        return view('agendaukm');
     }
 
-    public function dashboardtentang()
+    public function prestasiukm()
     {
-        return view('dashboardtentang');
+        return view('prestasiukm');
     }
 
-    public function dashboardprestasi()
+    public function jadwalukm()
     {
-        return view('dashboardprestasi');
-    }
-
-    public function dashboardjadwal()
-    {
-        return view('dashboardjadwal');
+        return view('jadwalukm');
     }
 }

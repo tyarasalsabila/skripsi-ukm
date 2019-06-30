@@ -24,13 +24,33 @@ Route::get('/berita/{id}', 'BeritaController@show');
 Route::get('/agenda', 'AgendaController@index');
 Route::get('/agenda/{id}', 'AgendaController@show');
 Route::get('/registrasi', 'RegistrasiController@create');
+Route::get('/dashbem', 'DashboardbemController@index');
 Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
 
 
-// Admin
-Route::get('/admin', 'ty@admin');
 
-Route::get('/dashboard', 'ty@dashboard');
+Route::get('/notifikasi', 'NotifikasiController@index');
+
+// Admin BEM
+Route::get('/adminbem', 'ty@adminbem');
+Route::get('/dashboardbem', 'ty@dashboardbem');
+Route::get('/bemukm', 'ty@bemukm');
+Route::get('/bemberita', 'ty@bemberita');
+Route::get('/bemagenda', 'ty@bemagenda');
+
+
+// Admin UKM
+Route::get('/adminukm', 'ty@adminukm');
+Route::get('/dashboardukm', 'ty@dashboardukm');
+Route::get('/anggotaukm', 'ty@anggotaukm');
+Route::get('/galeriukm', 'ty@galeriukm');
+Route::get('/beritaukm', 'ty@beritaukm');
+Route::get('/agendaukm', 'ty@agendaukm');
+Route::get('/prestasiukm', 'ty@prestasiukm');
+Route::get('/jadwalukm', 'ty@jadwalukm');
+
+
+
 Route::get('/notifikasidetail', 'ty@notifikasidetail');
 
 
@@ -70,3 +90,5 @@ Route::get('/perisaidiri', 'ty@perisaidiri');
 Route::get('/galeriisi', 'ty@galeriisi');
 
 Route::get('/masuk', 'ty@masuk');
+
+

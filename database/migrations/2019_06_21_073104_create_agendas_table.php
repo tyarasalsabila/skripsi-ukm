@@ -21,6 +21,7 @@ class CreateAgendasTable extends Migration
             $table->integer('id_user')->unsigned();;
             $table->string('foto');
             $table->string('link');
+            $table->boolean('confirmed');
             $table->timestamps();
 
             $table->foreign('id_ukm')
