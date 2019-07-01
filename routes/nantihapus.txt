@@ -1,20 +1,27 @@
+<form action="{{route('dashbemukm')}}" method="POST">
+
+							{{ csrf_field() }}
+
+
+BemukmController
 <?php
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
-
-class DashboardbemukmController extends Controller
+class BemukmController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        
+    {
+        return view('bemukm');
+
     }
 
     /**
@@ -35,7 +42,7 @@ class DashboardbemukmController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
@@ -83,3 +90,24 @@ class DashboardbemukmController extends Controller
         //
     }
 }
+
+
+
+
+
+
+
+
+Web.php
+Route::get('/dashbemukm', 'BemukmController@index');
+
+
+
+
+<tr>
+									<td>No</td>
+									<td>{{$ukm->nama}}</td>
+									<td>{{$ukm->namapendek}}</td>
+									<td>{{$ukm->ketua}}</td>
+									<td>{{$ukm->nohp}}</td>
+								</tr>

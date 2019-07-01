@@ -56,9 +56,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbemukm')}}" method="POST">
-							
-							{{ csrf_field() }}
+						<form>
 							<div class="modal-body">
 								<div class="form-group">
 									<label> UKM </label>

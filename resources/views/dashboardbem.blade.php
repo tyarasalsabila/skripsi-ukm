@@ -120,7 +120,7 @@
 
 						<form action="{{route('dashbem')}}" method="POST">
 
-							{{ csrf_field() }}
+							@csrf
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Judul </label>
