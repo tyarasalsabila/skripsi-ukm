@@ -87,12 +87,12 @@
 								<tbody>
 								@foreach($berita as $brt)
 									<tr>
-										<td>Berita</td>
+										<td></td>
 										<td>{{$brt->ukm->nama}}</td>
 										<td>{{$brt->judul}}</td>
 										<!-- <td>-</td> -->
 										<td>
-											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#exampleModal">Detail</button>
+											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#addModal">Detail</button>
 											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#exampleModal"><i style="width:10px" class="fa fa-check"></i></button>
 											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#exampleModal"><i style="width:10px" class="fa fa-times"></i></button>
 										</td>
@@ -107,26 +107,40 @@
 			</div>
 
 		
-			<!-- Modal Detail -->
-			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">New message</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					{{-- <!-- <h3>{{$brt->isi}}</h3> --> --}}
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save</button>
-				</div>
+			<!-- Modal Add -->
+			<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+
+						<form action="{{route('dashbem')}}" method="POST">
+
+							@csrf
+							<div class="modal-body">
+								<div class="form-group">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+								</div>
+
+								<div class="form-group">
+									<label> Isi </label>
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-primary">Save</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-			</div>
+			<!-- End Modal Add -->
 		</div>
 	</div>
 </div>

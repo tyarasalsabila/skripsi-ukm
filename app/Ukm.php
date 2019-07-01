@@ -8,9 +8,13 @@ class Ukm extends Model
 {
     protected $fillable = [
         'nama',
+        'namapendek',
         'hari',
         'jam',
+        'tempat',
         'profil',
+        'ketua',
+        'nohp',
     ];
 
     public function user(){

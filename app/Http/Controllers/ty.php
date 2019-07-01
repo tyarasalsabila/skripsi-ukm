@@ -76,12 +76,12 @@ class ty extends Controller
     public function dashboardbem()
     {
         $data['data'] = 'Data';
-        return view('dashboardbem',$data);
+        return view('dashboardbem', $data);
     }
-
-    public function bemukm()
+    
+    public function dashboardbemukm()
     {
-        return view('bemukm');
+        return view('dashboardbemukm');
     }
 
     public function bemagenda()

@@ -54,7 +54,7 @@
 				<nav>
 					<ul class="nav">
                         <li><a href="/dashboardbem" class="active"><span>Dashboard</span></a></li>
-                        <li><a href="/bemukm" class=""><span>UKM</span></a></li>
+                        <li><a href="/dashboardbemukm" class=""><span>UKM</span></a></li>
 						<li><a href="/bemberita" class=""><span>Berita</span></a></li>
                         <li><a href="/bemagenda" class=""><span>Agenda</span></a></li>
 					</ul>
