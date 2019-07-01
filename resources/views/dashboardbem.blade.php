@@ -53,7 +53,7 @@
 										<td>{{$brt->judul}}</td>
 										<!-- <td>-</td> -->
 										<td>
-											<a href="" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#exampleModal">Detail</button>
+											<a href="#editDialog" class="btn btn-primary btn-toastr editDialog" data-toggle="modal" data-target="#exampleModal" data-id = "{{$brt->id}}">Detail</button>
 											<a href="" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#exampleModal"><i style="width:10px" class="fa fa-check"></i></button>
 											<a href="" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#exampleModal"><i style="width:10px" class="fa fa-times"></i></button>
 										</td>
@@ -118,7 +118,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<!-- <h3>{{$brt->isi}}</h3> -->
+					{{-- <!-- <h3>{{$brt->isi}}</h3> --> --}}
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -132,7 +132,7 @@
 </div>
 
 
-<script>
+{{-- <script>
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -142,6 +142,28 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('New message to ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
+</script> --}}
+
+{{-- <script>
+$(document).on("click", ".editDialog", function () {
+	console.log(dataId); 
+	var dataId = $(this).data('id');
+	 $(".modal-body #bookId").val( myBookId );
+	 
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});</script> --}}
+
+<script>
+$('.editDialog').on('show.bs.modal', function(e) {
+
+//get data-id attribute of the clicked element
+var dataId = $(e.relatedTarget).data('id');
+
+//populate the textbox
+$(e.currentTarget).find('input[name="bookId"]').val(dataId);
+});
 </script>
 
 @endsection  
