@@ -48,19 +48,7 @@ class DashboardbemController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'judul' => 'required',
-            'isi' => 'required',
-        ]);
-
-        $berita = new Berita;
-
-        $berita->judul = $request->input('judul');
-        $berita->judul = $request->input('isi');
-
-        $berita->save();
-
-        return redirect('/berita')->with('success', 'data saved');
+        
     }
 
     /**

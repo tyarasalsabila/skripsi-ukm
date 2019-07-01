@@ -16,7 +16,8 @@ class DashboardbemukmController extends Controller
      */
     public function index()
     {   
-        return view('dashboardbemukm');
+        $data['dashboardbemukm'] = Dashboardbemukm::all();
+        return view('dashboardbemukm', $data);
     }
 
     /**

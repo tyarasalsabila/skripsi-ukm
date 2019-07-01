@@ -87,7 +87,7 @@
 								<tbody>
 								@foreach($berita as $brt)
 									<tr>
-										<td>Berita</td>
+										<td></td>
 										<td>{{$brt->ukm->nama}}</td>
 										<td>{{$brt->judul}}</td>
 										<!-- <td>-</td> -->
