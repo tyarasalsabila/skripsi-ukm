@@ -29,13 +29,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         
-        DB::table('anggotas')->insert([
-            'nama' => "A",
-            'jurusan' => "IT",
-            'fakultas' => "MIPA",
-            'angkatan' => "2015",
-            'aktif' => true,
+        DB::table('beritas')->insert([
+            'judu;' => "A",
+            'isi' => "ahahaha",
             'id_ukm' => 1,
+            'id_user' => 1,
+            'confirmed' =>true,
+            
         ]);
     }
 }

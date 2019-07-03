@@ -212,7 +212,7 @@
 </div>
 
 
-<script>
+{{-- <script>
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -222,6 +222,28 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('New message to ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
+</script> --}}
+
+{{-- <script>
+$(document).on("click", ".editDialog", function () {
+	console.log(dataId); 
+	var dataId = $(this).data('id');
+	 $(".modal-body #bookId").val( myBookId );
+	 
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});</script> --}}
+
+<script>
+$('.editDialog').on('show.bs.modal', function(e) {
+
+//get data-id attribute of the clicked element
+var dataId = $(e.relatedTarget).data('id');
+
+//populate the textbox
+$(e.currentTarget).find('input[name="bookId"]').val(dataId);
+});
 </script>
 
 @endsection  
