@@ -22,7 +22,7 @@
 							<table class="table table-bordered table-hover table-responsive">
 								<thead>
 									<tr>
-										<th>No.</th>
+										<th>No</th>
 										<th>Tanggal</th>
 										<th>Judul</th>
 										<th>UKM</th>
