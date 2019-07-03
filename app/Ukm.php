@@ -14,7 +14,7 @@ class Ukm extends Model
         'tempat',
         'profil',
         'ketua',
-        'nohp',
+        'npm',
     ];
 
     public function user(){

@@ -37,9 +37,8 @@
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Admin BEM</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="/dashboardprofile"><span>My Profile</span></a></li>
 								<li><a href="/dashboardlogout"><span>Logout</span></a></li>
 							</ul>
 						</li>
@@ -55,8 +54,8 @@
 					<ul class="nav">
                         <li><a href="/dashboardbem" class="active"><span>Dashboard</span></a></li>
                         <li><a href="/dashboardbemukm" class=""><span>UKM</span></a></li>
-						<li><a href="/bemberita" class=""><span>Berita</span></a></li>
-                        <li><a href="/bemagenda" class=""><span>Agenda</span></a></li>
+						<li><a href="/dashboardbemberita" class=""><span>Berita</span></a></li>
+                        <li><a href="/dashboardbemagenda" class=""><span>Agenda</span></a></li>
 					</ul>
 				</nav>
 			</div>

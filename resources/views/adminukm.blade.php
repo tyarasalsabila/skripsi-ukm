@@ -39,7 +39,6 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="/dashboardprofile"><span>My Profile</span></a></li>
 								<li><a href="/dashboardlogout"><span>Logout</span></a></li>
 							</ul>
 						</li>
@@ -54,12 +53,12 @@
 				<nav>
 					<ul class="nav">
                         <li><a href="/dashboardukm" class="active"><span>Dashboard</span></a></li>
-                        <li><a href="/anggotaukm" class=""><span>Anggota</span></a></li>
-						<li><a href="/galeriukm" class=""><span>Galeri</span></a></li>
-						<li><a href="/beritaukm" class=""><span>Berita</span></a></li>
-                        <li><a href="/agendaukm" class=""><span>Agenda</span></a></li>
-                        <li><a href="/prestasiukm" class=""><span>Prestasi</span></a></li>
-                        <li><a href="/jadwalukm" class=""><span>Jadwal</span></a></li>
+                        <li><a href="/dashboardukmanggota" class=""><span>Anggota</span></a></li>
+						<li><a href="/dashboardukmgaleri" class=""><span>Galeri</span></a></li>
+						<li><a href="/dashboardukmberita" class=""><span>Berita</span></a></li>
+                        <li><a href="/dashboardukmagenda" class=""><span>Agenda</span></a></li>
+                        <li><a href="/dashboardukmprestasi" class=""><span>Prestasi</span></a></li>
+                        <li><a href="/dashboardukmjadwal" class=""><span>Jadwal</span></a></li>
 					</ul>
 				</nav>
 			</div>

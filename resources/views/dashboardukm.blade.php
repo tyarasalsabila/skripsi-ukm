@@ -12,7 +12,7 @@
 			<div class="panel panel-headline">
 				<div class="panel-heading">
 					<h3 class="panel-title">Dashboard</h3>
-					<p class="panel-subtitle">Unit Kegiatan Mahasiswa UNPAD</p>
+					<p class="panel-subtitle">Unit Kegiatan Mahasiswa UNPAD - UKM</p>
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -38,25 +38,30 @@
 							<table class="table table-bordered table-hover">
 								<thead>
 									<tr>
+										<th>No</th>
 										<th>Nama</th>
 										<th>UKM</th>
 										<th>Judul</th>
-										<!-- <th>Isi</th> -->
+										<th>Isi</th>
 										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
+								@php ($x = 0)
+								@foreach($reg as $rgt)
+								@php ($x = $x+1)
 									<tr>
-										<td>Berita</td>
-										<td>PSM</td>
+										<th></th>
+										<td>{{$rgt->nama}}</td>
+										<td>{{$rgt->ukm->nama}}</td>
 										<td>ABC</td>
-										<!-- <td>-</td> -->
+										<td>-</td>
 										<td>
-											<a href="/"><button type="button" class="btn btn-primary btn-toastr">Detail</button></a>
-											<a href="/"><button type="button" class="btn btn-primary btn-toastr"><i style="width:10px" class="fa fa-check"></i></button></a>
-											<a href="/"><button type="button" class="btn btn-danger btn-toastr"><i style="width:10px" class="fa fa-times"></i></button></a>
+											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
+											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button>
 										</td>
 									</tr>
+								@endforeach
 								</tbody>
 							</table>
 						</div>

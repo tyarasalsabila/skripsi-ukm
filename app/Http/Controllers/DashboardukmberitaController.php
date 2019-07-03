@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-// use App\Dashboardbemukm;
+use App\Berita;
 use App\Ukm;
 use Illuminate\Http\Request;
 
-
-class DashboardbemukmController extends Controller
+class DashboardukmberitaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,11 @@ class DashboardbemukmController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $data['ukms'] = Ukm::all();
+    {
+        $ukm = 1; 
+        $data['berita'] = Berita::where('id_ukm', $ukm)->get();
         // dd($data);
-        return view('dashboardbemukm', $data);
+        return view('dashboardukmberita', $data);
     }
 
     /**
@@ -39,11 +39,7 @@ class DashboardbemukmController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->all();
-        $ukm = new Ukm;
-
-        $ukm->nama = $request->nama;
-        $ukm->hari = $request->hari;
+        //
     }
 
     /**

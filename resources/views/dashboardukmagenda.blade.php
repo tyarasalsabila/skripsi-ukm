@@ -35,16 +35,19 @@
 									</tr>
 								</thead>
 								<tbody>
+								@php ($x = 0)
+								@foreach ($agenda as $agd)
+								@php ($x = $x+1)
 									<tr>
-										<td>1</td>
-										<td>7/7/2019</td>
-										<td>23/7/2019</td>
-										<td>Acara IFest</td>
-										<td>LISES</td>
-										<td>yyy.jpg</td>
-										<td>loremipsum</td>
-										<td>bit.ly/</td>
+										<td>{{$x}}</td>
+										<td>{{$agd->create_at}}</td>
+										<td>{{$agd->judul}}</td>
+										<td>{{$agd->ukm->nama}}</td>
+										<td>{{$agd->foto}}</td>
+										<td>{{$agd->isi}}</td>
+										<td>{{$agd->link}}</td>
 									</tr>
+								@endforeach
 								</tbody>
 							</table>
 						</div>

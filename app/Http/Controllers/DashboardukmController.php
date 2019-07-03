@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-// use App\Dashboardbemukm;
-use App\Ukm;
 use Illuminate\Http\Request;
+use App\Registrasi;
 
-
-class DashboardbemukmController extends Controller
+class DashboardukmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,13 @@ class DashboardbemukmController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $data['ukms'] = Ukm::all();
+    {
+        //
+        $ukm = 1;
+        $data['reg'] = Registrasi::where('id_ukm', $ukm)->get();
         // dd($data);
-        return view('dashboardbemukm', $data);
+        return view('dashboardukm', $data);
+
     }
 
     /**
@@ -39,11 +40,7 @@ class DashboardbemukmController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->all();
-        $ukm = new Ukm;
-
-        $ukm->nama = $request->nama;
-        $ukm->hari = $request->hari;
+        //
     }
 
     /**

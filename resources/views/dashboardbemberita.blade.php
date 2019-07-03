@@ -1,6 +1,6 @@
 @extends ('adminbem')
 
-@section ('title','Dashboard BEM - UKM')
+@section ('title','Dashboard BEM - Berita')
 
 @section ('content')
 
@@ -8,51 +8,53 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Dashboard UKM</h3>
+			<h3 class="page-title">Berita</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">List UKM</h3>
+							<h3 class="panel-title">List Berita</h3>
 						</div>
-					<div class="panel-body">
-						<p class="demo-button">
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add UKM</button>
-						</p>
-						<table class="table table-bordered table-hover">
-							<thead>
-								<tr>
-									<th>No</th>
-									<th>UKM</th>
-									<th>Nama Pendek</th>
-									<th>Ketua</th>
-									<th>NPM</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-							@php ($x = 0)
-							@foreach($ukms as $ukm)
-            				@php ($x = $x+1)
-								<tr>
-									<td>{{$x}}</td>
-									<td>{{$ukm->nama}}</td>
-									<td>{{$ukm->namapendek}}</td>
-									<td>{{$ukm->ketua}}</td>
-									<td>{{$ukm->nohp}}</td>
-									<td>
-										<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
-										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
-									</td>
-								</tr>
-							@endforeach
-							</tbody>
-						</table>
+						<div class="panel-body">
+							<p class="demo-button">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Berita</button>
+							</p>
+							<table class="table table-bordered table-hover table-responsive">
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>Tanggal</th>
+										<th>Judul</th>
+										<th>UKM</th>
+										<th>Foto</th>
+										<th>Isi</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+								@php ($x = 0)
+								@foreach($berita as $brt)
+            					@php ($x = $x+1)
+									<tr>
+										<td>{{$x}}</td>
+										<td>{{$brt->created_at}}</td>
+										<td>{{$brt->judul}}</td>
+										<td>{{$brt->ukm->nama}}</td>
+										<td>{{$brt->foto}}</td>
+										<td>{{$brt->isi}}</td>
+										<td>
+											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+										</td>
+									</tr>
+								@endforeach
+								</tbody>
+							</table>
+						</div>
 					</div>						
 				</div>
-			</div>
 
-			<!-- Add -->
+				<!-- Add -->
 			<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -67,29 +69,23 @@
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="ukm" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
-									<input type="text" name="namapendek" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Isi </label>
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
 								</div>
 
 								<br>
 
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="ketua" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
 
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" placeholder="Masukkan Isi Berita">
+								<label> Upload Foto </label>
+								<div class="custom-file">
+									<input type="file" name="image" class="custom-file-input">
 								</div>
 
 								<br>
@@ -119,30 +115,24 @@
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+							<div class="form-group">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
+									<label> Isi </label>
 									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
 								</div>
 
 								<br>
 
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
 
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+								<label> Upload Foto </label>
+								<div class="custom-file">
+									<input type="file" name="image" class="custom-file-input">
 								</div>
 
 								<br>
@@ -184,9 +174,7 @@
 				</div>
 			</div>
 			<!-- Delete -->
-
-
-
+			</div>
 		</div>
 	</div>
 </div>

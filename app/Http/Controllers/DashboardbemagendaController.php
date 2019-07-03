@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-// use App\Dashboardbemukm;
-use App\Ukm;
+use App\Agenda;
 use Illuminate\Http\Request;
 
-
-class DashboardbemukmController extends Controller
+class DashboardbemagendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,10 @@ class DashboardbemukmController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $data['ukms'] = Ukm::all();
+    {
+        $data['agenda'] = Agenda::all();
         // dd($data);
-        return view('dashboardbemukm', $data);
+        return view('dashboardbemagenda', $data);
     }
 
     /**
@@ -39,11 +37,7 @@ class DashboardbemukmController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->all();
-        $ukm = new Ukm;
-
-        $ukm->nama = $request->nama;
-        $ukm->hari = $request->hari;
+        //
     }
 
     /**

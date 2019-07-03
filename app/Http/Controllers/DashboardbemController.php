@@ -48,7 +48,31 @@ class DashboardbemController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validate($request,[
+        //     'judul' => 'required',
+        //     'foto' => 'required',
+        //     'isi' => 'required',
+        // ]);
+
+        // $brt = new Dashboardbem;
+
+        // $brt->judul = $request->input('judul');
+        // $brt->foto = $request->input('foto');
+        // $brt->isi = $request->input('isi');
+
+        // $brt->save();
+
+
         
+        // $agd = new Dashboardbem;
+
+        // $agd->judul = $request->input('judul');
+        // $agd->foto = $request->input('foto');
+        // $agd->isi = $request->input('isi');
+
+        // $brt->save();
+
+        // return redirect('/dashbem')->with('success', 'data saved');
     }
 
     /**
