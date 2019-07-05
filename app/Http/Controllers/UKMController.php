@@ -51,6 +51,7 @@ class UKMController extends Controller
      */
     public function show($id)
     {
+        // ngambil data ukm, dimana id = $id, + data prestasi dan anggota
         $data['ukm'] = Ukm::where('id', $id)->with(['prestasi','anggota'])->first();
         
         return view('perisaidiri', $data);

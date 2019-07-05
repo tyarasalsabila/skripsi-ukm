@@ -17,6 +17,7 @@ class BeritaController extends Controller
     public function index()
     {
         //
+        //ngambil data semua berita
         $data['beritas'] = Berita::all();
         // dd($data);
         return view('berita', $data);
