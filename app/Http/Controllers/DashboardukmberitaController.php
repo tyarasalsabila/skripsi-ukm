@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Berita;
 use App\Ukm;
+use Auth;
 use Illuminate\Http\Request;
 
 class DashboardukmberitaController extends Controller
@@ -15,7 +16,7 @@ class DashboardukmberitaController extends Controller
      */
     public function index()
     {
-        $ukm = 1; 
+        $ukm = Auth::user()->id_ukm; 
         $data['berita'] = Berita::where('id_ukm', $ukm)->get();
         // dd($data);
         return view('dashboardukmberita', $data);

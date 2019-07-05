@@ -39,6 +39,7 @@
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 									</td>
 								</tr>
+								@endforeach
 							</tbody>
 						</table>
 					</div>						
