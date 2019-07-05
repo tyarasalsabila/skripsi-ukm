@@ -102,7 +102,7 @@
 				$('#npm').val(data[8]);
 				$('#pembina').val(data[9]);
 
-				$('#editForm').attr('action', '/dashboardbemukm'+data[0]);
+				$('#editForm').attr('action', '/dashbemukmupdate/'+data[0]);
 				
 				// $('#editModal').modal('show');
 			});
@@ -120,7 +120,7 @@
 
 				$('#id').val(data[0]);
 
-				$('#deleteForm').attr('action', '/dashboardbemukm'+data[0]);
+				$('#deleteForm').attr('action', '/dashbemukmdelete/'+data[0]);
 				
 				// $('#deleteModal').modal('show');
 			});

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Berita;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardbemberitaController extends Controller
 {
@@ -37,7 +40,20 @@ class DashboardbemberitaController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $brt = new Berita;
+
+        $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+
+        $brt->judul = $request->judul;
+        $brt->isi = $request->isi;
+        $brt->id_ukm = Auth::user()->id_ukm;
+        $brt->id_user = Auth::user()->id;
+        $brt->confirmed = 0;
+        $brt->foto = $path;
+
+        // dd($brt);
+
+        $brt->save();
     }
 
     /**

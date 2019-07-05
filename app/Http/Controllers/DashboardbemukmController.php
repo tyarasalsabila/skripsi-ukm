@@ -91,17 +91,17 @@ class DashboardbemukmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
-            'nama' => 'required',
-            'namapendek' => 'required',
-            'hari' => 'required',
-            'jam' => 'required',
-            'tempat' => 'required',
-            'profil' => 'required',
-            'ketua' => 'required',
-            'npm' => 'required',
-            'pembina' => 'required',
-        ]);
+        // $this->validate($request,[
+        //     'nama' => 'required',
+        //     'namapendek' => 'required',
+        //     'hari' => 'required',
+        //     'jam' => 'required',
+        //     'tempat' => 'required',
+        //     'profil' => 'required',
+        //     'ketua' => 'required',
+        //     'npm' => 'required',
+        //     'pembina' => 'required',
+        // ]);
         
         $ukm = Ukm::find($id);
 
@@ -132,6 +132,7 @@ class DashboardbemukmController extends Controller
     public function destroy($id)
     {
         $ukm = Ukm::find($id);
+        // dd($ukm);
         $ukm->delete();
 
         return redirect('dashboardbemukm')->with('success', 'data deleted');   

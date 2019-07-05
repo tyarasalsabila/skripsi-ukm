@@ -162,7 +162,7 @@
 							</button>
 						</div>
 
-						<form action="/dashboardbemukm" method="POST" id="editForm">
+					<form action="'/dashbemukmupdate'" method="POST" id="editForm">
 							{{ csrf_field() }}
 							{{ method_field('PUT') }}
 							<div class="modal-body">
@@ -172,6 +172,12 @@
 								</div>
 
 								<br>
+
+								{{-- <div class="form-group">
+									<label> ID </label>
+									<input type="text" name="id" id="id" class="form-control" placeholder="Masukkan Nama Pendek UKM">
+								</div>
+								<br> --}}
 
 								<div class="form-group">
 									<label> Nama Pendek </label>
@@ -249,7 +255,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbem')}}" method="POST" id="deleteForm">
+						<form action="'/dashbemukmdelete'" method="POST" id="deleteForm">
 							{{ csrf_field() }}
 							{{ method_field('DELETE') }}
 							<div class="modal-body">

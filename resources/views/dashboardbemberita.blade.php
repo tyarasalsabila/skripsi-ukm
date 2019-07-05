@@ -40,7 +40,7 @@
 										<td>{{$brt->created_at}}</td>
 										<td>{{$brt->judul}}</td>
 										<td>{{$brt->ukm->nama}}</td>
-										<td>{{$brt->foto}}</td>
+										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px"; alt=""></td>
 										<td>{{$brt->isi}}</td>
 										<td>
 											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
@@ -65,7 +65,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbemberita')}}" method="POST">
+						<form action="{{route('dashbemberita')}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">

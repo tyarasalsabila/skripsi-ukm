@@ -11,17 +11,17 @@ class UkmSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('ukms')->insert([
-        //     'nama' => "Unit Pramuka Unpad",
-        //     'namapendek' => "UPU",
-        //     'hari' => "Kamis",
-        //     'jam' => "10:00",
-        //     'tempat' => "Ruangan",
-        //     'profil' => "UPU adalah",
-        //     'ketua' => "Pandu Budiman",
-        //     'npm' => "200110170047",
-        //     'pembina' => "FMIPA",
-        // ]);   
+        DB::table('ukms')->insert([
+            'nama' => "Unit Pramuka Unpad",
+            'namapendek' => "UPU",
+            'hari' => "Kamis",
+            'jam' => "10:00",
+            'tempat' => "Ruangan",
+            'profil' => "UPU adalah",
+            'ketua' => "Pandu Budiman",
+            'npm' => "200110170047",
+            'pembina' => "FMIPA",
+        ]);   
 
         //2
         // DB::table('ukms')->insert([

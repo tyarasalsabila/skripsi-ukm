@@ -35,6 +35,8 @@ Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem');
 
 Route::get('/dashboardbemukm', 'DashboardbemukmController@index');
 Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm');
+Route::put('/dashbemukmupdate/{id}', 'DashboardbemukmController@update')->name('dashbemukmupdate');
+Route::delete('/dashbemukmdelete/{id}', 'DashboardbemukmController@destroy')->name('dashbemukmdelete');
 
 Route::get('/dashboardbemberita', 'DashboardbemberitaController@index');
 Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita');
