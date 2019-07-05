@@ -21,5 +21,15 @@ class BeritaTableSeeder extends Seeder
             'confirmed' =>true,
             
         ]);
+
+        DB::table('beritas')->insert([
+            'judul' => "B",
+            'isi' => "ahahaha",
+            'foto' =>'aisd',
+            'id_ukm' => 1,
+            'id_user' => 1,
+            'confirmed' =>true,
+            
+        ]);
     }
 }

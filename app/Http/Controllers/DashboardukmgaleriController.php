@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Berita;
+use App\Galeri;
 use Illuminate\Http\Request;
 
-class DashboardbemberitaController extends Controller
+class DashboardukmgaleriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class DashboardbemberitaController extends Controller
      */
     public function index()
     {
-        $data['berita'] = Berita::all();
+        $data['galeri'] = Galeri::all();
         // dd($data);
-        return view('dashboardbemberita', $data);
+        return view('dashboardukmgaleri', $data);
     }
 
     /**
@@ -37,7 +37,7 @@ class DashboardbemberitaController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**

@@ -55,7 +55,8 @@
 										<td>{{$brt->judul}}</td>
 										<td>{{$brt->isi}}</td>
 										<td>
-											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
+											<!-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button> -->
+											<a href="#" data-target = "#acceptModal" data-toggle="modal" data-id = "{{$brt->id}}" role="button" class="btn btn-primary btn-toastr">Accept</a>
 											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button>
 										</td>
 									</tr>
@@ -162,16 +163,17 @@
 							<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
-
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
 								<input type="hidden" name="judul">
+								<p id="test"></p>
+
 								<p> Accept Data? </p>
 							</div>
 
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
 								<button type="submit" class="btn btn-primary">Ya</button>
 							</div>
 						</form>
@@ -199,7 +201,7 @@
 							</div>
 
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
 								<button type="submit" class="btn btn-primary">Ya</button>
 							</div>
 						</form>
@@ -223,7 +225,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-body input').val(recipient)
 })
 </script> --}}
-
+<!-- 
 {{-- <script>
 $(document).on("click", ".editDialog", function () {
 	console.log(dataId); 
@@ -233,7 +235,21 @@ $(document).on("click", ".editDialog", function () {
      // As pointed out in comments, 
      // it is unnecessary to have to manually call the modal.
      // $('#addBookDialog').modal('show');
-});</script> --}}
+});</script> --}} -->
+
+<script>
+$('#acceptModal').on('show', function(e) {
+    var link     = e.relatedTarget(),
+        modal    = $(this),
+        id = link.data("id");
+        // email    = link.data("email");
+	window.alert(id);
+    modal.find("#email").val(email);
+    modal.find("#username").val(username);
+});
+</script>
+
+
 
 <script>
 $('.editDialog').on('show.bs.modal', function(e) {

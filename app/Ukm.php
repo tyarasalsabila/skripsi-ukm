@@ -15,6 +15,7 @@ class Ukm extends Model
         'profil',
         'ketua',
         'npm',
+        'pembina',
     ];
 
     public function user(){

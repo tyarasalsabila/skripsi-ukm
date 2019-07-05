@@ -37,7 +37,7 @@ Route::get('/dashboardbemukm', 'DashboardbemukmController@index');
 Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm');
 
 Route::get('/dashboardbemberita', 'DashboardbemberitaController@index');
-Route::post('/dashbemberita', 'DashboardbemukmController@store')->name('dashbemberita');
+Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita');
 
 Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index');
 Route::post('/dashbemagenda', 'DashboardbemagendaController@store')->name('dashbemagenda');

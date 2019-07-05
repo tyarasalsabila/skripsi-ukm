@@ -65,7 +65,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="{{route('dashbemberita')}}" method="POST">
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">
@@ -166,7 +166,7 @@
 							</div>
 
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
 								<button type="submit" class="btn btn-primary">Ya</button>
 							</div>
 						</form>

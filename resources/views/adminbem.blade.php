@@ -19,7 +19,9 @@
 	<link href="{{ asset ('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700')}}" rel="stylesheet">
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset ('assets/img/apple-icon.png')}}">
-	  <link rel="icon" type="image/png" sizes="96x96" href="{{ asset ('assets/img/favicon.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ asset ('assets/img/favicon.png')}}">
+	<!-- TABLE CDN -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body>
@@ -71,7 +73,65 @@
 	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
 	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 	
+
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var table = $('#datatable').DataTable();
+
+			//Edit
+			table.on('click', '.edit', function () {
+				$tr = $(this).closest('tr');
+				if($($tr).hasClass('child')) {
+					$tr = $tr.prev('.parent');
+				}
+
+				var data = table.row($tr).data();
+				console.log(data);
+
+				$('#nama').val(data[1]);
+				$('#namapendek').val(data[2]);
+				$('#hari').val(data[3]);
+				$('#jam').val(data[4]);
+				$('#tempat').val(data[5]);
+				$('#profil').val(data[6]);
+				$('#ketua').val(data[7]);
+				$('#npm').val(data[8]);
+				$('#pembina').val(data[9]);
+
+				$('#editForm').attr('action', '/dashboardbemukm'+data[0]);
+				
+				// $('#editModal').modal('show');
+			});
+
+
+			//Delete
+			table.on('click', '.delete', function () {
+				$tr = $(this).closest('tr');
+				if($($tr).hasClass('child')) {
+					$tr = $tr.prev('.parent');
+				}
+
+				var data = table.row($tr).data();
+				console.log(data);
+
+				$('#id').val(data[0]);
+
+				$('#deleteForm').attr('action', '/dashboardbemukm'+data[0]);
+				
+				// $('#deleteModal').modal('show');
+			});
+		});
+	</script>
+
+
+	
+
+	
+
 </body>
 
 </html>

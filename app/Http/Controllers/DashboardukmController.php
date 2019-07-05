@@ -41,6 +41,7 @@ class DashboardukmController extends Controller
     public function store(Request $request)
     {
         //
+        $ukm = new Ukm;
     }
 
     /**

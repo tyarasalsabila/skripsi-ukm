@@ -37,7 +37,23 @@ class DashboardukmanggotaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $anggota = new Anggota;
+
+        // $variabel->nama_kolom = $request->name_input
+        $anggota->nama = $request->nama;
+        $anggota->npm = $request->npm;
+        $anggota->email = $request->email;
+        $anggota->nohp = $request->nohp;
+        $anggota->fakultas = $request->fakultas;
+        $anggota->jurusan = $request->jurusan;
+        $anggota->angkatan = $request->angkatan;
+        $anggota->status = $request->status;
+
+        // dd($ukm);
+
+        $anggota->save();
+
+        return redirect('dashboardukmanggota')->with('success', 'data saved');
     }
 
     /**
