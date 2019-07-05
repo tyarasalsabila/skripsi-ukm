@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+// use App\Dashboardbemukm;
+use App\Ukm;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +16,9 @@ class DashboardbemukmController extends Controller
      */
     public function index()
     {   
-        
+        $data['ukms'] = Ukm::all();
+        // dd($data);
+        return view('dashboardbemukm', $data);
     }
 
     /**
@@ -35,7 +39,25 @@ class DashboardbemukmController extends Controller
      */
     public function store(Request $request)
     {
-        
+        // $variabel = new NamaModel;
+        $ukm = new Ukm;
+
+        // $variabel->nama_kolom = $request->name_input
+        $ukm->nama = $request->nama;
+        $ukm->namapendek = $request->namapendek;
+        $ukm->hari = $request->hari;
+        $ukm->jam = $request->jam;
+        $ukm->tempat = $request->hari;
+        $ukm->profil = $request->profil;
+        $ukm->ketua = $request->ketua;
+        $ukm->npm = $request->npm;
+        $ukm->pembina = $request->pembina;
+
+        // dd($ukm);
+
+        $ukm->save();
+
+        return redirect('dashboardbemukm')->with('success', 'data saved');
     }
 
     /**
@@ -69,7 +91,36 @@ class DashboardbemukmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'nama' => 'required',
+            'namapendek' => 'required',
+            'hari' => 'required',
+            'jam' => 'required',
+            'tempat' => 'required',
+            'profil' => 'required',
+            'ketua' => 'required',
+            'npm' => 'required',
+            'pembina' => 'required',
+        ]);
+        
+        $ukm = Ukm::find($id);
+
+        // $variabel->nama_kolom = $request->name_input
+        $ukm->nama = $request->nama;
+        $ukm->namapendek = $request->namapendek;
+        $ukm->hari = $request->hari;
+        $ukm->jam = $request->jam;
+        $ukm->tempat = $request->hari;
+        $ukm->profil = $request->profil;
+        $ukm->ketua = $request->ketua;
+        $ukm->npm = $request->npm;
+        $ukm->pembina = $request->pembina;
+
+        // dd($ukm);
+
+        $ukm->save();
+
+        return redirect('dashboardbemukm')->with('success', 'data updated');   
     }
 
     /**
@@ -80,6 +131,9 @@ class DashboardbemukmController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ukm = Ukm::find($id);
+        $ukm->delete();
+
+        return redirect('dashboardbemukm')->with('success', 'data deleted');   
     }
 }

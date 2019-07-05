@@ -15,14 +15,15 @@ class CreateUkmsTable extends Migration
     {
         Schema::create('ukms', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('nama');
-            $table->text('namapendek');
+            $table->string('nama');
+            $table->string('namapendek');
             $table->string('hari');
             $table->time('jam');
             $table->string('tempat');
             $table->text('profil');
-            $table->text('ketua');
-            $table->text('nohp');
+            $table->string('ketua');
+            $table->string('npm');
+            $table->string('pembina');
             $table->timestamps();
         });
     }

@@ -18,6 +18,6 @@ class Registrasi extends Model
     ];
 
     public function ukm(){
-        return $this->belongsTo('App\Ukm');
+        return $this->belongsTo('App\Ukm', 'id_ukm');
     }
 }

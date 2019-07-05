@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard UKM')
+@section ('title','Dashboard UKM - Galeri')
 
 @section ('content')
 
@@ -17,29 +17,27 @@
 						</div>
 					<div class="panel-body">
 						<p class="demo-button">
-							<button type="button" class="btn btn-primary">Add Anggota</button>
-							<button type="button" class="btn btn-warning">Edit</button>
-							<button type="button" class="btn btn-danger">Delete</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Prestasi</button>
 						</p>
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Nama</th>
-									<th>Fakultas</th>
-									<th>Jurusan</th>
-									<th>Angkatan</th>
-									<th>Status</th>
+									<th>Foto</th>
+									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
+								@php ($x = 0)
+								@foreach ($galeri as $glr)
+								@php ($x = $x+1)
 								<tr>
-									<td>No</td>
-									<td>Bambang</td>
-									<td>MIPA</td>
-									<td>Teknik Informatika</td>
-									<td>2019</td>
-									<td>Aktif</td>
+									<td>{{$x}}</td>
+									<td>{{Bambang}}</td>
+									<td>
+										<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+									</td>
 								</tr>
 							</tbody>
 						</table>

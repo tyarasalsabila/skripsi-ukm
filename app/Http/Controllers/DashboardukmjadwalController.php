@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Dashboardbem;
-use App\Berita;
-use App\Agenda;
-use App\User;
-use App\Ukm;
 use Illuminate\Http\Request;
+use App\Ukm;
 
-class DashboardbemController extends Controller
+class DashboardukmjadwalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +14,8 @@ class DashboardbemController extends Controller
      */
     public function index()
     {
-        // ngambil data berita + ukm
-        // ngambil data agenda + ukm
-        $berita = Berita::with('ukm')->get();
-        $agenda = Agenda::with('ukm')->get();
-        $data = array(
-            'berita' => $berita,
-            'agenda' =>$agenda,           
-        );
-        // dd($data);
-
-        return view('dashboardbem',$data);
-
+        //gelap
+        return view('dashboardukmjadwal', $data);
     }
 
     /**
@@ -50,16 +36,16 @@ class DashboardbemController extends Controller
      */
     public function store(Request $request)
     {
-        // 
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Dashboardbem  $dashboardbem
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Dashboardbem $dashboardbem)
+    public function show($id)
     {
         //
     }
@@ -67,10 +53,10 @@ class DashboardbemController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Dashboardbem  $dashboardbem
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dashboardbem $dashboardbem)
+    public function edit($id)
     {
         //
     }
@@ -79,10 +65,10 @@ class DashboardbemController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Dashboardbem  $dashboardbem
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dashboardbem $dashboardbem)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -90,10 +76,10 @@ class DashboardbemController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Dashboardbem  $dashboardbem
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dashboardbem $dashboardbem)
+    public function destroy($id)
     {
         //
     }

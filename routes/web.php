@@ -24,10 +24,57 @@ Route::get('/berita/{id}', 'BeritaController@show');
 Route::get('/agenda', 'AgendaController@index');
 Route::get('/agenda/{id}', 'AgendaController@show');
 Route::get('/registrasi', 'RegistrasiController@create');
+Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
+
+
+// Admin BEM
+Route::get('/adminbem', 'ty@adminbem');
 
 Route::get('/dashboardbem', 'DashboardbemController@index');
-Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
 Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem');
+
+Route::get('/dashboardbemukm', 'DashboardbemukmController@index');
+Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm');
+
+Route::get('/dashboardbemberita', 'DashboardbemberitaController@index');
+Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita');
+
+Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index');
+Route::post('/dashbemagenda', 'DashboardbemagendaController@store')->name('dashbemagenda');
+
+
+// Admin UKM
+Route::get('/adminukm', 'ty@adminukm');
+
+Route::get('/dashboardukm', 'DashboardukmController@index');
+Route::post('/dashukm', 'DashboardukmController@store')->name('dashukm');
+
+Route::get('/dashboardukmanggota', 'DashboardukmanggotaController@index');
+Route::post('/dashukmanggota', 'DashboardukmanggotaController@store')->name('dashukmanggota');
+
+Route::get('/dashboardukmgaleri', 'DashboardukmgaleriController@index');
+Route::post('/dashukmgaleri', 'DashboardukmgaleriController@store')->name('dashukmgaleri');
+
+Route::get('/dashboardukmberita', 'DashboardukmberitaController@index');
+Route::post('/dashukmberita', 'DashboardukmberitaController@store')->name('dashukmberita');
+
+Route::get('/dashboardukmagenda', 'DashboardukmagendaController@index');
+Route::post('/dashukmagenda', 'DashboardukmagendaController@store')->name('dashukmagenda');
+
+Route::get('/dashboardukmprestasi', 'DashboardukmprestasiController@index');
+Route::post('/dashukmprestasi', 'DashboardukmprestasiController@store')->name('dashukmprestasi');
+
+Route::get('/dashboardukmjadwal', 'DashboardukmjadwalController@index');
+Route::post('/dashukmjadwal', 'DashboardukmjadwalController@store')->name('dashukmjadwal');
+
+
+// Route::get('/dashboardukm', 'ty@dashboardukm');
+Route::get('/anggotaukm', 'ty@anggotaukm');
+Route::get('/galeriukm', 'ty@galeriukm');
+Route::get('/beritaukm', 'ty@beritaukm');
+Route::get('/agendaukm', 'ty@agendaukm');
+Route::get('/prestasiukm', 'ty@prestasiukm');
+Route::get('/jadwalukm', 'ty@jadwalukm');
 
 
 Route::get('/notifikasi', 'NotifikasiController@index');
@@ -35,14 +82,14 @@ Route::get('/notifikasi', 'NotifikasiController@index');
 // Admin BEM
 Route::get('/adminbem', 'ty@adminbem');
 // Route::get('/dashboardbem', 'ty@dashboardbem');
-Route::get('/dashboardbemukm', 'ty@dashboardbemukm');
-Route::get('/bemberita', 'ty@bemberita');
-Route::get('/bemagenda', 'ty@bemagenda');
+// Route::get('/dashboardbemukm', 'ty@dashboardbemukm');
+// Route::get('/bemberita', 'ty@bemberita');
+// Route::get('/bemagenda', 'ty@bemagenda');
 
 
 // Admin UKM
 Route::get('/adminukm', 'ty@adminukm');
-Route::get('/dashboardukm', 'ty@dashboardukm');
+// Route::get('/dashboardukm', 'ty@dashboardukm');
 Route::get('/anggotaukm', 'ty@anggotaukm');
 Route::get('/galeriukm', 'ty@galeriukm');
 Route::get('/beritaukm', 'ty@beritaukm');
@@ -55,7 +102,7 @@ Route::get('/jadwalukm', 'ty@jadwalukm');
 Route::get('/notifikasidetail', 'ty@notifikasidetail');
 
 
-Route::get('/dashboardukm', 'ty@dashboardukm');
+// Route::get('/dashboardukm', 'ty@dashboardukm');
 Route::get('/dashboardanggotaukm', 'ty@dashboardanggotaukm');
 
 
