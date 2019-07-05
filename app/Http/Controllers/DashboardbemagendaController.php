@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Agenda;
+use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class DashboardbemagendaController extends Controller
 {
@@ -38,6 +41,25 @@ class DashboardbemagendaController extends Controller
     public function store(Request $request)
     {
         //
+        $agenda = new Agenda;
+
+        $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+
+
+        $agenda->judul = $request->judul;
+        $agenda->isi = $request->isi;
+        $agenda->id_ukm = Auth::user()->id_ukm;
+        $agenda->id_user = Auth::user()->id;
+        $agenda->foto = $path;
+        $agenda->link = "as.as";
+        $agenda->confirmed = 0;
+
+        // dd($agenda);
+        $agenda->save();
+
+        return redirect('dashboardbemagenda')->with('success', 'data saved');
+
+
     }
 
     /**

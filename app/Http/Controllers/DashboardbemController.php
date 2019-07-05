@@ -20,7 +20,7 @@ class DashboardbemController extends Controller
     {
         // ngambil data berita + ukm
         // ngambil data agenda + ukm
-        $berita = Berita::with('ukm')->get();
+        $berita = Berita::with('ukm')->where('confirmed',0)->get();
         $agenda = Agenda::with('ukm')->get();
         $data = array(
             'berita' => $berita,

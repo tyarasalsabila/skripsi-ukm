@@ -124,6 +124,28 @@
 				
 				// $('#deleteModal').modal('show');
 			});
+
+			table.on('click', '.accept', function () {
+				$tr = $(this).closest('tr');
+				if($($tr).hasClass('child')) {
+					$tr = $tr.prev('.parent');
+				}
+
+				var data = table.row($tr).data();
+				console.log(data);
+
+				$('#judul').val(data[1]);
+				$('#isi').val(data[2]);
+				$('#id_ukm').val(data[3]);
+				$('#id_user').val(data[4]);
+				$('#foto').val(data[5]);
+				$('#confirmed').val(data[6]);
+				$('#created_at').val(data[7]);
+				
+				$('#editForm').attr('action', '/dashbemukmupdate/'+data[0]);
+				
+				// $('#editModal').modal('show');
+			});
 		});
 	</script>
 

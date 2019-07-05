@@ -35,7 +35,7 @@
 							<h3 class="panel-title">Notifikasi Berita</h3>
 						</div>
 						<div class="panel-body">
-							<table class="table table-bordered table-hover">
+							<table class="table table-bordered table-hover" id="datatable">
 								<thead>
 									<tr>
 										<th>No</th>
@@ -56,8 +56,8 @@
 										<td>{{$brt->isi}}</td>
 										<td>
 											<!-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button> -->
-											<a href="#" data-target = "#acceptModal" data-toggle="modal" data-id = "{{$brt->id}}" role="button" class="btn btn-primary btn-toastr">Accept</a>
-											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button>
+											<a href="#" type="button" class="btn btn-primary accept" data-toggle="modal" data-target="#acceptModal">Accept</a>
+											<a href="#" type="button" class="btn btn-danger reject" data-toggle="modal" data-target="#rejectModal">Reject</button>
 										</td>
 									</tr>
 									@endforeach
@@ -237,29 +237,31 @@ $(document).on("click", ".editDialog", function () {
      // $('#addBookDialog').modal('show');
 });</script> --}} -->
 
-<script>
-$('#acceptModal').on('show', function(e) {
-    var link     = e.relatedTarget(),
-        modal    = $(this),
-        id = link.data("id");
-        // email    = link.data("email");
-	window.alert(id);
-    modal.find("#email").val(email);
-    modal.find("#username").val(username);
-});
-</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+			var table = $('#datatable').DataTable();
+
+			//Edit
+			
 
 
+			//Delete
+			table.on('click', '.delete', function () {
+				$tr = $(this).closest('tr');
+				if($($tr).hasClass('child')) {
+					$tr = $tr.prev('.parent');
+				}
 
-<script>
-$('.editDialog').on('show.bs.modal', function(e) {
+				var data = table.row($tr).data();
+				console.log(data);
 
-//get data-id attribute of the clicked element
-var dataId = $(e.relatedTarget).data('id');
+				$('#id').val(data[0]);
 
-//populate the textbox
-$(e.currentTarget).find('input[name="bookId"]').val(dataId);
-});
+				$('#deleteForm').attr('action', '/dashbemukmdelete/'+data[0]);
+				
+				// $('#deleteModal').modal('show');
+			});
+		});
 </script>
 
 @endsection  

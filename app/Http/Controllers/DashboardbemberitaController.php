@@ -54,6 +54,8 @@ class DashboardbemberitaController extends Controller
         // dd($brt);
 
         $brt->save();
+
+        return redirect('dashboardbemberita')->with('success', 'data saved');
     }
 
     /**
