@@ -8,7 +8,6 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Dashboard UKM</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
@@ -30,7 +29,6 @@
 									<th>Fakultas</th>
 									<th>Jurusan</th>
 									<th>Angkatan</th>
-									<th>Status</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -47,7 +45,6 @@
 									<td>{{$ang->fakutlas}}</td>
 									<td>{{$ang->jurusan}}</td>
 									<td>{{$ang->angkatan}}</td>
-									<td>{{$ang->status}}</td>
 									<td>
 										<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addModal">Delete</button>
@@ -188,7 +185,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Save</button>
+								<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>
 					</div>

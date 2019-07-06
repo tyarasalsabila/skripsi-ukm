@@ -8,7 +8,6 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Prestasi UKM</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
@@ -69,29 +68,22 @@
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="ukm" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Prestasi </label>
+									<input type="text" name="prestasi" class="form-control" placeholder="Masukkan Prestasi">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
-									<input type="text" name="namapendek" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Anggota </label>
+									<input type="text" name="anggota" class="form-control" placeholder="Masukkan Nama Peraih Prestasi">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="ketua" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Tahun </label>
+									<input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun Prestasi">
 								</div>
 
 								<br>
@@ -121,37 +113,30 @@
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+							<div class="form-group">
+									<label> Prestasi </label>
+									<input type="text" name="prestasi" class="form-control" placeholder="Masukkan Prestasi">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Anggota </label>
+									<input type="text" name="anggota" class="form-control" placeholder="Masukkan Nama Peraih Prestasi">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Tahun </label>
+									<input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun Prestasi">
 								</div>
 
 								<br>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Save</button>
+								<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>
 					</div>

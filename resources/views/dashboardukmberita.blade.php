@@ -8,7 +8,6 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Berita</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
@@ -25,7 +24,6 @@
 										<th>No</th>
 										<th>Tanggal</th>
 										<th>Judul</th>
-										<th>UKM</th>
 										<th>Foto</th>
 										<th>Isi</th>
 										<th>Action</th>
@@ -39,7 +37,6 @@
 										<td>{{$x}}</td>
 										<td>{{$brt->create_at}}</td>
 										<td>{{$brt->judul}}</td>
-										<td>{{$brt->ukm->nama}}</td>
 										<td>{{$brt->foto}}</td>
 										<td>{{$brt->isi}}</td>
 										<td>
@@ -70,29 +67,22 @@
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="ukm" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
-									<input type="text" name="namapendek" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Isi </label>
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
 								</div>
 
 								<br>
 
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="ketua" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" placeholder="Masukkan Isi Berita">
+								<label> Upload Foto </label>
+								<div class="custom-file">
+									<input type="file" name="image" class="custom-file-input">
 								</div>
 
 								<br>
@@ -122,30 +112,23 @@
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+							<div class="form-group">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
+									<label> Isi </label>
 									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
 								</div>
 
 								<br>
 
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+								<label> Upload Foto </label>
+								<div class="custom-file">
+									<input type="file" name="image" class="custom-file-input">
 								</div>
 
 								<br>

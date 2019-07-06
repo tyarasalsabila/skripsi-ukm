@@ -8,17 +8,13 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Jadwal UKM</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">List Prestasi</h3>
+							<h3 class="panel-title">Jadwal UKM</h3>
 						</div>
 						<div class="panel-body">
-							<p class="demo-button">
-								<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
-							</p>
 							<table class="table table-bordered table-hover">
 								<thead>
 									<tr>
@@ -33,6 +29,9 @@
 										<td>{{$ukm->hari}}</td>
 										<td>{{$ukm->jam}}</td>
 										<td>{{$ukm->tempat}}</td>
+										<td>
+											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+										</td>
 									</tr>
 								@endforeach
 								</tbody>

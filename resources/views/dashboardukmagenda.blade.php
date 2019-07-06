@@ -8,7 +8,6 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Agenda</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
@@ -17,7 +16,7 @@
 						</div>
 						<div class="panel-body">
 							<p class="demo-button">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Berita</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Agenda</button>
 							</p>
 							<table class="table table-bordered table-hover">
 								<thead>
@@ -70,30 +69,23 @@
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="ukm" class="form-control" placeholder="Masukkan Isi Berita">
+							<div class="form-group">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
-									<input type="text" name="namapendek" class="form-control" placeholder="Masukkan Isi Berita">
+									<label> Isi </label>
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
 								</div>
 
 								<br>
 
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="ketua" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" placeholder="Masukkan Isi Berita">
+								<label> Upload Foto </label>
+								<div class="custom-file">
+									<input type="file" name="image" class="custom-file-input">
 								</div>
 
 								<br>
@@ -123,30 +115,23 @@
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-								<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+							<div class="form-group">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Nama Pendek </label>
+									<label> Isi </label>
 									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
 								</div>
 
 								<br>
 
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+								<label> Upload Foto </label>
+								<div class="custom-file">
+									<input type="file" name="image" class="custom-file-input">
 								</div>
 
 								<br>

@@ -19,7 +19,7 @@
 							<p class="demo-button">
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Berita</button>
 							</p>
-							<table class="table table-bordered table-hover table-responsive">
+							<table class="table table-bordered table-hover" id="datatable">
 								<thead>
 									<tr>
 										<th>No</th>
