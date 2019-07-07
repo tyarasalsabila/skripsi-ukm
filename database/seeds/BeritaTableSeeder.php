@@ -15,7 +15,7 @@ class BeritaTableSeeder extends Seeder
         DB::table('beritas')->insert([
             'judul' => "A",
             'isi' => "ahahaha",
-            'foto' =>'aisd',
+            'foto' =>'1562353360.jpg',
             'id_ukm' => 1,
             'id_user' => 1,
             'confirmed' =>true,
@@ -25,10 +25,10 @@ class BeritaTableSeeder extends Seeder
         DB::table('beritas')->insert([
             'judul' => "B",
             'isi' => "ahahaha",
-            'foto' =>'aisd',
+            'foto' =>'1562353360.jpg',
             'id_ukm' => 1,
             'id_user' => 1,
-            'confirmed' =>true,
+            'confirmed' =>false,
             
         ]);
     }

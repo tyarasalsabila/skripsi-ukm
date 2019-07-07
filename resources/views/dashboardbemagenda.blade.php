@@ -25,7 +25,7 @@
 										<th>No</th>
 										<th>Tanggal</th>
 										<th>Judul</th>
-										<th>UKM</th>
+										{{-- <th>UKM</th> --}}
 										<th>Foto</th>
 										<th>Isi</th>
 										<th>Link</th>
@@ -40,7 +40,7 @@
 										<td>{{$x}}</td>
 										<td>{{$agd->created_at}}</td>
 										<td>{{$agd->judul}}</td>
-										<td>{{$agd->ukm->nama}}</td>
+										{{-- <td>{{$agd->ukm->nama}}</td> --}}
 										<td><img src="{{  url('').'/storage/'.$agd->foto }}" width="70px"></td>
 										<td>{{$agd->isi}}</td>
 										<td>{{$agd->link}}</td>

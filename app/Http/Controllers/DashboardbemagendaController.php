@@ -17,7 +17,7 @@ class DashboardbemagendaController extends Controller
      */
     public function index()
     {
-        $data['agenda'] = Agenda::all();
+        $data['agenda'] = Agenda::where('id_ukm','=',NULL)->get();
         // dd($data);
         return view('dashboardbemagenda', $data);
     }
@@ -52,7 +52,7 @@ class DashboardbemagendaController extends Controller
         $agenda->id_user = Auth::user()->id;
         $agenda->foto = $path;
         $agenda->link = "as.as";
-        $agenda->confirmed = 0;
+        $agenda->confirmed = 1;
 
         // dd($agenda);
         $agenda->save();

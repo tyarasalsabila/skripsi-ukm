@@ -39,7 +39,7 @@
 										<td>{{$agd->create_at}}</td>
 										<td>{{$agd->judul}}</td>
 										<td>{{$agd->ukm->nama}}</td>
-										<td>{{$agd->foto}}</td>
+										<td><img src="{{ url('').'/storage/'.$agd->foto}}" width="70px" alt=""></td>
 										<td>{{$agd->isi}}</td>
 										<td>
 											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
@@ -66,7 +66,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="{{route('dashukmagenda')}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
 							<div class="form-group">

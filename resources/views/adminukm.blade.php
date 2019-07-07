@@ -39,7 +39,7 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"><span>Admin UKM</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="/dashboardlogout"><span>Logout</span></a></li>
+								<li><a href="/logout"><span>Logout</span></a></li>
 							</ul>
 						</li>
 					</ul>

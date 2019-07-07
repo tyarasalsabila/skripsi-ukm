@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             UkmSeeder::class,
             UsersTableSeeder::class,
             BeritaTableSeeder::class,
+            AgendaTableSeeder::class,
 
             ]);
     }

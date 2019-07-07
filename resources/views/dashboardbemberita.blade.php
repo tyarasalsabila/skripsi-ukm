@@ -25,7 +25,7 @@
 										<th>No</th>
 										<th>Tanggal</th>
 										<th>Judul</th>
-										<th>UKM</th>
+										{{-- <th>UKM</th> --}}
 										<th>Foto</th>
 										<th>Isi</th>
 										<th>Action</th>
@@ -39,7 +39,7 @@
 										<td>{{$x}}</td>
 										<td>{{$brt->created_at}}</td>
 										<td>{{$brt->judul}}</td>
-										<td>{{$brt->ukm->nama}}</td>
+										{{-- <td>{{$brt->ukm->nama}}</td> --}}
 										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px"; alt=""></td>
 										<td>{{$brt->isi}}</td>
 										<td>

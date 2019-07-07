@@ -16,7 +16,7 @@
 						</div>
 						<div class="panel-body">
 							<p class="demo-button">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Anggota</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Berita</button>
 							</p>
 							<table class="table table-bordered table-hover">
 								<thead>
@@ -37,7 +37,7 @@
 										<td>{{$x}}</td>
 										<td>{{$brt->create_at}}</td>
 										<td>{{$brt->judul}}</td>
-										<td>{{$brt->foto}}</td>
+										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
 										<td>{{$brt->isi}}</td>
 										<td>
 											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
@@ -63,7 +63,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="{{route('dashukmberita')}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">

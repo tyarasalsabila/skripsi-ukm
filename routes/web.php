@@ -28,46 +28,46 @@ Route::post('/daftar', 'RegistrasiController@store')->name('daftar');
 
 
 // Admin BEM
-Route::get('/adminbem', 'ty@adminbem');
+Route::get('/adminbem', 'ty@adminbem')->middleware('auth');
 
-Route::get('/dashboardbem', 'DashboardbemController@index');
-Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem');
+Route::get('/dashboardbem', 'DashboardbemController@index')->middleware('auth');
+Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem')->middleware('auth');
 
-Route::get('/dashboardbemukm', 'DashboardbemukmController@index');
-Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm');
-Route::put('/dashbemukmupdate/{id}', 'DashboardbemukmController@update')->name('dashbemukmupdate');
-Route::delete('/dashbemukmdelete/{id}', 'DashboardbemukmController@destroy')->name('dashbemukmdelete');
+Route::get('/dashboardbemukm', 'DashboardbemukmController@index')->middleware('auth');
+Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm')->middleware('auth');
+Route::put('/dashbemukmupdate/{id}', 'DashboardbemukmController@update')->name('dashbemukmupdate')->middleware('auth');
+Route::delete('/dashbemukmdelete/{id}', 'DashboardbemukmController@destroy')->name('dashbemukmdelete')->middleware('auth');
 
-Route::get('/dashboardbemberita', 'DashboardbemberitaController@index');
-Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita');
+Route::get('/dashboardbemberita', 'DashboardbemberitaController@index')->middleware('auth');
+Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita')->middleware('auth');
 
-Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index');
-Route::post('/dashbemagenda', 'DashboardbemagendaController@store')->name('dashbemagenda');
+Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index')->middleware('auth');
+Route::post('/dashbemagenda', 'DashboardbemagendaController@store')->name('dashbemagenda')->middleware('auth');
 
 
 // Admin UKM
-Route::get('/adminukm', 'ty@adminukm');
+Route::get('/adminukm', 'ty@adminukm')->middleware('auth');
 
-Route::get('/dashboardukm', 'DashboardukmController@index');
-Route::post('/dashukm', 'DashboardukmController@store')->name('dashukm');
+Route::get('/dashboardukm', 'DashboardukmController@index')->middleware('auth')->name('dashboardukm');
+Route::post('/dashukm', 'DashboardukmController@store')->name('dashukm')->middleware('auth');
 
-Route::get('/dashboardukmanggota', 'DashboardukmanggotaController@index');
-Route::post('/dashukmanggota', 'DashboardukmanggotaController@store')->name('dashukmanggota');
+Route::get('/dashboardukmanggota', 'DashboardukmanggotaController@index')->middleware('auth');
+Route::post('/dashukmanggota', 'DashboardukmanggotaController@store')->name('dashukmanggota')->middleware('auth');
 
-Route::get('/dashboardukmgaleri', 'DashboardukmgaleriController@index');
-Route::post('/dashukmgaleri', 'DashboardukmgaleriController@store')->name('dashukmgaleri');
+Route::get('/dashboardukmgaleri', 'DashboardukmgaleriController@index')->middleware('auth');
+Route::post('/dashukmgaleri', 'DashboardukmgaleriController@store')->name('dashukmgaleri')->middleware('auth');
 
-Route::get('/dashboardukmberita', 'DashboardukmberitaController@index');
-Route::post('/dashukmberita', 'DashboardukmberitaController@store')->name('dashukmberita');
+Route::get('/dashboardukmberita', 'DashboardukmberitaController@index')->middleware('auth');
+Route::post('/dashukmberita', 'DashboardukmberitaController@store')->name('dashukmberita')->middleware('auth');
 
-Route::get('/dashboardukmagenda', 'DashboardukmagendaController@index');
-Route::post('/dashukmagenda', 'DashboardukmagendaController@store')->name('dashukmagenda');
+Route::get('/dashboardukmagenda', 'DashboardukmagendaController@index')->middleware('auth');
+Route::post('/dashukmagenda', 'DashboardukmagendaController@store')->name('dashukmagenda')->middleware('auth');
 
-Route::get('/dashboardukmprestasi', 'DashboardukmprestasiController@index');
-Route::post('/dashukmprestasi', 'DashboardukmprestasiController@store')->name('dashukmprestasi');
+Route::get('/dashboardukmprestasi', 'DashboardukmprestasiController@index')->middleware('auth');
+Route::post('/dashukmprestasi', 'DashboardukmprestasiController@store')->name('dashukmprestasi')->middleware('auth');
 
-Route::get('/dashboardukmjadwal', 'DashboardukmjadwalController@index');
-Route::post('/dashukmjadwal', 'DashboardukmjadwalController@store')->name('dashukmjadwal');
+Route::get('/dashboardukmjadwal', 'DashboardukmjadwalController@index')->middleware('auth');
+Route::post('/dashukmjadwal', 'DashboardukmjadwalController@store')->name('dashukmjadwal')->middleware('auth');
 
 
 // Route::get('/dashboardukm', 'ty@dashboardukm');
@@ -79,7 +79,7 @@ Route::get('/prestasiukm', 'ty@prestasiukm');
 Route::get('/jadwalukm', 'ty@jadwalukm');
 
 
-Route::get('/notifikasi', 'NotifikasiController@index');
+// Route::get('/notifikasi', 'NotifikasiController@index');
 
 // Admin BEM
 Route::get('/adminbem', 'ty@adminbem');

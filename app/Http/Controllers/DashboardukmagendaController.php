@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Agenda;
 use App\Ukm;
+use Auth;
 use Illuminate\Http\Request;
 
 class DashboardukmagendaController extends Controller
@@ -40,6 +41,24 @@ class DashboardukmagendaController extends Controller
     public function store(Request $request)
     {
         //
+        $agenda = new Agenda;
+
+        $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+
+
+        $agenda->judul = $request->judul;
+        $agenda->isi = $request->isi;
+        $agenda->id_ukm = Auth::user()->id_ukm;
+        $agenda->id_user = Auth::user()->id;
+        $agenda->foto = $path;
+        $agenda->link = "as.as";
+        $agenda->confirmed = 1;
+
+        // dd($agenda);
+        $agenda->save();
+
+        return redirect('dashboardukmagenda')->with('success', 'data saved');
+
     }
 
     /**

@@ -17,7 +17,7 @@ class DashboardbemberitaController extends Controller
      */
     public function index()
     {
-        $data['berita'] = Berita::all();
+        $data['berita'] = Berita::where('id_ukm','=',NULL)->get();
         // dd($data);
         return view('dashboardbemberita', $data);
     }
@@ -48,7 +48,7 @@ class DashboardbemberitaController extends Controller
         $brt->isi = $request->isi;
         $brt->id_ukm = Auth::user()->id_ukm;
         $brt->id_user = Auth::user()->id;
-        $brt->confirmed = 0;
+        $brt->confirmed = 1;
         $brt->foto = $path;
 
         // dd($brt);
