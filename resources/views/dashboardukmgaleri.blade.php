@@ -34,7 +34,7 @@
 									<td>{{$x}}</td>
 									<td>{{Bambang}}</td>
 									<td>
-										<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+										<a href="/formukmgaleri" type="button" class="btn btn-warning">Edit</a>
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 									</td>
 								</tr>

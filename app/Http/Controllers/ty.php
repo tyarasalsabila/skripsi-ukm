@@ -84,9 +84,19 @@ class ty extends Controller
         return view('dashboardbemukm');
     }
 
+    public function formbemukm()
+    {
+        return view('formbemukm');
+    }
+
     public function bemagenda()
     {
         return view('bemagenda');
+    }
+
+    public function formbemagenda()
+    {
+        return view('formbemagenda');
     }
 
     public function bemberita()
@@ -94,9 +104,9 @@ class ty extends Controller
         return view('bemberita');
     }
 
-    public function notifikasidetail()
+    public function formbemberita()
     {
-        return view('notifikasidetail');
+        return view('formbemberita');
     }
 
 
@@ -116,9 +126,19 @@ class ty extends Controller
         return view('anggotaukm');
     }
 
+    public function formukmanggota()
+    {
+        return view('formukmanggota');
+    }
+
     public function galeriukm()
     {
         return view('galeriukm');
+    }
+
+    public function formukmgaleri()
+    {
+        return view('formukmgaleri');
     }
 
     public function beritaukm()
@@ -126,9 +146,19 @@ class ty extends Controller
         return view('beritaukm');
     }
 
+    public function formukmberita()
+    {
+        return view('formukmberita');
+    }
+
     public function agendaukm()
     {
         return view('agendaukm');
+    }
+
+    public function formukmagenda()
+    {
+        return view('formukmagenda');
     }
 
     public function prestasiukm()
@@ -136,8 +166,18 @@ class ty extends Controller
         return view('prestasiukm');
     }
 
+    public function formukmprestasi()
+    {
+        return view('formukmprestasi');
+    }
+
     public function jadwalukm()
     {
         return view('jadwalukm');
+    }
+
+    public function formukmjadwal()
+    {
+        return view('formukmjadwal');
     }
 }

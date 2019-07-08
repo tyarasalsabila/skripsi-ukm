@@ -43,7 +43,7 @@
 										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px"; alt=""></td>
 										<td>{{$brt->isi}}</td>
 										<td>
-											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+											<a href="/formbemberita" type="button" class="btn btn-warning">Edit</a>
 											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 										</td>
 									</tr>

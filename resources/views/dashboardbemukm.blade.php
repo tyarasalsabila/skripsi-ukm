@@ -52,7 +52,7 @@
 									<td>{{$ukm->npm}}</td>
 									<td>{{$ukm->pembina}}</td>
 									<td>
-										<a href="#" type="button" class="btn btn-warning edit" data-toggle="modal" data-target="#editModal">Edit</a>
+										<a href="/formbemukm" type="button" class="btn btn-warning edit">Edit</a>
 										<a href="#" type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</a>
 									</td>
 								</tr>

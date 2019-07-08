@@ -1,6 +1,6 @@
-@extends ('admin')
+@extends ('adminukm')
 
-@section ('title','Dashboard Pendaftaran UKM')
+@section ('title','Dashboard BEM - Agenda')
 
 @section ('content')
 
@@ -8,51 +8,14 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
+			<h3 class="page-title">Agenda</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Jadwal UKM</h3>
+							<h3 class="panel-title">List Agenda</h3>
 						</div>
 						<div class="panel-body">
-							<table class="table table-bordered table-hover">
-								<thead>
-									<tr>
-										<th>Hari</th>
-										<th>Jam</th>
-										<th>Tempat</th>
-									</tr>
-								</thead>
-								<tbody>
-								@foreach ($ukms as $ukm)
-									<tr>
-										<td>{{$ukm->hari}}</td>
-										<td>{{$ukm->jam}}</td>
-										<td>{{$ukm->tempat}}</td>
-										<td>
-											<a href="/formukmjadwal" type="button" class="btn btn-warning">Edit</a>
-										</td>
-									</tr>
-								@endforeach
-								</tbody>
-							</table>
-						</div>
-					</div>						
-				</div>
-			</div>
-
-
-			<!-- Edit -->
-			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<!-- <h5 class="modal-title" id="addModalLabel"></h5> -->
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
 						<form action="{{route('dashbem')}}" method="POST">
 							@csrf
 							<div class="modal-body">
@@ -82,10 +45,10 @@
 								<button type="submit" class="btn btn-primary">Save</button>
 							</div>
 						</form>
-					</div>
+						</div>
+					</div>						
 				</div>
 			</div>
-			<!-- Edit -->
 		</div>
 	</div>
 </div>

@@ -25,10 +25,8 @@
 										<th>No</th>
 										<th>Tanggal</th>
 										<th>Judul</th>
-										{{-- <th>UKM</th> --}}
 										<th>Foto</th>
 										<th>Isi</th>
-										<th>Link</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -40,12 +38,10 @@
 										<td>{{$x}}</td>
 										<td>{{$agd->created_at}}</td>
 										<td>{{$agd->judul}}</td>
-										{{-- <td>{{$agd->ukm->nama}}</td> --}}
 										<td><img src="{{  url('').'/storage/'.$agd->foto }}" width="70px"></td>
 										<td>{{$agd->isi}}</td>
-										<td>{{$agd->link}}</td>
 										<td>
-											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+											<a href="/formbemagenda" type="button" class="btn btn-warning">Edit</a>
 											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 										</td>
 									</tr>

@@ -46,7 +46,7 @@
 									<td>{{$ang->jurusan}}</td>
 									<td>{{$ang->angkatan}}</td>
 									<td>
-										<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+										<a href="/formukmanggota" type="button" class="btn btn-warning">Edit</a>
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addModal">Delete</button>
 									</td>
 								</tr>

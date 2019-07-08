@@ -40,7 +40,7 @@
 										<td>{{$member->nama}}</td>
 										<td>{{$prest->tahun}}</td>
 										<td>
-											<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+											<a href="/formukmprestasi" type="button" class="btn btn-warning">Edit</a>
 											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 										</td>
 									</tr>
