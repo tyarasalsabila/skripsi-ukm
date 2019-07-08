@@ -17,7 +17,7 @@ class Prestasi extends Model
         return $this->belongsTo('App\Ukm');
     }
 
-    public function anggota(){
-        return $this->belongsTo('App\Anggota');
-    }
+    // public function anggota(){
+    //     return $this->belongsTo('App\Anggota');
+    // }
 }

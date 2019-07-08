@@ -17,17 +17,17 @@ class CreatePrestasisTable extends Migration
             $table->increments('id');
             $table->text('nama');
             $table->integer('tahun');
-            $table->integer('id_ukm')->unsigned();;
-            $table->integer('id_anggota')->unsigned();;
+            $table->integer('id_ukm')->unsigned();
+            $table->string('id_anggota');
             $table->timestamps();
 
             $table->foreign('id_ukm')
             ->references('id')
             ->on('ukms');
 
-            $table->foreign('id_anggota')
-            ->references('id')
-            ->on('anggotas');
+            // $table->foreign('id_anggota')
+            // ->references('id')
+            // ->on('anggotas');
         });
     }
 
