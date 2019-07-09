@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\Registrasi;
 
 class DashboardukmController extends Controller
@@ -15,11 +16,18 @@ class DashboardukmController extends Controller
     public function index()
     {
         //
-        $ukm = 1;
+        // dd(Auth::user()->id_ukm);
+        if (Auth::user()->id_ukm == NULL) {
+            return redirect('dashboardbem');
+        } else {
+            # code...
+        
+        
+        $ukm = Auth::user()->id_ukm;
         $data['reg'] = Registrasi::where('id_ukm', $ukm)->get();
         // dd($data);
         return view('dashboardukm', $data);
-
+        }     
     }
 
     /**
