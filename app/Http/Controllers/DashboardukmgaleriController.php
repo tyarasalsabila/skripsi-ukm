@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Galeri;
 use Illuminate\Http\Request;
+use Auth;
+use Exception;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 class DashboardukmgaleriController extends Controller
 {
@@ -37,7 +42,17 @@ class DashboardukmgaleriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $galeri = new Galeri;
+        $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+        // dd($path);
+        $galeri->link_foto = $path;
+        $galeri->id_ukm = Auth::user()->id_ukm;
+
+        dd($galeri);
+        
+        $galeri->save;      
+
+        return redirect('dashboardukmgaleri');
     }
 
     /**

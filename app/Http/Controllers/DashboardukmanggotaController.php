@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Anggota;
+use Auth;
 use Illuminate\Http\Request;
 
 class DashboardukmanggotaController extends Controller
@@ -41,13 +42,14 @@ class DashboardukmanggotaController extends Controller
 
         // $variabel->nama_kolom = $request->name_input
         $anggota->nama = $request->nama;
-        $anggota->npm = $request->npm;
-        $anggota->email = $request->email;
-        $anggota->nohp = $request->nohp;
+        // $anggota->npm = $request->npm;
+        // $anggota->email = $request->email;
+        // $anggota->nohp = $request->nohp;
         $anggota->fakultas = $request->fakultas;
         $anggota->jurusan = $request->jurusan;
         $anggota->angkatan = $request->angkatan;
-        $anggota->status = $request->status;
+        $anggota->status = 1;
+        $anggota->id_ukm = Auth::user()->id_ukm;
 
         // dd($ukm);
 

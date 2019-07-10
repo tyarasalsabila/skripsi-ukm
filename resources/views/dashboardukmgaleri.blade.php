@@ -32,7 +32,7 @@
 								@php ($x = $x+1)
 								<tr>
 									<td>{{$x}}</td>
-									<td>{{Bambang}}</td>
+									<td>{{ url('').'/storage/'.$glr->link_foto }}</td>
 									<td>
 										<a href="/formukmgaleri" type="button" class="btn btn-warning">Edit</a>
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
@@ -57,7 +57,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbem')}}" method="POST" enctype="multipart/form-data">
+						<form action="{{route('dashukmgaleri')}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
 								<label> Upload Foto </label>

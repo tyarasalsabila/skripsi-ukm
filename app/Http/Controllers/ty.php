@@ -121,6 +121,11 @@ class ty extends Controller
         return view('dashboardukm');
     }
 
+    public function dashboardukmregistrasi()
+    {
+        return view('dashboardukmregistrasi');
+    }
+
     public function anggotaukm()
     {
         return view('anggotaukm');

@@ -58,7 +58,8 @@
 						<li><a href="/dashboardukmberita" class=""><span>Berita</span></a></li>
                         <li><a href="/dashboardukmagenda" class=""><span>Agenda</span></a></li>
                         <li><a href="/dashboardukmprestasi" class=""><span>Prestasi</span></a></li>
-                        <li><a href="/dashboardukmjadwal" class=""><span>Jadwal</span></a></li>
+						<li><a href="/dashboardukmjadwal" class=""><span>Jadwal</span></a></li>
+						<li><a href="/dashboardukmregistrasi" class=""><span>Registrasi</span></a></li>
 					</ul>
 				</nav>
 			</div>

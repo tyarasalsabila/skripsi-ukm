@@ -10,7 +10,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="panel">
+					<div class="panel"	>
 						<div class="panel-heading">
 							<h3 class="panel-title">Anggota UKM</h3>
 						</div>
@@ -23,9 +23,9 @@
 								<tr>
 									<th>No</th>
 									<th>Nama</th>
-									<th>NPM</th>
+									{{-- <th>NPM</th>
 									<th>Email</th>
-									<th>No. HP</th>
+									<th>No. HP</th> --}}
 									<th>Fakultas</th>
 									<th>Jurusan</th>
 									<th>Angkatan</th>
@@ -39,10 +39,10 @@
 								<tr>
 									<td>{{$x}}</td>
 									<td>{{$ang->nama}}</td>
-									<td>{{$ang->npm}}</td>
+									{{-- <td>{{$ang->npm}}</td>
 									<td>{{$ang->email}}</td>
-									<td>{{$ang->nohp}}</td>
-									<td>{{$ang->fakutlas}}</td>
+									<td>{{$ang->nohp}}</td> --}}
+									<td>{{$ang->fakultas}}</td>
 									<td>{{$ang->jurusan}}</td>
 									<td>{{$ang->angkatan}}</td>
 									<td>
@@ -74,43 +74,43 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Nama </label>
-									<input type="text" name="nama" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="nama" class="form-control" placeholder="Masukkan Nama">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="npm" class="form-control" placeholder="Masukkan NPM">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Email </label>
-									<input type="text" name="email" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="email" class="form-control" placeholder="Masukkan Email">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> No. HP </label>
-									<input type="text" name="nohp" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="nohp" class="form-control" placeholder="Masukkan No Hp">
 								</div>
 
 								<div class="form-group">
 									<label> Fakultas </label>
-									<input type="text" name="fakultas" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="fakultas" class="form-control" placeholder="Pilih Fakultas">
 								</div>
 
 								<div class="form-group">
 									<label> Jurusan </label>
-									<input type="text" name="jurusan" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="jurusan" class="form-control" placeholder="Pilih Jurusan">
 								</div>
 
 								<div class="form-group">
 									<label> Angkatan </label>
-									<input type="text" name="angkatan" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="angkatan" class="form-control" placeholder="Angkatan">
 								</div>
 
 								<br>

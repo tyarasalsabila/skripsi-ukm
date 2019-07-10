@@ -71,14 +71,14 @@
 							<div class="modal-body">
 							<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Agenda">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Agenda">
 								</div>
 
 								<br>

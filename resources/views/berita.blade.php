@@ -19,7 +19,7 @@
         <div class="col-md-4 p-t-30">             
           <div class="blo1">
             <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
-              <a href="/beritaisi"><img src="images/berita/berita.png" alt="IMG-INTRO"></a>
+            <a href="/berita/{{$berita->id}}"><img src="{{url('').'/storage/'.$berita->foto}}" alt="IMG-INTRO"></a>
               <div class="time-blog">
    	            01 Mei 2019
               </div>

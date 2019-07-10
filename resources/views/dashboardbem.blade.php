@@ -21,7 +21,7 @@
                         <div class="col-md-3">
 							<div class="metric">
                                 <p style="text-align:center">
-                                    <span class="number">20</span>
+								<span class="number">{{$count}}</span>
                                     <span class="title">Jumlah UKM</span>
                                 </p>
 							</div>

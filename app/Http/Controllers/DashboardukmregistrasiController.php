@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Auth;
 use App\Registrasi;
-use App\Ukm;
-use App\Anggota;
+use Auth;
+use Illuminate\Http\Request;
 
-class DashboardukmController extends Controller
+class DashboardukmregistrasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,21 +15,18 @@ class DashboardukmController extends Controller
      */
     public function index()
     {
-        //
         // dd(Auth::user()->id_ukm);
         if (Auth::user()->id_ukm == NULL) {
-            return redirect('dashboardbem');
+            return redirect('dashboardukmregistrasi');
         } else {
             # code...
         
         
         $ukm = Auth::user()->id_ukm;
         $data['reg'] = Registrasi::where('id_ukm', $ukm)->get();
-        $data['count'] = Anggota::where('id_ukm',$ukm)->count();
         // dd($data);
-        // dd($data);
-        return view('dashboardukm', $data);
-        }     
+        return view('dashboardukmregistrasi', $data);
+        }   
     }
 
     /**
@@ -53,7 +48,6 @@ class DashboardukmController extends Controller
     public function store(Request $request)
     {
         //
-        $ukm = new Ukm;
     }
 
     /**

@@ -55,6 +55,9 @@ Route::get('/adminukm', 'ty@adminukm')->middleware('auth');
 Route::get('/dashboardukm', 'DashboardukmController@index')->middleware('auth')->name('dashboardukm');
 Route::post('/dashukm', 'DashboardukmController@store')->name('dashukm')->middleware('auth');
 
+Route::get('/dashboardukmregistrasi', 'DashboardukmregistrasiController@index')->middleware('auth');
+Route::post('/dashukmregis', 'DashboardukmregistrasiController@store')->name('dashukmregis')->middleware('auth');
+
 Route::get('/dashboardukmanggota', 'DashboardukmanggotaController@index')->middleware('auth');
 Route::post('/dashukmanggota', 'DashboardukmanggotaController@store')->name('dashukmanggota')->middleware('auth');
 Route::get('/formukmanggota', 'ty@formukmanggota');
