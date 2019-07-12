@@ -78,6 +78,8 @@ class DashboardukmanggotaController extends Controller
     public function edit($id)
     {
         //
+        $data['anggota'] = Anggota::find($id);
+        return view('formukmanggota',$data);
     }
 
     /**
@@ -90,6 +92,19 @@ class DashboardukmanggotaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $anggota = Anggota::find($id);
+
+        $anggota->nama = $request->nama;
+        $anggota->jurusan = $request->jurusan;
+        $anggota->fakultas = $request->fakultas;
+        $anggota->angkatan = $request->angkatan;
+        // $anggota->npm = $request->npm;
+        // $anggota->hp = $request->nohp;
+        // $anggota->email = $request->email;
+        // dd($anggota);
+        $anggota->save();
+
+        return redirect('dashboardukmanggota');
     }
 
     /**

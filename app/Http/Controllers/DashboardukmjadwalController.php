@@ -61,6 +61,8 @@ class DashboardukmjadwalController extends Controller
     public function edit($id)
     {
         //
+        $data['ukm'] = Ukm::find($id);
+        return view('formukmjadwal',$data);
     }
 
     /**
@@ -73,6 +75,15 @@ class DashboardukmjadwalController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $ukm = Ukm::find($id);
+
+        $ukm->hari = $request->hari;
+        $ukm->jam = $request->jam;
+        $ukm->tempat = $request->tempat;
+
+        // dd($ukm);
+        $ukm->save();
+        return redirect('dashboardukmjadwal');
     }
 
     /**

@@ -73,6 +73,8 @@ class DashboardukmprestasiController extends Controller
     public function edit($id)
     {
         //
+        $data['prestasi'] = Prestasi::find($id);
+        return view('formukmprestasi',$data);
     }
 
     /**
@@ -85,6 +87,15 @@ class DashboardukmprestasiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $prestasi = Prestasi::find($id);
+
+        $prestasi->nama = $request->prestasi;
+        $prestasi->anggota = $request->anggota;
+        $prestasi->tahun = $request->tahun;
+
+        // dd($prestasi);
+        $prestasi->save();
+        return redirect('dashboardukmprestasi');
     }
 
     /**

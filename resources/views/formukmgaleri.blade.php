@@ -8,20 +8,25 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Agenda</h3>
+			<h3 class="page-title">Galeri</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">List Agenda</h3>
+							<h3 class="panel-title">List Galeri</h3>
 						</div>
 						<div class="panel-body">
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="/dashukmgaleriupd/{{$galeri->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
+								<div class="form-group">
+									<label> Judul </label>
+								<input type="text" name="judul" class="form-control" value="{{$galeri->judul}}">
+								</div>
+								<br>
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
+								<input type="file" name="image" class="custom-file-input" value="{{$galeri->link_foto}}">
 								</div>
 
 								<br>

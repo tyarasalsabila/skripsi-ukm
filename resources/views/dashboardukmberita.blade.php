@@ -18,7 +18,7 @@
 							<p class="demo-button">
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Berita</button>
 							</p>
-							<table class="table table-bordered table-hover">
+							<table class="table table-bordered table-hover" id="datatable">
 								<thead>
 									<tr>
 										<th>No</th>
@@ -40,8 +40,8 @@
 										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
 										<td>{{$brt->isi}}</td>
 										<td>
-											<a href="/formukmberita" type="button" class="btn btn-warning">Edit</a>
-											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+										<a href="/editberitaukm/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
+										<button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</button>
 										</td>
 									</tr>
 								@endforeach

@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<!-- VENDOR CSS -->
-	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset ('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{ asset ('assets/vendor/linearicons/style.css')}}">
 	<link rel="stylesheet" href="{{ asset ('assets/vendor/chartist/css/chartist-custom.css')}}">
@@ -69,12 +69,37 @@
     
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
-	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+	<script src="{{asset('assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+	<script src="{{asset('assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')}}"></script>
+	<script src="{{asset('assets/vendor/chartist/js/chartist.min.js')}}"></script>
+	<script src="{{asset('assets/scripts/klorofil-common.js')}}"></script>
+	<script src="{{asset('https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js')}}"></script>
+	<script src="{{asset('https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js')}}"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var table = $('#datatable').DataTable();
+
+			table.on('click', '.delete', function () {
+				$tr = $(this).closest('tr');
+				if($($tr).hasClass('child')) {
+					$tr = $tr.prev('.parent');
+				}
+
+				var data = table.row($tr).data();
+				console.log(data[2]);
+
+				$('#judul').val(data[2]);
+				$('#isi').val(data[4]);
+
+				$('#deleteForm').attr('action', '/dashukmbrtdelete/'+data[2]);
+				
+				// $('#deleteModal').modal('show');
+			});
+		})
+	</script>
 	
 </body>
 

@@ -59,26 +59,45 @@ Route::post('/dashukmregis', 'DashboardukmregistrasiController@store')->name('da
 Route::get('/dashboardukmanggota', 'DashboardukmanggotaController@index')->middleware('auth');
 Route::post('/dashukmanggota', 'DashboardukmanggotaController@store')->name('dashukmanggota')->middleware('auth');
 Route::get('/formukmanggota', 'ty@formukmanggota');
+Route::get('/editanggotaukm/{id}', 'DashboardukmanggotaController@edit')->middleware('auth');
+Route::post('/dashukmanggotaupd/{id}', 'DashboardukmanggotaController@update')->middleware('auth');
+
 
 Route::get('/dashboardukmgaleri', 'DashboardukmgaleriController@index')->middleware('auth');
 Route::post('/dashukmgalerii', 'DashboardukmgaleriController@store')->name('dashukmgalerii')->middleware('auth');
 Route::get('/formukmgaleri', 'ty@formukmgaleri');
+Route::get('/editgaleriukm/{id}', 'DashboardukmgaleriController@edit')->middleware('auth');
+Route::post('/dashukmgaleriupd/{id}', 'DashboardukmgaleriController@update')->middleware('auth');
+
 
 Route::get('/dashboardukmberita', 'DashboardukmberitaController@index')->middleware('auth');
 Route::post('/dashukmberita', 'DashboardukmberitaController@store')->name('dashukmberita')->middleware('auth');
 Route::get('/formukmberita', 'ty@formukmberita');
+Route::get('/editberitaukm/{id}', 'DashboardukmberitaController@edit')->middleware('auth');
+Route::post('/dashukmberitaupd/{id}', 'DashboardukmberitaController@update')->name('dashukmberitaupd')->middleware('auth');
+Route::post('/dashukmberitadel/{judul}', 'DashboardukmberitaController@destroy')->name('dashukmberitaupd')->middleware('auth');
 
 Route::get('/dashboardukmagenda', 'DashboardukmagendaController@index')->middleware('auth');
 Route::post('/dashukmagenda', 'DashboardukmagendaController@store')->name('dashukmagenda')->middleware('auth');
 Route::get('/formukmagenda', 'ty@formukmagenda');
+Route::get('/editagendaukm/{id}', 'DashboardukmagendaController@edit')->middleware('auth');
+Route::post('/dashukmagendaupd/{id}', 'DashboardukmagendaController@update')->middleware('auth');
+
+
 
 Route::get('/dashboardukmprestasi', 'DashboardukmprestasiController@index')->middleware('auth');
 Route::post('/dashukmprestasi', 'DashboardukmprestasiController@store')->name('dashukmprestasi')->middleware('auth');
 Route::get('/formukmprestasi', 'ty@formukmprestasi');
+Route::get('/editprestasiukm/{id}', 'DashboardukmprestasiController@edit')->middleware('auth');
+Route::post('/dashukmprestasiupd/{id}', 'DashboardukmprestasiController@update')->middleware('auth');
+
 
 Route::get('/dashboardukmjadwal', 'DashboardukmjadwalController@index')->middleware('auth');
 Route::post('/dashukmjadwal', 'DashboardukmjadwalController@store')->name('dashukmjadwal')->middleware('auth');
 Route::get('/formukmjadwal', 'ty@formukmjadwal');
+Route::get('/editjadwalukm/{id}', 'DashboardukmjadwalController@edit')->middleware('auth');
+Route::post('/dashukmjadwalupd/{id}', 'DashboardukmjadwalController@update')->middleware('auth');
+
 
 
 // Route::get('/dashboardukm', 'ty@dashboardukm');

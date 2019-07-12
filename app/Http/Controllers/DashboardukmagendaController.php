@@ -81,6 +81,8 @@ class DashboardukmagendaController extends Controller
     public function edit($id)
     {
         //
+        $data['agenda'] = Agenda::find($id); 
+        return view('formukmagenda',$data);
     }
 
     /**
@@ -93,6 +95,25 @@ class DashboardukmagendaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $agenda = agenda::find($id);
+
+        
+
+        if (isset($request->image)) {
+            # code...
+            $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+            $agenda->foto  = $path;
+        }
+        // dd($agenda->foto);
+
+        $agenda->judul = $request->judul;
+        $agenda->isi = $request->isi;
+        $agenda->link = $request->link;
+        // dd($agenda);
+
+        $agenda->save();
+        return redirect('dashboardukmagenda');
+
     }
 
     /**

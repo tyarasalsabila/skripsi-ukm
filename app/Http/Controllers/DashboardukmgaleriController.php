@@ -80,6 +80,9 @@ class DashboardukmgaleriController extends Controller
     public function edit($id)
     {
         //
+        $data['galeri'] = Galeri::find($id);
+
+        return view('formukmgaleri',$data);
     }
 
     /**
@@ -92,6 +95,21 @@ class DashboardukmgaleriController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $galeri = Galeri::find($id);
+
+        if (isset($request->image)) {
+            # code...
+            $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+            $galeri->link_foto  = $path;
+        }
+        // dd($galeri->foto);
+
+        $galeri->judul = $request->judul;
+        
+        // dd($galeri);
+
+        $galeri->save();
+        return redirect('dashboardukmgaleri');
     }
 
     /**

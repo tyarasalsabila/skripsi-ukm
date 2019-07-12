@@ -19,6 +19,9 @@ class CreateAnggotasTable extends Migration
             $table->string('jurusan');
             $table->string('fakultas');
             $table->integer('angkatan');
+            $table->string('npm');
+            $table->string('hp');
+            $table->string('email');
             $table->boolean('status');
             $table->integer('id_ukm')->unsigned();
             $table->timestamps();

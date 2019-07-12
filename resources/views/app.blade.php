@@ -59,7 +59,7 @@
               <nav class="menu">
                 <ul class="main_menu" style="margin-bottom:0px">
                   <li>
-                    <a href="/beranda">Beranda</a>
+                    <a href="/">Beranda</a>
                   </li>
                   <li>
                     <a href="/ukm">UKM</a>

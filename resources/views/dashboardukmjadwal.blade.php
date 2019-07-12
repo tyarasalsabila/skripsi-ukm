@@ -30,7 +30,7 @@
 										<td>{{$ukm->jam}}</td>
 										<td>{{$ukm->tempat}}</td>
 										<td>
-											<a href="/formukmjadwal" type="button" class="btn btn-warning">Edit</a>
+										<a href="/editjadwalukm/{{$ukm->id}}" type="button" class="btn btn-warning">Edit</a>
 										</td>
 									</tr>
 								{{-- @endforeach --}}

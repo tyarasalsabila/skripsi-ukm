@@ -22,6 +22,7 @@
 							<thead>
 								<tr>
 									<th>No</th>
+									<th>Judul</th>
 									<th>Foto</th>
 									<th>Action</th>
 								</tr>
@@ -32,9 +33,10 @@
 								@php ($x = $x+1)
 								<tr>
 									<td>{{$x}}</td>
+								<td>{{$glr->judul}}</td>
 								<td><img src="{{ url('').'/storage/'.$glr->link_foto }}" width="70px;" alt=""></td>
 									<td>
-										<a href="/formukmgaleri" type="button" class="btn btn-warning">Edit</a>
+									<a href="/editgaleriukm/{{$glr->id}}" type="button" class="btn btn-warning">Edit</a>
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 									</td>
 								</tr>

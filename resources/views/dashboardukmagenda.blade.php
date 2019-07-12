@@ -42,7 +42,7 @@
 										<td><img src="{{ url('').'/storage/'.$agd->foto}}" width="70px" alt=""></td>
 										<td>{{$agd->isi}}</td>
 										<td>
-											<a href="/formukmagenda" type="button" class="btn btn-warning" >Edit</a>
+										<a href="/editagendaukm/{{$agd->id}}" type="button" class="btn btn-warning" >Edit</a>
 											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 										</td>
 									</tr>

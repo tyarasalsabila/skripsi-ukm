@@ -8,34 +8,34 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Agenda</h3>
+			<h3 class="page-title">Jadwal</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">List Agenda</h3>
+							<h3 class="panel-title">Edit Jadwal</h3>
 						</div>
 						<div class="panel-body">
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="/dashukmjadwalupd/{{$ukm->id}}" method="POST">
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Hari </label>
-									<input type="text" name="hari" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="hari" class="form-control" value="{{$ukm->hari}}">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Jam </label>
-									<input type="text" name="jam" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="jam" class="form-control" value="{{$ukm->jam}}">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tempat </label>
-									<input type="text" name="tempat" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="tempat" class="form-control" value="{{$ukm->tempat}}">
 								</div>
 
 								<br>

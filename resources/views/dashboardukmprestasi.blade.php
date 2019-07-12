@@ -39,7 +39,7 @@
 										<td>{{$prest->anggota}}</td>
 										<td>{{$prest->tahun}}</td>
 										<td>
-											<a href="/formukmprestasi" type="button" class="btn btn-warning">Edit</a>
+										<a href="/editprestasiukm/{{$prest->id}}" type="button" class="btn btn-warning">Edit</a>
 											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
 										</td>
 									</tr>
