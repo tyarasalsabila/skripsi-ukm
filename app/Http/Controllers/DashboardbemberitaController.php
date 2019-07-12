@@ -78,6 +78,8 @@ class DashboardbemberitaController extends Controller
     public function edit($id)
     {
         //
+        $data['berita'] = Berita::find($id);
+        return view('formbemberita',$data);
     }
 
     /**
@@ -90,6 +92,21 @@ class DashboardbemberitaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $berita = Berita::find($id);
+
+        if (isset($request->image)) {
+            # code...
+            $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+            $berita->foto  = $path;
+        }
+        // dd($berita->foto);
+
+        $berita->judul = $request->judul;
+        $berita->isi = $request->isi;
+        // dd($berita);
+
+        $berita->save();
+        return redirect('dashboardbemberita');
     }
 
     /**

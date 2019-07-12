@@ -82,6 +82,8 @@ class DashboardbemagendaController extends Controller
     public function edit($id)
     {
         //
+        $data['agenda'] = Agenda::find($id);
+        return view('formbemagenda',$data);
     }
 
     /**
@@ -94,6 +96,20 @@ class DashboardbemagendaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $agenda = Agenda::find($id);
+        if (isset($request->image)) {
+            # code...
+            $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
+            $agenda->foto  = $path;
+        }
+        // dd($agenda->foto);
+
+        $agenda->judul = $request->judul;
+        $agenda->isi = $request->isi;
+        // dd($agenda);
+
+        $agenda->save();
+        return redirect('dashboardbemagenda');
     }
 
     /**

@@ -17,7 +17,7 @@ class CreateBeritasTable extends Migration
             $table->increments('id');
             $table->string('judul');
             $table->string('isi');
-            $table->integer('id_ukm')->unsigned();
+            $table->integer('id_ukm')->unsigned()->nullable();
             $table->integer('id_user')->unsigned();
             $table->string('foto');
             $table->boolean('confirmed');

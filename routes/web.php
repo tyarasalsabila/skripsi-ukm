@@ -33,18 +33,22 @@ Route::post('/dashbem', 'DashboardbemController@store')->name('dashbem')->middle
 
 Route::get('/dashboardbemukm', 'DashboardbemukmController@index')->middleware('auth');
 Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm')->middleware('auth');
-
-Route::put('/dashbemukmupdate/{id}', 'DashboardbemukmController@update')->name('dashbemukmupdate')->middleware('auth');
-Route::delete('/dashbemukmdelete/{id}', 'DashboardbemukmController@destroy')->name('dashbemukmdelete')->middleware('auth');
-Route::get('/formbemukm', 'ty@formbemukm');
+Route::get('/editukm/{id}', 'DashboardbemukmController@edit')->middleware('auth');
+Route::put('/updateukm/{id}', 'DashboardbemukmController@update');
 
 Route::get('/dashboardbemberita', 'DashboardbemberitaController@index')->middleware('auth');
 Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita')->middleware('auth');
 Route::get('/formbemberita', 'ty@formbemberita');
+Route::get('/editberita/{id}', 'DashboardbemberitaController@edit')->middleware('auth');
+Route::post('/updateberita/{id}', 'DashboardbemberitaController@update');
+
 
 Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index')->middleware('auth');
 Route::post('/dashbemagenda', 'DashboardbemagendaController@store')->name('dashbemagenda')->middleware('auth');
 Route::get('/formbemagenda', 'ty@formbemagenda');
+Route::get('/editagenda/{id}', 'DashboardbemagendaController@edit')->middleware('auth');
+Route::post('/updateagenda/{id}', 'DashboardbemagendaController@update');
+
 
 
 // Admin UKM

@@ -80,6 +80,8 @@ class DashboardbemukmController extends Controller
     public function edit($id)
     {
         //
+        $data['ukm'] = Ukm::find($id);
+        return view('formbemukm',$data);
     }
 
     /**
@@ -110,7 +112,7 @@ class DashboardbemukmController extends Controller
         $ukm->namapendek = $request->namapendek;
         $ukm->hari = $request->hari;
         $ukm->jam = $request->jam;
-        $ukm->tempat = $request->hari;
+        $ukm->tempat = $request->tempat;
         $ukm->profil = $request->profil;
         $ukm->ketua = $request->ketua;
         $ukm->npm = $request->npm;

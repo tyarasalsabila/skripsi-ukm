@@ -16,19 +16,19 @@
 							<h3 class="panel-title">List Agenda</h3>
 						</div>
 						<div class="panel-body">
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="/updateagenda/{{$agenda->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
 							<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+									<input type="text" name="judul" class="form-control" value="{{$agenda->judul}}">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="isi" class="form-control" value="{{$agenda->isi}}">
 								</div>
 
 								<br>
@@ -36,7 +36,7 @@
 
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
+									<input type="file" name="image" class="custom-file-input" value="{{$agenda->foto}}">
 								</div>
 
 								<br>
