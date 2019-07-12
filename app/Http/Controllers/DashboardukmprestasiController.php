@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ukm;
+use App\Prestasi;
+use Auth;
 
 class DashboardukmprestasiController extends Controller
 {
@@ -15,7 +17,8 @@ class DashboardukmprestasiController extends Controller
     public function index()
     {
         //gelap
-        return view('dashboardukmprestasi');
+        $data['prestasi'] = Prestasi::with('ukm')->get();
+        return view('dashboardukmprestasi', $data);
     }
 
     /**
@@ -37,6 +40,17 @@ class DashboardukmprestasiController extends Controller
     public function store(Request $request)
     {
         //
+        $prestasi = new Prestasi;
+        $prestasi->nama = $request->prestasi;
+        $prestasi->anggota = $request->anggota;
+        $prestasi->tahun = $request->tahun;
+        $prestasi->id_ukm = Auth::user()->id_ukm;
+
+        // dd($prestasi);
+
+        $prestasi->save();
+
+        return redirect('dashboardukmprestasi');
     }
 
     /**

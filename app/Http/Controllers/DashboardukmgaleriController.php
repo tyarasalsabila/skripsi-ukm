@@ -42,16 +42,21 @@ class DashboardukmgaleriController extends Controller
      */
     public function store(Request $request)
     {
+       
+      
         $galeri = new Galeri;
         $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
         // dd($path);
+        $galeri->judul = $request->judul;
         $galeri->link_foto = $path;
         $galeri->id_ukm = Auth::user()->id_ukm;
-
-        dd($galeri);
+        // dd($galeri->save);
         
-        $galeri->save;      
-
+        $galeri->save(); 
+            
+          
+    
+        session()->flash('success_message');
         return redirect('dashboardukmgaleri');
     }
 

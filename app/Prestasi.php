@@ -10,7 +10,7 @@ class Prestasi extends Model
         'nama',
         'tahun',
         'id_ukm',
-        'id_anggota',
+        'anggota',
     ];
 
     public function ukm(){

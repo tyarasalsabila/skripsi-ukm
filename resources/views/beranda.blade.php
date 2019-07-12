@@ -66,85 +66,34 @@
           Berita Terbaru
         </h2>
         <div class="row">
+			@foreach ($berita as $brt)
           <div class="col-md-4 p-t-30">             
             <div class="blo1">
               <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
-                <a href="/beritaisi"><img src="images/berita/berita.png" alt="IMG-INTRO"></a>
+			   <a href="/berita/{{$brt->id}}"><img src="{{url('').'/storage/'.$brt->foto}}" alt="IMG-INTRO"></a>
                 <div class="time-blog">
-     	            01 Mei 2019
+     	            {{ \Carbon\Carbon::parse($brt->created_at)->format('d M Y')}}
                 </div>
               </div>
 
               <div class="wrap-text-blo1 p-t-35">
-                <a href="/beritaisi" style="text-decoration:none"><h4 class="txt5 color0-hov m-b-13">
-                  Ngabuburit Bersama Unit Karate Unpad
+			  <a href="/berita/{{$brt->id}}" style="text-decoration:none"><h4 class="txt5 color0-hov m-b-13">
+                  {{$brt->judul}} 
                 </h4></a>
 
                 <p class="m-b-20">
-									Ngabuburit ala UKU dengan melakukan latihan bersama.
+					{{Str::limit($brt->isi,100)}}
                 </p>
 
-                <a href="/beritaisi" class="txt4" style="text-decoration:none">
+			<a href="/berita/{{$brt->id}}" class="txt4" style="text-decoration:none">
                   Selengkapnya
   	              <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
-          </div>
-            
-          <div class="col-md-4 p-t-30">    
-            <div class="blo1">
-              <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
-                <a href="/beritaisi"><img src="images/berita/berita1.png" alt="IMG-INTRO"></a>
-                  <div class="time-blog">
-                    13 Mei 2019
-                  </div>
-                </div>
-
-                <div class="wrap-text-blo1 p-t-35">
-                  <a href="/beritaisi" style="text-decoration:none"><h4 class="txt5 color0-hov m-b-13">
-                    Juara 1 Lomba Paduan Suara Nasional 2019
-                  </h4></a>
-
-                  <p class="m-b-20">
-                    PSM UNPAD mendapatkan juara 1 dalam ajang Paduan Suara Nasional.
-                  </p>
-
-                  <a href="/beritaisi" class="txt4" style="text-decoration:none">
-										Selengkapnya
-                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-4 p-t-30">   
-              <div class="blo1">
-                <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
-                  <a href="/beritaisi"><img src="images/berita/berita2.png" alt="IMG-INTRO"></a>
-
-                  <div class="time-blog">
-                    23 Mei 2019
-                  </div>
-                </div>
-
-                <div class="wrap-text-blo1 p-t-35">
-                  <a href="/beritaisi" style="text-decoration:none"><h4 class="txt5 color0-hov m-b-13">
-                    Pelantikan Anggota USBU 2019
-                  </h4></a>
-
-                  <p class="m-b-20">
-                    USBU UNPAD mengadakan pelantikan anggota baru.
-                  </p>
-
-                  <a href="/beritaisi" class="txt4" style="text-decoration:none">
-										Selengkapnya
-                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-					</div>
+		  </div>
+		  @endforeach
+		</div>
 
 					<div class="flex-c-m m-t-6 p-t-60">
 						<a href="/berita" class="btn3 flex-c-m size13 txt11" style="text-decoration:none">
@@ -161,20 +110,23 @@
 					<div class="sidebar2 p-b-80 p-l-0-md p-t-0-md">
 						<div class="popular">
 							<ul>
+								@foreach ($agenda as $agd)
+									
+								
 								<li class="flex-w m-b-25">
 									<div class="size16 bo-rad-4 wrap-pic-w of-hidden m-r-18">
-										<a href="images/agenda/agendafull.png" data-lightbox="gallery-footer">
-											<img src="images/agenda/agenda.png" alt="IMG-BLOG">
+										<a href="{{url('').'/storage/'.$agd->foto}}" data-lightbox="gallery-footer">
+											<img src="{{url('').'/storage/'.$agd->foto}}" alt="IMG-BLOG">
 										</a>
 									</div>
 
 									<div class="size28">
 										<a href="/" data-toggle="modal" data-target="#EventModal1" class="dis-block txt28 m-b-8" style="text-decoration:none">
-											Melodijo Veselja
+											{{$agd->judul}}
 										</a>
 
 										<span class="txt14">
-											01 Mei 2019
+											{{ \Carbon\Carbon::parse($agd->created_at)->format('d M Y')}}
 										</span>
 									</div>
 
@@ -182,18 +134,17 @@
 										<div class="modal-dialog modal-dialog-centered" role="document">
 											<div class="modal-content">
 												<div class="modal-header">
-													<h5 class="modal-title" id="EventModal1">Melodijo Veselja</h5>
+													<h5 class="modal-title" id="EventModal1">{{$agd->judul}}</h5>
 													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 														<span aria-hidden="true">&times;</span>
 													</button>
 												</div>
 												<div class="modal-body">
 													<h6> Tanggal </h6>
-													<p> 01 Mei 2019 </p>
-
+													<p> {{ \Carbon\Carbon::parse($agd->created_at)->format('d M Y')}}</p>
 													<hr>
 													<h6> Waktu </h6>
-													<p> Rabu, 12:30 - Selesai </p>
+													<p> {{ \Carbon\Carbon::parse($agd->created_at)->format('l')}}, {{ \Carbon\Carbon::parse($agd->created_at)->format('h:m')}}  </p>
 
 													<hr>
 
@@ -203,7 +154,7 @@
 													<hr>
 
 													<h6> UKM Penyelenggara </h6>
-													<p> Paduan Suara Mahasiswa Unpad (PSM) </p>
+													<p> {{$agd->ukm->nama}} </p>
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -212,8 +163,8 @@
 										</div>
 									</div>
 								</li>
-
-								<li class="flex-w m-b-25">
+								@endforeach
+								{{-- <li class="flex-w m-b-25">
 									<div class="size16 bo-rad-4 wrap-pic-w of-hidden m-r-18">
 										<a href="images/agenda/agendafull1.png" data-lightbox="gallery-footer">
 											<img src="images/agenda/agenda1.png" alt="IMG-BLOG">
@@ -315,7 +266,7 @@
 											</div>
 										</div>
 									</div>
-								</li>
+								</li> --}}
 
 								<a href="/agenda" class="txt4" style="text-decoration:none">
 										Selengkapnya
@@ -338,7 +289,7 @@
 	</h3>
 
 	<div class="flex-c-m m-t-6  p-b-100">
-		<a href="/daftarukm" class="btn3 flex-c-m size13 txt11" style="text-decoration:none">
+		<a href="/registrasi" class="btn3 flex-c-m size13 txt11" style="text-decoration:none">
 			DAFTAR UKM
 		</a>
 	</div>

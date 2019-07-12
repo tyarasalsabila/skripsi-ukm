@@ -1,4 +1,4 @@
-@extends ('admin')
+@extends ('adminukm')
 
 @section ('title','Dashboard Pendaftaran UKM')
 
@@ -24,7 +24,7 @@
 									</tr>
 								</thead>
 								<tbody>
-								@foreach ($ukms as $ukm)
+								{{-- @foreach ($ukms as $ukm) --}}
 									<tr>
 										<td>{{$ukm->hari}}</td>
 										<td>{{$ukm->jam}}</td>
@@ -33,7 +33,7 @@
 											<a href="/formukmjadwal" type="button" class="btn btn-warning">Edit</a>
 										</td>
 									</tr>
-								@endforeach
+								{{-- @endforeach --}}
 								</tbody>
 							</table>
 						</div>

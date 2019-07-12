@@ -1,5 +1,3 @@
-
-
 @extends ('adminbem')
 
 @section ('title','Dashboard BEM')

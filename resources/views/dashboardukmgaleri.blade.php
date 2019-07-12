@@ -12,7 +12,7 @@
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Anggota UKM</h3>
+							<h3 class="panel-title">Galeri UKM</h3>
 						</div>
 					<div class="panel-body">
 						<p class="demo-button">
@@ -32,7 +32,7 @@
 								@php ($x = $x+1)
 								<tr>
 									<td>{{$x}}</td>
-									<td>{{ url('').'/storage/'.$glr->link_foto }}</td>
+								<td><img src="{{ url('').'/storage/'.$glr->link_foto }}" width="70px;" alt=""></td>
 									<td>
 										<a href="/formukmgaleri" type="button" class="btn btn-warning">Edit</a>
 										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
@@ -57,9 +57,14 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashukmgaleri')}}" method="POST" enctype="multipart/form-data">
+						<form action="{{route('dashukmgalerii')}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
+								<div class="form-group">
+									<label> Judul </label>
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Foto">
+								</div>
+								<br>
 								<label> Upload Foto </label>
 								<div class="custom-file">
 									<input type="file" name="image" class="custom-file-input">

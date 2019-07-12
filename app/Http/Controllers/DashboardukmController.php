@@ -28,6 +28,7 @@ class DashboardukmController extends Controller
         $ukm = Auth::user()->id_ukm;
         $data['reg'] = Registrasi::where('id_ukm', $ukm)->get();
         $data['count'] = Anggota::where('id_ukm',$ukm)->count();
+        $data['count2'] = Registrasi::where('id_ukm', $ukm)->count();
         // dd($data);
         // dd($data);
         return view('dashboardukm', $data);

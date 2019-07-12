@@ -24,17 +24,17 @@ class UkmSeeder extends Seeder
         ]);   
 
         //2
-        // DB::table('ukms')->insert([
-        //     'nama' => "Unit Baseball dan Softball Unpad",
-        //     'namapendek' => "USBU",
-        //     'hari' => "Kamis",
-        //     'jam' => "10:00",
-        //     'tempat' => "Ruangan",
-        //     'profil' => "UPU adalah",
-        //     'ketua' => "Fransiskus Bayu Prakoso",
-        //     'npm' => "120110160107",
-        //     'pembina' => "FMIPA",
-        // ]); 
+        DB::table('ukms')->insert([
+            'nama' => "Unit Baseball dan Softball Unpad",
+            'namapendek' => "USBU",
+            'hari' => "Kamis",
+            'jam' => "10:00",
+            'tempat' => "Ruangan",
+            'profil' => "UPU adalah",
+            'ketua' => "Fransiskus Bayu Prakoso",
+            'npm' => "120110160107",
+            'pembina' => "FMIPA",
+        ]); 
 
         // //3
         // DB::table('ukms')->insert([

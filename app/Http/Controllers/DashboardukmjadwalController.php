@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ukm;
+use Auth;
 
 class DashboardukmjadwalController extends Controller
 {
@@ -15,6 +16,7 @@ class DashboardukmjadwalController extends Controller
     public function index()
     {
         //gelap
+        $data['ukm'] = Ukm::where('id',Auth::user()->id_ukm)->first();
         return view('dashboardukmjadwal', $data);
     }
 

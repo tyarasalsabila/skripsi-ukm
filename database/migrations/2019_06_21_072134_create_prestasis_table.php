@@ -18,7 +18,7 @@ class CreatePrestasisTable extends Migration
             $table->text('nama');
             $table->integer('tahun');
             $table->integer('id_ukm')->unsigned();
-            $table->string('id_anggota');
+            $table->string('anggota');
             $table->timestamps();
 
             $table->foreign('id_ukm')

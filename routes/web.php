@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('beranda');
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/ukm', 'UKMController@index');
 Route::get('/ukm/{id}', 'UKMController@show');
 Route::get('/berita', 'BeritaController@index');
@@ -63,7 +61,7 @@ Route::post('/dashukmanggota', 'DashboardukmanggotaController@store')->name('das
 Route::get('/formukmanggota', 'ty@formukmanggota');
 
 Route::get('/dashboardukmgaleri', 'DashboardukmgaleriController@index')->middleware('auth');
-Route::post('/dashukmgaleri', 'DashboardukmgaleriController@store')->name('dashukmgaleri')->middleware('auth');
+Route::post('/dashukmgalerii', 'DashboardukmgaleriController@store')->name('dashukmgalerii')->middleware('auth');
 Route::get('/formukmgaleri', 'ty@formukmgaleri');
 
 Route::get('/dashboardukmberita', 'DashboardukmberitaController@index')->middleware('auth');

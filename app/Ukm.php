@@ -35,7 +35,7 @@ class Ukm extends Model
     }
 
     public function galeri(){
-        return $this->hasMany('App\Galeri');
+        return $this->hasMany('App\Galeri','id_ukm');
     }
 
     public function prestasi(){

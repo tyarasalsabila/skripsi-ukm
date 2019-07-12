@@ -1,4 +1,4 @@
-@extends ('admin')
+@extends ('adminukm')
 
 @section ('title','Dashboard Pendaftaran UKM')
 
@@ -30,14 +30,13 @@
 								</thead>
 								<tbody>
 								@php ($x = 0)
-								@php ($member = (object)[])
-								@foreach ($ukm->prestasi as $prest)
-								@php ($member = App\Anggota::where('id',$prest->id_anggota)->first())
+								@foreach ($prestasi as $prest)
+								{{-- @php ($member = App\Anggota::where('id',$prest->id_anggota)->first()) --}}
 								@php ($x = $x+1)
 									<tr>
 										<td>{{$x}}</td>
 										<td>{{$prest->nama}}</td>
-										<td>{{$member->nama}}</td>
+										<td>{{$prest->anggota}}</td>
 										<td>{{$prest->tahun}}</td>
 										<td>
 											<a href="/formukmprestasi" type="button" class="btn btn-warning">Edit</a>
@@ -64,7 +63,7 @@
 							</button>
 						</div>
 
-						<form action="{{route('dashbem')}}" method="POST">
+						<form action="{{route('dashukmprestasi')}}" method="POST">
 							@csrf
 							<div class="modal-body">
 								<div class="form-group">

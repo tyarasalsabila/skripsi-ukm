@@ -21,7 +21,7 @@
             <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
               <a href="/agendaisi"><img src="images/agenda/agendafull.png" alt="IMG-INTRO"></a>
               <div class="time-blog">
-   	            01 Mei 2019
+                  {{ \Carbon\Carbon::parse($agenda->created_at)->format('d M Y')}}
               </div>
             </div>
 
