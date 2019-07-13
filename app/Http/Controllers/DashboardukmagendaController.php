@@ -53,6 +53,9 @@ class DashboardukmagendaController extends Controller
         $agenda->foto = $path;
         $agenda->link = "as.as";
         $agenda->confirmed = 1;
+        $agenda->waktu = $request->waktu;
+        $agenda->tanggal = $request->tanggal;
+        $agenda->tempat = $request->tempat;
 
         // dd($agenda);
         $agenda->save();
@@ -109,6 +112,10 @@ class DashboardukmagendaController extends Controller
         $agenda->judul = $request->judul;
         $agenda->isi = $request->isi;
         $agenda->link = $request->link;
+        $agenda->waktu = $request->waktu;
+        $agenda->tanggal = $request->tanggal;
+        $agenda->confirmed = false;
+        $agenda->tempat = $request->tempat;
         // dd($agenda);
 
         $agenda->save();

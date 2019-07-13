@@ -97,8 +97,8 @@
 								<br>
 
 								<div class="form-group">
-									<label> Hari </label>
-									<input type="text" name="hari" class="form-control" placeholder="Masukkan Hari">
+									<label> Waktu </label>
+									<input type="time" name="waktu" class="form-control" placeholder="Masukkan Waktu">
 								</div>
 
 								<br>

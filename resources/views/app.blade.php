@@ -49,7 +49,7 @@
           <div class="wrap_header trans-0-3">
             <!-- Logo -->
             <div class="logo">
-              <a href="/beranda">
+              <a href="/">
                 <img src="{{ asset('images/logo/logo4.png') }}" alt="IMG-LOGO" data-logofixed="images/logo/logo.png">
               </a>
             </div>
@@ -101,7 +101,7 @@
       <!-- - -->
       <ul class="menu-sidebar p-t-95 p-b-70">
         <li class="t-center m-b-13">
-          <a href="/beranda" class="txt19">Beranda</a>
+          <a href="/" class="txt19">Beranda</a>
         </li>
         <li class="t-center m-b-13">
           <a href="/ukm" class="txt19">UKM</a>

@@ -51,8 +51,12 @@ class DashboardbemagendaController extends Controller
         $agenda->id_ukm = Auth::user()->id_ukm;
         $agenda->id_user = Auth::user()->id;
         $agenda->foto = $path;
-        $agenda->link = "as.as";
+        $agenda->link = $request->link;
         $agenda->confirmed = 1;
+        $agenda->tempat = $request->tempat;
+        $agenda->waktu = $request->waktu;
+        $agenda->tanggal = $request->tanggal;
+
 
         // dd($agenda);
         $agenda->save();
@@ -106,6 +110,10 @@ class DashboardbemagendaController extends Controller
 
         $agenda->judul = $request->judul;
         $agenda->isi = $request->isi;
+        $agenda->link = $request->link;
+        $agenda->tempat = $request->tempat;
+        $agenda->waktu = $request->waktu;
+        $agenda->tanggal = $request->tanggal;
         // dd($agenda);
 
         $agenda->save();

@@ -19,7 +19,7 @@ class AgendaTableSeeder extends Seeder
             'id_ukm' => 1,
             'id_user' => 1,
             'tanggal' => '2019-02-02',
-            'waktu' => '13.00',
+            'waktu' => '13:00',
             'tempat' => 'PPBS',
             'confirmed' => false,
             'link' => 'link.link',
