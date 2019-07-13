@@ -33,6 +33,33 @@
 
 								<br>
 
+								<div class="form-group">
+									<label> Link </label>
+									<input type="text" name="link" class="form-control" value="{{$agenda->link}}">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Hari </label>
+									<input type="text" name="hari" class="form-control" value="{{$agenda->waktu}}">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Tanggal </label>
+									<input type="date" name="tanggal" class="form-control" value="{{$agenda->tanggal}}">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Tempat </label>
+									<input type="text" name="tempat" class="form-control" value="{{$agenda->tempat}}">
+								</div>
+
+								<br>
 
 								<label> Upload Foto </label>
 								<div class="custom-file">

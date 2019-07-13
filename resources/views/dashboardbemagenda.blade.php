@@ -27,6 +27,10 @@
 										<th>Judul</th>
 										<th>Foto</th>
 										<th>Isi</th>
+										<th>Link</th>
+										<th>Hari</th>
+										<th>Tanggal</th>
+										<th>Tempat</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -40,6 +44,10 @@
 										<td>{{$agd->judul}}</td>
 										<td><img src="{{  url('').'/storage/'.$agd->foto }}" width="70px"></td>
 										<td>{{$agd->isi}}</td>
+										<td>{{$agd->link}}</td>
+										<td>{{$agd->waktu}}</td>
+										<td>{{$agd->tanggal}}</td>
+										<td>{{$agd->tempat}}</td>
 										<td>
 											<a href="/editagenda/{{$agd->id}}" type="button" class="btn btn-warning">Edit</a>
 											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
@@ -81,6 +89,33 @@
 
 								<br>
 
+								<div class="form-group">
+									<label> Link </label>
+									<input type="text" name="link" class="form-control" placeholder="Masukkan Link Pendaftaran">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Hari </label>
+									<input type="text" name="hari" class="form-control" placeholder="Masukkan Hari">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Tanggal </label>
+									<input type="date" name="tanggal" class="form-control" placeholder="Masukkan Tanggal">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Tempat </label>
+									<input type="text" name="tempat" class="form-control" placeholder="Masukkan Tempat">
+								</div>
+
+								<br>
 
 								<label> Upload Foto </label>
 								<div class="custom-file">
