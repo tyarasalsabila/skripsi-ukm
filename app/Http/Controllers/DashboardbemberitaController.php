@@ -118,5 +118,12 @@ class DashboardbemberitaController extends Controller
     public function destroy($id)
     {
         //
+        $berita = Berita::find($id);
+
+        // dd($berita);
+
+        $berita->delete();
+
+        return redirect('dashboardbemberita');
     }
 }

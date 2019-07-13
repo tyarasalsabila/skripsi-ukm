@@ -50,7 +50,9 @@
 										<td>{{$agd->tempat}}</td>
 										<td>
 											<a href="/editagenda/{{$agd->id}}" type="button" class="btn btn-warning">Edit</a>
-											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+											{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}
+											<a href="/deleteagenda/{{$agd->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+
 										</td>
 									</tr>
 								@endforeach

@@ -107,5 +107,10 @@ class DashboardukmprestasiController extends Controller
     public function destroy($id)
     {
         //
+        $prestasi = Prestasi::find($id);
+
+        $prestasi->delete();
+
+        return redirect('dashboardukmprestasi');
     }
 }

@@ -23,9 +23,9 @@
 								<tr>
 									<th>No</th>
 									<th>Nama</th>
-									{{-- <th>NPM</th>
+									<th>NPM</th>
 									<th>Email</th>
-									<th>No. HP</th> --}}
+									<th>No. HP</th>
 									<th>Fakultas</th>
 									<th>Jurusan</th>
 									<th>Angkatan</th>
@@ -39,15 +39,16 @@
 								<tr>
 									<td>{{$x}}</td>
 									<td>{{$ang->nama}}</td>
-									{{-- <td>{{$ang->npm}}</td>
+									<td>{{$ang->npm}}</td>
 									<td>{{$ang->email}}</td>
-									<td>{{$ang->nohp}}</td> --}}
+									<td>{{$ang->hp}}</td>
 									<td>{{$ang->fakultas}}</td>
 									<td>{{$ang->jurusan}}</td>
 									<td>{{$ang->angkatan}}</td>
 									<td>
 										<a href="/editanggotaukm/{{$ang->id}}" type="button" class="btn btn-warning">Edit</a>
-										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addModal">Delete</button>
+										{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addModal">Delete</button> --}}
+										<a href="/dashukmanggotadel/{{$ang->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
 									</td>
 								</tr>
 							@endforeach

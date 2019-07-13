@@ -121,12 +121,12 @@
 									</div>
 
 									<div class="size28">
-										<a href="/" data-toggle="modal" data-target="#EventModal1" class="dis-block txt28 m-b-8" style="text-decoration:none">
+										<a href="/agenda/{{$agd->id}}" class="dis-block txt28 m-b-8" style="text-decoration:none">
 											{{$agd->judul}}
 										</a>
 
 										<span class="txt14">
-											{{ \Carbon\Carbon::parse($agd->created_at)->format('d M Y')}}
+											{{ \Carbon\Carbon::parse($agd->tanggal)->format('d M Y')}}
 										</span>
 									</div>
 
@@ -141,20 +141,25 @@
 												</div>
 												<div class="modal-body">
 													<h6> Tanggal </h6>
-													<p> {{ \Carbon\Carbon::parse($agd->created_at)->format('d M Y')}}</p>
+													<p> {{ \Carbon\Carbon::parse($agd->tanggal)->format('d M Y')}}</p>
 													<hr>
 													<h6> Waktu </h6>
-													<p> {{ \Carbon\Carbon::parse($agd->created_at)->format('l')}}, {{ \Carbon\Carbon::parse($agd->created_at)->format('h:m')}}  </p>
+													<p> {{ \Carbon\Carbon::parse($agd->tanggal)->format('l')}}, {{ \Carbon\Carbon::parse($agd->waktu)->format('h:m')}}  </p>
 
 													<hr>
 
 													<h6> Tempat </h6>
-													<p> Bale Santika </p>
+													<p> {{$agd->tempat}} </p>
 
 													<hr>
 
 													<h6> UKM Penyelenggara </h6>
-													<p> {{$agd->ukm->nama}} </p>
+													@if ($agd->ukm != NULL)
+														<p> {{$agd->ukm->nama}} </p>
+													@else
+														<p> - </p>
+													@endif
+													
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

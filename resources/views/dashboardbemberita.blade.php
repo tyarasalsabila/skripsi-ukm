@@ -44,7 +44,9 @@
 										<td>{{$brt->isi}}</td>
 										<td>
 											<a href="/editberita/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
-											<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+											{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}
+											<a href="/deleteberita/{{$brt->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+
 										</td>
 									</tr>
 								@endforeach

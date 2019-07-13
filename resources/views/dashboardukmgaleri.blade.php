@@ -37,7 +37,9 @@
 								<td><img src="{{ url('').'/storage/'.$glr->link_foto }}" width="70px;" alt=""></td>
 									<td>
 									<a href="/editgaleriukm/{{$glr->id}}" type="button" class="btn btn-warning">Edit</a>
-										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+										{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}
+									<a href="/dashukmgaleridel/{{$glr->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+
 									</td>
 								</tr>
 								@endforeach

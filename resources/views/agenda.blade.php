@@ -19,14 +19,14 @@
         <div class="col-md-4 p-t-30">             
           <div class="blo1">
             <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
-              <a href="/agendaisi"><img src="images/agenda/agendafull.png" alt="IMG-INTRO"></a>
+              <a href="/agenda/{{$agenda->id}}"><img src="images/agenda/agendafull.png" alt="IMG-INTRO"></a>
               <div class="time-blog">
                   {{ \Carbon\Carbon::parse($agenda->created_at)->format('d M Y')}}
               </div>
             </div>
 
             <div class="wrap-text-blo1 p-t-35">
-              <a href="/agendaisi" style="text-decoration:none">
+              <a href="/agenda/{{$agenda->id}}" style="text-decoration:none">
                 <h4 class="txt5 color0-hov m-b-13">
                   {{$agenda->judul}}
                 </h4>
@@ -36,7 +36,7 @@
                 {{$agenda->isi}}
               </p>
 
-              <a href="/agendaisi" class="txt4" style="text-decoration:none">
+              <a href="/agenda/{{$agenda->id}}" class="txt4" style="text-decoration:none">
                 Selengkapnya
 	              <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
               </a>

@@ -25,8 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $berita = Berita::orderBy('created_at', 'DESC')->limit(3)->get();
-        $agenda = Agenda::orderBy('created_at', 'DESC')->limit(3)->get();
+        $berita = Berita::orderBy('created_at', 'DESC')->with('ukm')->limit(3)->get();
+        $agenda = Agenda::orderBy('created_at', 'DESC')->with('ukm')->limit(3)->get();
 
         $data = array('berita' => $berita,
                     'agenda' => $agenda,

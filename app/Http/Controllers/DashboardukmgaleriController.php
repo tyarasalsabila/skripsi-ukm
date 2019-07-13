@@ -121,5 +121,12 @@ class DashboardukmgaleriController extends Controller
     public function destroy($id)
     {
         //
+        $galeri = Galeri::find($id);
+        
+        // dd($galeri);
+
+        $galeri->delete();
+
+        return redirect('dashboardukmgaleri');
     }
 }

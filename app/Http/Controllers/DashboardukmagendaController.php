@@ -132,5 +132,12 @@ class DashboardukmagendaController extends Controller
     public function destroy($id)
     {
         //
+        $agenda = Agenda::find($id);
+
+        // dd($agenda);
+
+        $agenda->delete();
+
+        return redirect('dashboardukmagenda');
     }
 }

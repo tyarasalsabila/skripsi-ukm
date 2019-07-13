@@ -35,34 +35,39 @@
 				<div class="blo4 p-b-63">
 					<div class="text-blo4 p-t-33">
 						<h4 class="p-b-16">
-							<a href="/agendaisi" class="tit9" style="text-decoration:none"> Melodijo Veselja </a>
+							<a href="/agenda/{{$agenda->id}}" class="tit9" style="text-decoration:none"> {{$agenda->judul}} </a>
 						</h4>
 
 						<div class="txt32 flex-w p-b-24">
 							<span>
-								by Admin
+								@if ($agenda->ukm != null)
+								by {{$agenda->ukm->nama}}
+								@else
+								by BEM
+								@endif
+								
 								<span class="m-r-6 m-l-4">|</span>
 							</span>
 
 							<span>
-								01 Mei, 2019
+									{{ \Carbon\Carbon::parse($agenda->created_at)->format('d M Y')}}
 								<span class="m-r-6 m-l-4">|</span>
 							</span>
 
 							<span>
-								Agenda UKM
+								{{$agenda->judul}}
 							</span>
 						</div>
 					</div>
 
 					<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
 						<a>
-							<img src="images/agenda/agendafull.png" alt="IMG-BLOG">
+							<img src="{{url('').'/storage/'.$agenda->foto}}" alt="IMG-BLOG">
 						</a>
 					</div>
 
 					<p class="p-t-20">
-          19th Annual Concert (2015)
+          {{$agenda->isi}}
 					</p>
 				</div>
 			</div>

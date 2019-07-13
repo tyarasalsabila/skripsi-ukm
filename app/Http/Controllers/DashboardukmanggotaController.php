@@ -42,9 +42,9 @@ class DashboardukmanggotaController extends Controller
 
         // $variabel->nama_kolom = $request->name_input
         $anggota->nama = $request->nama;
-        // $anggota->npm = $request->npm;
-        // $anggota->email = $request->email;
-        // $anggota->nohp = $request->nohp;
+        $anggota->npm = $request->npm;
+        $anggota->email = $request->email;
+        $anggota->hp = $request->nohp;
         $anggota->fakultas = $request->fakultas;
         $anggota->jurusan = $request->jurusan;
         $anggota->angkatan = $request->angkatan;
@@ -116,5 +116,12 @@ class DashboardukmanggotaController extends Controller
     public function destroy($id)
     {
         //
+        $anggota = Anggota::find($id);
+
+        // dd($anggota);
+
+        $anggota->delete();
+
+        return redirect('dashboardukmanggota');
     }
 }

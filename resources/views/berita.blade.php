@@ -26,7 +26,7 @@
             </div>
 
             <div class="wrap-text-blo1 p-t-35">
-              <a href="/beritaisi" style="text-decoration:none">
+              <a href="/berita/{{$berita->id}}" style="text-decoration:none">
                 <h4 class="txt5 color0-hov m-b-13">
                   {{$berita->judul}}
                 </h4>
@@ -36,7 +36,7 @@
                 {{$berita->isi}}
               </p>
 
-              <a href="/beritaisi" class="txt4" style="text-decoration:none">
+              <a href="/berita/{{$berita->id}}" class="txt4" style="text-decoration:none">
                 Selengkapnya
 	              <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
               </a>

@@ -120,12 +120,15 @@ class DashboardukmberitaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($judul)
+    public function destroy($id)
     {
         //
-        $berita = Berita::where('judul', $judul)
-                        ->first();
+        $berita = Berita::find($id);
 
-        dd($berita);
+        // dd($berita);
+
+        $berita->delete();
+
+        return redirect('dashboardukmberita');
     }
 }

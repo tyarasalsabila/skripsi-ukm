@@ -53,7 +53,10 @@
 									<td>{{$ukm->pembina}}</td>
 									<td>
 									<a href="/editukm/{{$ukm->id}}" type="button" class="btn btn-warning edit">Edit</a>
-										<a href="#" type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</a>
+										{{-- <a href="#" type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</a> --}}
+									{{-- Route::get('/dashukmagendadel/{id}', 'DashboardukmagendaController@destroy')->name('dashukmagendadel')->middleware('auth'); --}}
+									<a href="/deleteukm/{{$ukm->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+
 									</td>
 								</tr>
 							@endforeach
