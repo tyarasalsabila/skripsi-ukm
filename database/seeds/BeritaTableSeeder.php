@@ -28,7 +28,7 @@ class BeritaTableSeeder extends Seeder
             'foto' =>'1562353360.jpg',
             'id_ukm' => 1,
             'id_user' => 1,
-            'confirmed' =>false,
+            // 'confirmed' =>false,
             
         ]);
     }

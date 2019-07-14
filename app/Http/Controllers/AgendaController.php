@@ -86,4 +86,26 @@ class AgendaController extends Controller
     {
         //
     }
+
+    public function accept($id)
+    {
+        $agenda = Agenda::find($id);
+        $agenda->confirmed = 1;
+
+        // dd($agenda);
+
+        $agenda->save();
+        
+        return redirect('dashboardbem');
+    }
+
+    public function reject($id)
+    {
+        $agenda = Agenda::find($id);
+        $agenda->confirmed = 0;
+
+        $agenda->save();
+
+        return redirect('dashboardbem');
+    }
 }

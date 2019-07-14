@@ -51,8 +51,8 @@ class DashboardukmagendaController extends Controller
         $agenda->id_ukm = Auth::user()->id_ukm;
         $agenda->id_user = Auth::user()->id;
         $agenda->foto = $path;
-        $agenda->link = "as.as";
-        $agenda->confirmed = 1;
+        $agenda->link = $request->link;
+        $agenda->confirmed = 0;
         $agenda->waktu = $request->waktu;
         $agenda->tanggal = $request->tanggal;
         $agenda->tempat = $request->tempat;
@@ -114,7 +114,7 @@ class DashboardukmagendaController extends Controller
         $agenda->link = $request->link;
         $agenda->waktu = $request->waktu;
         $agenda->tanggal = $request->tanggal;
-        $agenda->confirmed = false;
+        // $agenda->confirmed = false;
         $agenda->tempat = $request->tempat;
         // dd($agenda);
 

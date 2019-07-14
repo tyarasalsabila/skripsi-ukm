@@ -56,8 +56,8 @@
 										<td>{{$brt->isi}}</td>
 										<td>
 											<!-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button> -->
-											<a href="#" type="button" class="btn btn-primary accept" data-toggle="modal" data-target="#acceptModal">Accept</a>
-											<a href="#" type="button" class="btn btn-danger reject" data-toggle="modal" data-target="#rejectModal">Reject</button>
+											<a href="/acceptberita/{{$brt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima berita?')">Accept</a>
+											<a href="/rejectberita/{{$brt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak berita?')">Reject</a>
 										</td>
 									</tr>
 									@endforeach
@@ -96,8 +96,8 @@
 										<td>{{$agd->judul}}</td>
 										<td>{{$agd->isi}}</td>
 										<td>
-											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
-											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button>
+											<a href="/acceptagenda/{{$agd->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima agenda?')">Accept</a>
+											<a href="/rejectagenda/{{$agd->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak agenda?')">Reject</a>
 										</td>
 									</tr>
 									@endforeach

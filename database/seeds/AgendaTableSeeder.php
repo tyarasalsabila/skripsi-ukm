@@ -21,7 +21,7 @@ class AgendaTableSeeder extends Seeder
             'tanggal' => '2019-02-02',
             'waktu' => '13:00',
             'tempat' => 'PPBS',
-            'confirmed' => false,
+            // 'confirmed' => false,
             'link' => 'link.link',
         ]);
     }

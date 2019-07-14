@@ -90,4 +90,26 @@ class BeritaController extends Controller
     {
         //
     }
+
+    public function accept($id)
+    {
+        $berita = Berita::find($id);
+        $berita->confirmed = 1;
+
+        // dd($berita);
+
+        $berita->save();
+        
+        return redirect('dashboardbem');
+    }
+
+    public function reject($id)
+    {
+        $berita = Berita::find($id);
+        $berita->confirmed = 0;
+
+        $berita->save();
+
+        return redirect('dashboardbem');
+    }
 }

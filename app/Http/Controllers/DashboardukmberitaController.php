@@ -49,7 +49,7 @@ class DashboardukmberitaController extends Controller
         $brt->isi = $request->isi;
         $brt->id_ukm = Auth::user()->id_ukm;
         $brt->id_user = Auth::user()->id;
-        $brt->confirmed = 0;
+        // $brt->confirmed = 0;
         $brt->foto = $path;
 
         // dd($brt);

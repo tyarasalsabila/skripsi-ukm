@@ -43,6 +43,8 @@ Route::get('/formbemberita', 'ty@formbemberita');
 Route::get('/editberita/{id}', 'DashboardbemberitaController@edit')->middleware('auth');
 Route::post('/updateberita/{id}', 'DashboardbemberitaController@update');
 Route::get('/deleteberita/{id}', 'DashboardbemberitaController@destroy')->name('deleteberita')->middleware('auth');
+Route::get('/acceptberita/{id}', 'BeritaController@accept')->name('acceptberita')->middleware('auth');
+Route::get('/rejectberita/{id}', 'BeritaController@reject')->name('rejectberita')->middleware('auth');
 
 
 Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index')->middleware('auth');
@@ -51,6 +53,8 @@ Route::get('/formbemagenda', 'ty@formbemagenda');
 Route::get('/editagenda/{id}', 'DashboardbemagendaController@edit')->middleware('auth');
 Route::post('/updateagenda/{id}', 'DashboardbemagendaController@update');
 Route::get('/deleteagenda/{id}', 'DashboardbemagendaController@destroy')->name('deleteagenda')->middleware('auth');
+Route::get('/acceptagenda/{id}', 'AgendaController@accept')->name('acceptagenda')->middleware('auth');
+Route::get('/rejectagenda/{id}', 'AgendaController@reject')->name('rejectagenda')->middleware('auth');
 
 
 

@@ -24,7 +24,7 @@ class CreateAgendasTable extends Migration
             $table->date('tanggal');
             $table->time('waktu');
             $table->string('tempat');
-            $table->boolean('confirmed');
+            $table->boolean('confirmed')->nullable();
             $table->timestamps();
 
             $table->foreign('id_ukm')
