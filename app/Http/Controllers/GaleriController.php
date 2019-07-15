@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Galeri;
+use App\Ukm;
 use Illuminate\Http\Request;
 
 class GaleriController extends Controller
@@ -15,6 +16,11 @@ class GaleriController extends Controller
     public function index()
     {
         //
+        $data['ukms'] = Ukm::all();
+
+        // dd($data);
+
+        return view('galeri', $data);
     }
 
     /**
@@ -81,5 +87,15 @@ class GaleriController extends Controller
     public function destroy(Galeri $galeri)
     {
         //
+    }
+
+    public function list($id)
+    {
+        $data['galeris'] = Galeri::where('id_ukm',$id)->get();
+        $data['ukm'] = Ukm::where('id', $id)->first();
+// 
+        // dd($data);
+
+        return view('galeriisi', $data);
     }
 }

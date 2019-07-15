@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
-use App\Registrasi;
+use App\User;
 use App\Ukm;
-use App\Anggota;
 
-class DashboardukmController extends Controller
+class DashboardbemuserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,22 +15,10 @@ class DashboardukmController extends Controller
      */
     public function index()
     {
-        //
-        // dd(Auth::user()->id_ukm);
-        if (Auth::user()->id_ukm == NULL) {
-            return redirect('dashboardbem');
-        } else {
-            # code...
-        
-        
-        $ukm = Auth::user()->id_ukm;
-        $data['ukm'] = Ukm::where('id', $ukm)->first();
-        $data['count'] = Anggota::where('id_ukm',$ukm)->count();
-        $data['count2'] = Registrasi::where('id_ukm', $ukm)->count();
+        $data['accs'] = User::where('id_ukm', '!=', NULL)->with('ukm')->get();
+        $data['ukms'] = Ukm::all();
         // dd($data);
-        // dd($data);
-        return view('dashboardukm', $data);
-        }     
+        return view('dashboardbemuser', $data);
     }
 
     /**
@@ -54,7 +40,18 @@ class DashboardukmController extends Controller
     public function store(Request $request)
     {
         //
-        $ukm = new Ukm;
+        $user = new User;
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->id_ukm = $request->pilihukm;
+
+        // dd($user);
+
+        $user->save();
+
+        return redirect('dashboardbemuser');
     }
 
     /**
@@ -100,44 +97,5 @@ class DashboardukmController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function editProfil($id)
-    {
-        $data['ukm'] = Ukm::find($id);
-
-        return view('formukmprofil', $data);
-    }
-
-    public function updateProfil(Request $request, $id)
-    {
-        $ukm = Ukm::find($id);
-
-        $ukm->profil = $request->profil;
-
-        $ukm->save();
-
-        return redirect('dashboardukm');
-    }
-
-    public function editPengurus($id)
-    {
-        $data['ukm'] = Ukm::find($id);
-
-        return view('formukmpengurus', $data);
-    }
-
-    public function updatePengurus(Request $request, $id)
-    {
-        $ukm = Ukm::find($id);
-
-        $ukm->ketua = $request->ketua;
-        $ukm->npm = $request->npm;
-        $ukm->pembina = $request->pembina;
-
-
-        $ukm->save();
-
-        return redirect('dashboardukm');
     }
 }

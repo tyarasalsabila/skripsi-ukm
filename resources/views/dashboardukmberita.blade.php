@@ -38,7 +38,7 @@
 										<td>{{$brt->create_at}}</td>
 										<td>{{$brt->judul}}</td>
 										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
-										<td>{{$brt->isi}}</td>
+										<td>{{Str::limit($brt->isi,10)}}</td>
 										<td>
 										<a href="/editberitaukm/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
 										{{-- <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}

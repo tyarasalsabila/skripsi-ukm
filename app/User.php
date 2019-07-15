@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
     public function ukm(){
-        return $this->belongsTo('App\Ukm');
+        return $this->belongsTo('App\Ukm','id_ukm');
     }
 
     public function berita()

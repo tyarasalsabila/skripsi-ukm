@@ -18,7 +18,7 @@ class CreateRegistrasisTable extends Migration
             $table->text('nama');
             $table->integer('npm');
             $table->string('email');
-            $table->integer('hp');
+            $table->string('hp');
             $table->string('fakultas');
             $table->string('jurusan');
             $table->integer('angkatan');

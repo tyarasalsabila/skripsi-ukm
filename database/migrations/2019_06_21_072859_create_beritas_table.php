@@ -16,7 +16,7 @@ class CreateBeritasTable extends Migration
         Schema::create('beritas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judul');
-            $table->string('isi');
+            $table->text('isi');
             $table->integer('id_ukm')->unsigned()->nullable();
             $table->integer('id_user')->unsigned();
             $table->string('foto');

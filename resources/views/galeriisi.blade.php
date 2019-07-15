@@ -21,7 +21,7 @@
 		<span class="txt29 m-l-10 m-r-10">/</span>
 
 		<a href="/" class="txt29" style="text-decoration:none">
-			Unit Perisai Diri Unpad (PD)
+			{{$ukm->nama}}
 		</a>
 	</div>
 </div>
@@ -30,40 +30,16 @@
 
 
 <div class="wrap-gallery isotope-grid flex-w p-l-30">
+@foreach($galeris as $galeri)
   <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom senibahasa">
-    <img src="images/ukm/ukm-gallery4.png" alt="IAAS">
+    <img src="{{url('').'/storage/'.$galeri->link_foto }}" alt="IAAS">
 	  <div class="overlay-item-gallery trans-0-4 flex-c-m">
-      <a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="images/ukm/ukm-gallery4.png" data-lightbox="gallery"></a>
+      <a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="{{url('').'/storage/'.$galeri->link_foto }}" data-lightbox="gallery"></a>
 		</div>
   </div>
+  @endforeach
 
-  <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom senibahasa">
-    <img src="images/ukm/ukm-gallery4.png" alt="IAAS">
-	  <div class="overlay-item-gallery trans-0-4 flex-c-m">
-      <a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="images/ukm/ukm-gallery4.png" data-lightbox="gallery"></a>
-		</div>
-  </div>
-
-  <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom senibahasa">
-    <img src="images/ukm/ukm-gallery4.png" alt="IAAS">
-	  <div class="overlay-item-gallery trans-0-4 flex-c-m">
-      <a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="images/ukm/ukm-gallery4.png" data-lightbox="gallery"></a>
-		</div>
-  </div>
-
-  <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom senibahasa">
-    <img src="images/ukm/ukm-gallery4.png" alt="IAAS">
-	  <div class="overlay-item-gallery trans-0-4 flex-c-m">
-      <a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="images/ukm/ukm-gallery4.png" data-lightbox="gallery"></a>
-		</div>
-  </div>
-
-  <div class="item-gallery isotope-item bo-rad-10 hov-img-zoom senibahasa">
-    <img src="images/ukm/ukm-gallery4.png" alt="IAAS">
-	  <div class="overlay-item-gallery trans-0-4 flex-c-m">
-      <a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="images/ukm/ukm-gallery4.png" data-lightbox="gallery"></a>
-		</div>
-  </div>
+  
 </div>
 @endsection  
 </html>

@@ -11,11 +11,12 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
+					<div style="overflow:auto">
 						<div class="panel-heading">
 							<h3 class="panel-title">Permintaan Anggota Baru</h3>
 						</div>
-						<div class="panel-body">
-							<table class="table table-responsive table-bordered table-hover">
+						<div class="panel-body" style="padding-right:10px">
+							<table  class="table table-bordered table-responsive table-hover">
 								<thead>
 									<tr>
 										<th>No</th>

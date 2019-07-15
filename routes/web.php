@@ -56,6 +56,10 @@ Route::get('/deleteagenda/{id}', 'DashboardbemagendaController@destroy')->name('
 Route::get('/acceptagenda/{id}', 'AgendaController@accept')->name('acceptagenda')->middleware('auth');
 Route::get('/rejectagenda/{id}', 'AgendaController@reject')->name('rejectagenda')->middleware('auth');
 
+Route::get('/dashboardbemuser', 'DashboardbemuserController@index')->middleware('auth');
+Route::post('/dashbemuser', 'DashboardbemuserController@store')->name('dashbemuser')->middleware('auth');
+
+
 
 
 // Admin UKM
@@ -63,6 +67,11 @@ Route::get('/adminukm', 'ty@adminukm')->middleware('auth');
 
 Route::get('/dashboardukm', 'DashboardukmController@index')->middleware('auth')->name('dashboardukm');
 Route::post('/dashukm', 'DashboardukmController@store')->name('dashukm')->middleware('auth');
+Route::get('/editprofil/{id}', 'DashboardukmController@editProfil');
+Route::post('/updateprofil/{id}', 'DashboardukmController@updateProfil')->middleware('auth');
+Route::get('/editpengurus/{id}', 'DashboardukmController@editPengurus');
+Route::post('/updatepengurus/{id}', 'DashboardukmController@updatePengurus')->middleware('auth');
+
 
 Route::get('/dashboardukmregistrasi', 'DashboardukmregistrasiController@index')->middleware('auth');
 Route::post('/dashukmregis', 'DashboardukmregistrasiController@store')->name('dashukmregis')->middleware('auth');
@@ -175,7 +184,9 @@ Route::get('/typography', 'ty@typography');
 
 
 Route::get('/beranda', 'ty@beranda');
-Route::get('/galeri', 'ty@galeri');
+Route::get('/galeri', 'GaleriController@index');
+Route::get('/galeri/{id}', 'GaleriController@list');
+
 Route::get('/tentang', 'ty@tentang');
 
 

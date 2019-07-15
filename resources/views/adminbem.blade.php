@@ -64,6 +64,7 @@
                         <li><a href="/dashboardbemukm" class=""><span>UKM</span></a></li>
 						<li><a href="/dashboardbemberita" class=""><span>Berita</span></a></li>
                         <li><a href="/dashboardbemagenda" class=""><span>Agenda</span></a></li>
+						<li><a href="/dashboardbemuser" class=""><span>User</span></a></li>
 					</ul>
 				</nav>
 			</div>

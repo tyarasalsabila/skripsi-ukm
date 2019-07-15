@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UkmSeeder::class,
             UsersTableSeeder::class,
-            BeritaTableSeeder::class,
-            AgendaTableSeeder::class,
+            // BeritaTableSeeder::class,
+            // AgendaTableSeeder::class,
 
             ]);
     }

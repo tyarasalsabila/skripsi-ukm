@@ -12,28 +12,61 @@
 			<div class="panel panel-headline">
 				<div class="panel-heading">
 					<h3 class="panel-title">Dashboard</h3>
-					<p class="panel-subtitle">Unit Kegiatan Mahasiswa UNPAD - UKM</p>
+					<p class="panel-subtitle">{{$ukm->nama}} - {{$ukm->namapendek}}</p>
 				</div>
 				<div class="panel-body">
 					<div class="row">
                         <div class="col-md-3">
 							<div class="metric">
                                 <p style="text-align:center">
-								<span class="number">{{$count}}</span>
-                                    <span class="title">Jumlah Anggota</span>
+									<span class="number">{{$count}}</span>
+									<span class="title">Jumlah Anggota</span>
                                 </p>
 							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="metric">
+								<p style="text-align:center">
+									<span class="number">{{$count2}}</span>
+									<span class="title">Jumlah Pendaftar</span>
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="metric">
-							<p style="text-align:center">
-							<span class="number">{{$count2}}</span>
-								<span class="title">Jumlah Pendaftar</span>
-							</p>
-					</div>
-				</div>
 				</div>
 			</div>
+
+
+			<div class="col-md-6">
+				<div class="panel panel-headline">
+					<div class="panel-heading">
+						<h3 class="panel-title">Profil</h3>
+					</div>
+					<div class="panel-body" style="margin:15px">
+						<p> {{$ukm->profil}} </p>
+						<br>
+						<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-primary">Edit</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-headline">
+					<div class="panel-heading">
+						<h3 class="panel-title">Pengurus</h3>
+					</div>
+					<div class="panel-body" style="margin:15px">
+							<p>Ketua : {{$ukm->ketua}} </p>
+							<p>NPM : {{$ukm->npm}}</p>
+							<p> Pembina :  {{$ukm->pembina}} </p>
+							<br>
+							<a href="/editpengurus/{{$ukm->id}}" type="button" class="btn btn-primary">Edit</a>
+					</div>
+				</div>
+			</div>
+
+
+			
 
 
 			<!-- Accept -->

@@ -184,41 +184,7 @@
 
 								<option value="{{$ukm->id}}">{{$ukm->nama}}</option>
 								@endforeach
-								<!--<option>Unit Perisai Diri Unpad (PD)</option>
-								 <option>Unit Merpati Putih Unpad (MP)</option>
-								<option>Unit Kempo Unpad</option>
-								<option>Unit Judo Unpad (UJU)</option>
-								<option>Unit Karate Unpad (UKU)</option>
-								<option>Unit Taekwondo Unpad (UTKD)</option>
-								<option>Unit Catur Mahasiswa Unpad (UCMU)</option>
-								<option>Unit Bridge Unpad</option>
-								<option>Unit Tenis Lapang Unpad (UTU)</option>
-								<option>Unit Tenis Meja Unpad (UTMU)</option>
-								<option>Unit Renang Unpad (URU)</option>
-								<option>Unit Hockey Unpad (UHU)</option>
-								<option>Unit Soft Ball & Base Ball Unpad</option>
-								<option>Unit Sepak Bola Unpad (USBU)</option>
-								<option>Unit Bola Basket Unpad (UBBU)</option>
-								<option>Unit Bola Volley Unpad (UBVU)</option>
-								<option>Unit Bulutangkis Unpad (UBTU)</option>
-								<option>Unit Palawa Unpad</option>
-								<option>Search and Rescue (SAR) Unpad</option>
-								<option>Korps Sukarela Palang Merah <br>Indonesia (KSR PMI)</option>
-								<option>Unit Menwa Yon II Unpad</option>
-								<option>Unit Pramuka Unpad</option>
-								<option>Sadaluhung Padjadjaran Drum Corps (SPdC)</option>
-								<option>Paduan Suara Mahasiswa (PSM)</option>
-								<option>Korps Protokoler Mahasiswa (KPM)</option>
-								<option>Lingkung Seni Sunda (Lises)</option>
-								<option>Unit Fotografi (Spektrum)</option>
-								<option>Gelanggang Seni  Sastra, Teater dan Film (GSSTF)</option>
-								<option>Unit Pecinta Budaya Minangkabau (UPBM)</option>
-								<option>Association Internationale des Etudiants en Sciences Economiques et Commerciales (AIESEC)</option>
-								<option>English Speaking Union (ESU)</option>
-								<option>Lembaga Pengkajian dan Pengabdian Masyarakat Demokratis (LPPMD)</option>
-								<option>Padjadjaran Ensemble Club (PEC)</option>
-								<option>Unit Flag Footbal UNPAD (UFFU)</option>
-								<option>International Association of Students in Agricultural and Related Sciences (IAAS)</option> -->
+								
 							</select>
 						</div>
 

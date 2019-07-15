@@ -109,6 +109,11 @@ class ty extends Controller
         return view('formbemberita');
     }
 
+    public function dashboardbemuser()
+    {
+        return view('dashboardbemuser');
+    }
+
 
     // Admin UKM
     public function adminukm()

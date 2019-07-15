@@ -1,4 +1,4 @@
-@extends ('adminukm')
+@extends ('adminbem')
 
 @section ('title','Dashboard BEM - Agenda')
 
@@ -8,36 +8,31 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Berita</h3>
+			<h3 class="page-title">Edit Pengurus</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">List Berita</h3>
-						</div>
 						<div class="panel-body">
-						<form action="/dashukmberitaupd/{{$berita->id}}" method="POST" enctype="multipart/form-data">
+						<form action="/updatepengurus/{{$ukm->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
 							<div class="form-group">
-									<label> Judul </label>
-							<input type="text" name="judul" class="form-control" value="{{$berita->judul}}">
+									<label> Ketua </label>
+									<input type="text" name="ketua" class="form-control" value="{{$ukm->ketua}}">
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Isi </label>
-									<br>
-								<!-- <input type="text" name="isi" class="form-control" value="{{$berita->isi}}"> -->
-								<textarea name="isi" id="isi" cols="100%" rows="10">{{$berita->isi}}</textarea>
+									<label> NPM </label>
+									<input type="text" name="npm" class="form-control" value="{{$ukm->npm}}">
 								</div>
 
 								<br>
 
-								<label> Upload Foto </label>
-								<div class="custom-file">
-								<input type="file" name="image" class="custom-file-input" value="{{$berita->foto}}">
+								<div class="form-group">
+									<label> Pembina </label>
+									<input type="text" name="pembina" class="form-control" value="{{$ukm->pembina}}">
 								</div>
 
 								<br>

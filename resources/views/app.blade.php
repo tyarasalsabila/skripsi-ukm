@@ -119,7 +119,7 @@
           <a href="/tentang" class="txt19">Tentang</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/daftarukm" class="txt19">Daftar UKM</a>
+          <a href="/registrasi" class="txt19">Daftar UKM</a>
         </li>
       </ul>
     </aside>
