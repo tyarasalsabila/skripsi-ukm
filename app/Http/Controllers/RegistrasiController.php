@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Registrasi;
 use App\Ukm;
+use App\Anggota;
 use Illuminate\Http\Request;
 
 class RegistrasiController extends Controller
@@ -102,5 +103,38 @@ class RegistrasiController extends Controller
     public function destroy(Registrasi $registrasi)
     {
         //
+    }
+
+    public function accept($id)
+    {
+        $registrasi = Registrasi::find($id);
+
+        $anggota = new Anggota();
+
+        $anggota->nama = $registrasi->nama;
+        $anggota->npm = $registrasi->npm;
+        $anggota->email = $registrasi->email;
+        $anggota->fakultas = $registrasi->fakultas;
+        $anggota->jurusan = $registrasi->jurusan;
+        $anggota->angkatan = $registrasi->angkatan;
+        $anggota->hp = $registrasi->hp;
+        $anggota->id_ukm = $registrasi->id_ukm;
+        $anggota->status = 1;
+
+        $anggota->save();
+        $registrasi->delete();
+
+        return redirect('dashboardukmregistrasi');
+
+    }
+
+    public function reject($id)
+    {
+        $registrasi = Registrasi::find($id);
+
+        $registrasi->delete();
+
+        return redirect('dashboardukmregistrasi');
+
     }
 }

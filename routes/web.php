@@ -114,6 +114,8 @@ Route::get('/editjadwalukm/{id}', 'DashboardukmjadwalController@edit')->middlewa
 Route::post('/dashukmjadwalupd/{id}', 'DashboardukmjadwalController@update')->middleware('auth');
 
 
+Route::get('/acceptregistrasi/{id}', 'RegistrasiController@accept')->name('acceptregistrasi')->middleware('auth');
+Route::get('/rejectregistrasi/{id}', 'RegistrasiController@reject')->name('rejectregistrasi')->middleware('auth');
 
 // Route::get('/dashboardukm', 'ty@dashboardukm');
 Route::get('/anggotaukm', 'ty@anggotaukm');

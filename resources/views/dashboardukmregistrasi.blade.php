@@ -43,8 +43,10 @@
 										<td>{{$rgt->jurusan}}</td>
 										<td>{{$rgt->angkatan}}</td>
 										<td>
-											<button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
-											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button>
+											{{-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
+											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button> --}}
+											<a href="/acceptregistrasi/{{$rgt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima registrasi?')">Accept</a>
+											<a href="/rejectregistrasi/{{$rgt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak registrasi?')">Reject</a>
 										</td>
 									</tr>
 								@endforeach
