@@ -19,7 +19,7 @@
         <div class="col-md-4 p-t-30">             
           <div class="blo1">
             <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
-              <a href="/agenda/{{$agenda->id}}"><img src="images/agenda/agendafull.png" alt="IMG-INTRO"></a>
+              <a href="/agenda/{{$agenda->id}}"><img src="{{url('').'/storage/'.$agenda->foto}}" alt="IMG-INTRO"></a>
               <div class="time-blog">
                   {{ \Carbon\Carbon::parse($agenda->created_at)->format('d M Y')}}
               </div>

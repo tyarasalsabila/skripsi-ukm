@@ -21,7 +21,7 @@
             <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
             <a href="/berita/{{$berita->id}}"><img src="{{url('').'/storage/'.$berita->foto}}" alt="IMG-INTRO"></a>
               <div class="time-blog">
-   	            01 Mei 2019
+              {{ \Carbon\Carbon::parse($berita->created_at)->format('d M Y')}}
               </div>
             </div>
 
@@ -33,7 +33,7 @@
               </a>
 
               <p class="m-b-20">
-                {{$berita->isi}}
+                {{Str::limit($berita->isi,10)}}
               </p>
 
               <a href="/berita/{{$berita->id}}" class="txt4" style="text-decoration:none">

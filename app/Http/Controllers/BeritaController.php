@@ -18,7 +18,7 @@ class BeritaController extends Controller
     {
         //
         //ngambil data semua berita
-        $data['beritas'] = Berita::all();
+        $data['beritas'] = Berita::where('confirmed','=',true)->get();
         // dd($data);
         return view('berita', $data);
     }

@@ -14,7 +14,7 @@ class AgendaController extends Controller
      */
     public function index()
     {
-        $data['agendas'] = Agenda::all();
+        $data['agendas'] = Agenda::where('confirmed','=',true)->get();
         // dd($data);
         return view('agenda', $data);
     }

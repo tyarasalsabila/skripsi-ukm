@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Berita;
 use App\Agenda;
+use DB;
 
 class HomeController extends Controller
 {
@@ -25,8 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $berita = Berita::orderBy('created_at', 'DESC')->with('ukm')->limit(3)->get();
-        $agenda = Agenda::orderBy('created_at', 'DESC')->with('ukm')->limit(3)->get();
+        $berita = Berita::where('confirmed','=',true)->orderBy('created_at', 'DESC')->with('ukm')->limit(3)->get();
+        $agenda = Agenda::where('confirmed','=',true)->orderBy(DB::raw('ABS(DATEDIFF(tanggal, NOW()))'))->with('ukm')->limit(3)->get();
 
         $data = array('berita' => $berita,
                     'agenda' => $agenda,

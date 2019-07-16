@@ -21,8 +21,8 @@
 
 		<span class="txt29 m-l-10 m-r-10">/</span>
 
-		<a href="/" class="txt29" style="text-decoration:none">
-      Melodijo Veselja
+		<a class="txt29" style="text-decoration:none">
+			{{$agenda->judul}}
 		</a>
 	</div>
 </div>
@@ -67,7 +67,23 @@
 					</div>
 
 					<p class="p-t-20">
-          {{$agenda->isi}}
+						<b> Link Pendaftaran : </b> {{$agenda->link}}
+					</p>
+
+					<p>
+						<b> Tanggal : </b> {{$agenda->tanggal}}
+					</p>
+
+					<p>
+						<b> Jam : </b> {{$agenda->waktu}}
+					</p>
+
+					<p>
+						<b> Tempat : </b> {{$agenda->tempat}}
+					</p>
+
+					<p class="p-t-20">
+          				{{$agenda->isi}}
 					</p>
 				</div>
 			</div>

@@ -27,9 +27,10 @@
 										<th>Foto</th>
 										<th>Isi</th>
 										<th>Link</th>
-										<th>Hari</th>
+										<th>Jam</th>
 										<th>Tanggal</th>
 										<th>Tempat</th>
+										<th>Status</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -47,6 +48,7 @@
 										<td>{{$agd->waktu}}</td>
 										<td>{{$agd->tanggal}}</td>
 										<td>{{$agd->tempat}}</td>
+										<td>{{$agd->confirmed}}</td>
 										<td>
 										<a href="/editagendaukm/{{$agd->id}}" type="button" class="btn btn-warning" >Edit</a>
 											{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}

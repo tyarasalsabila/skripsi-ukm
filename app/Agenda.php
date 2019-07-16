@@ -12,10 +12,6 @@ class Agenda extends Model
         'id_ukm',
         'id_user',
         'foto',
-        'link',
-        'tanggal',
-        'waktu',
-        'tempat',
     ];
 
     public function ukm(){
