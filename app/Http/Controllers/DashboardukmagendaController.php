@@ -16,7 +16,7 @@ class DashboardukmagendaController extends Controller
      */
     public function index()
     {
-        $ukm = 1; 
+        $ukm = Auth::user()->id_ukm; 
         $data['agenda'] = Agenda::where('id_ukm', $ukm)->get();
         // dd($data);
         return view('dashboardukmagenda', $data);
@@ -52,7 +52,7 @@ class DashboardukmagendaController extends Controller
         $agenda->id_user = Auth::user()->id;
         $agenda->foto = $path;
         $agenda->link = $request->link;
-        $agenda->confirmed = 0;
+        // $agenda->confirmed = 0;
         $agenda->waktu = $request->waktu;
         $agenda->tanggal = $request->tanggal;
         $agenda->tempat = $request->tempat;
@@ -82,7 +82,7 @@ class DashboardukmagendaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    {   
         //
         $data['agenda'] = Agenda::find($id); 
         return view('formukmagenda',$data);
