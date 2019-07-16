@@ -26,7 +26,7 @@ class UkmSeeder extends Seeder
         //2
         DB::table('ukms')->insert([
             'nama' => "Unit Baseball dan Softball Unpad",
-            'namapendek' => "USBU",
+            'namapendek' => "SOFTBALL",
             'hari' => "Kamis",
             'jam' => "10:00",
             'tempat' => "Ruangan",
