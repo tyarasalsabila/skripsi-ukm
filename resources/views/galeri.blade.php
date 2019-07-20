@@ -27,7 +27,7 @@
             <h5> {{$ukm->namapendek}} </h5>
           </div>
           <div class="container" style="text-align:center">
-            <p>{{Str::limit($ukm->nama,35)}}</p>
+            <p>{{Str::limit($ukm->nama_ukm,35)}}</p>
           </div>
         </a>
       </div>
