@@ -91,7 +91,7 @@ class GaleriController extends Controller
 
     public function list($id)
     {
-        $data['galeris'] = Galeri::where('id_ukm',$id)->get();
+        $data['galeris'] = Galeri::where('id_ukm',$id)->orderBy('created_at', 'DESC')->get();
         $data['ukm'] = Ukm::where('id', $id)->first();
 // 
         // dd($data);

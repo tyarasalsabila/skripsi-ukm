@@ -36,11 +36,17 @@
 								@php ($x = $x+1)
 									<tr>
 										<td>{{$x}}</td>
-										<td>{{$brt->create_at}}</td>
+										<td>{{$brt->created_at}}</td>
 										<td>{{$brt->judul}}</td>
 										<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
 										<td>{{Str::limit($brt->isi,10)}}</td>
-										<td>{{$brt->confirmed}}</td>
+										@if($brt->confirmed == 1)
+											<td>Diterima</td>
+										@elseif($brt->confirmed === 0)
+											<td>Ditolak</td>
+										@else
+											<td>Belum ada kabar</td>
+										@endif
 										<td>
 										<a href="/editberitaukm/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
 										{{-- <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}
@@ -71,21 +77,21 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita" required>
 								</div>
 
 								<br>
 
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
+									<input type="file" name="image" class="custom-file-input" required>
 								</div>
 
 								<br>
@@ -117,21 +123,21 @@
 							<div class="modal-body">
 							<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita" required>
 								</div>
 
 								<br>
 
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
+									<input type="file" name="image" class="custom-file-input" required>
 								</div>
 
 								<br>

@@ -10,51 +10,54 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="panel"	>
-						<div class="panel-heading">
-							<h3 class="panel-title">Anggota UKM</h3>
-						</div>
-					<div class="panel-body">
-						<p class="demo-button">
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Anggota</button>
-						</p>
-						<table class="table table-bordered table-hover">
-							<thead>
-								<tr>
-									<th>No</th>
-									<th>Nama</th>
-									<th>NPM</th>
-									<th>Email</th>
-									<th>No. HP</th>
-									<th>Fakultas</th>
-									<th>Jurusan</th>
-									<th>Angkatan</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-							@php ($x = 0)
-							@foreach ($anggota as $ang)
-							@php ($x = $x+1)
-								<tr>
-									<td>{{$x}}</td>
-									<td>{{$ang->nama}}</td>
-									<td>{{$ang->npm}}</td>
-									<td>{{$ang->email}}</td>
-									<td>{{$ang->hp}}</td>
-									<td>{{$ang->fakultas}}</td>
-									<td>{{$ang->jurusan}}</td>
-									<td>{{$ang->angkatan}}</td>
-									<td>
-										<a href="/editanggotaukm/{{$ang->id}}" type="button" class="btn btn-warning">Edit</a>
-										{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addModal">Delete</button> --}}
-										<a href="/dashukmanggotadel/{{$ang->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
-									</td>
-								</tr>
-							@endforeach
-							</tbody>
-						</table>
-					</div>						
+					<div class="panel">
+						<div style="overflow:auto">
+							<div class="panel-heading">
+								<h3 class="panel-title">Anggota UKM</h3>
+							</div>
+							<div class="panel-body">
+								<p class="demo-button">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Anggota</button>
+								</p>
+								<table class="table table-bordered table-hover" id="datatable">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Nama</th>
+											<th>NPM</th>
+											<th>Email</th>
+											<th>No. HP</th>
+											<th>Fakultas</th>
+											<th>Jurusan</th>
+											<th>Angkatan</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+									@php ($x = 0)
+									@foreach ($anggota as $ang)
+									@php ($x = $x+1)
+										<tr>
+											<td>{{$x}}</td>
+											<td>{{$ang->nama}}</td>
+											<td>{{$ang->npm}}</td>
+											<td>{{$ang->email}}</td>
+											<td>{{$ang->hp}}</td>
+											<td>{{$ang->fakultas}}</td>
+											<td>{{$ang->jurusan}}</td>
+											<td>{{$ang->angkatan}}</td>
+											<td>
+												<a href="/editanggotaukm/{{$ang->id}}" type="button" class="btn btn-warning">Edit</a>
+												{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#addModal">Delete</button> --}}
+												<a href="/dashukmanggotadel/{{$ang->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+											</td>
+										</tr>
+									@endforeach
+									</tbody>
+								</table>
+							</div>					
+						</div>					
+					</div>
 				</div>
 			</div>
 

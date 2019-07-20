@@ -18,7 +18,7 @@
 							<p class="demo-button">
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Agenda</button>
 							</p>
-							<table class="table table-bordered table-hover">
+							<table class="table table-bordered table-hover" id="datatable">
 								<thead>
 									<tr>
 										<th>No</th>
@@ -40,7 +40,7 @@
 								@php ($x = $x+1)
 									<tr>
 										<td>{{$x}}</td>
-										<td>{{$agd->create_at}}</td>
+										<td>{{$agd->created_at}}</td>
 										<td>{{$agd->judul}}</td>
 										<td><img src="{{ url('').'/storage/'.$agd->foto}}" width="70px" alt=""></td>
 										<td>{{$agd->isi}}</td>

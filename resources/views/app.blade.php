@@ -23,20 +23,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/animate/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/css-hamburgers/hamburgers.min.css')}}">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/animsition/css/animsition.min.css')}}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/animsition/css/animsition.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/select2/select2.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/daterangepicker/daterangepicker.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/slick/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/lightbox2/css/lightbox.min.css')}}">
-
-    <!-- Admin Klorofil
-    <link rel="stylesheet" href="{{ asset ('assets/vendor/linearicons/style.css')}}">
-    <link rel="stylesheet" href="{{ asset ('assets/vendor/chartist/css/chartist-custom.css')}}">
-    <link rel="stylesheet" href="{{ asset ('assets/css/main1.css')}}">
-    <link rel="stylesheet" href="{{ asset ('assets/css/demo.css')}}">
-    <link href="{{ asset ('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700')}}" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset ('assets/img/apple-icon.png')}}">
-	  <link rel="icon" type="image/png" sizes="96x96" href="{{ asset ('assets/img/favicon.png')}}"> -->
     
   </head>
 
@@ -101,25 +92,25 @@
       <!-- - -->
       <ul class="menu-sidebar p-t-95 p-b-70">
         <li class="t-center m-b-13">
-          <a href="/" class="txt19">Beranda</a>
+          <a href="/" class="txt19" style="text-decoration: none">Beranda</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/ukm" class="txt19">UKM</a>
+          <a href="/ukm" class="txt19" style="text-decoration: none">UKM</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/galeri" class="txt19">Galeri</a>
+          <a href="/galeri" class="txt19" style="text-decoration: none">Galeri</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/berita" class="txt19">Berita</a>
+          <a href="/berita" class="txt19" style="text-decoration: none">Berita</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/agenda" class="txt19">Agenda</a>
+          <a href="/agenda" class="txt19" style="text-decoration: none">Agenda</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/tentang" class="txt19">Tentang</a>
+          <a href="/tentang" class="txt19" style="text-decoration: none">Tentang</a>
         </li>
         <li class="t-center m-b-13">
-          <a href="/registrasi" class="txt19">Daftar UKM</a>
+          <a href="/registrasi" class="txt19" style="text-decoration: none">Daftar UKM</a>
         </li>
       </ul>
     </aside>
@@ -224,11 +215,10 @@
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="{{ asset('vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
   <script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
 <!--===============================================================================================-->
   <script src="js/main.js"></script>
-  
 
 </body>

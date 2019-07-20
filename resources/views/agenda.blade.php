@@ -6,7 +6,7 @@
 
 
 <!-- Header -->
-<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/ukm/ukm-cover.jpg);">
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('images/unpad/headermini1.png') }});">
 	<h2 class="tit7-ukm">
     AGENDA
   </h2>
@@ -14,6 +14,7 @@
 
 <section>
 	<div class="container p-b-80 p-t-80">
+  {{$agendas->links()}}
       <div class="row">
         @foreach ($agendas as $agenda)
         <div class="col-md-4 p-t-30">             
@@ -21,7 +22,7 @@
             <div class="wrap-pic-blo1 bo-rad-4 hov-img-zoom pos-relative">
               <a href="/agenda/{{$agenda->id}}"><img src="{{url('').'/storage/'.$agenda->foto}}" alt="IMG-INTRO"></a>
               <div class="time-blog">
-                  {{ \Carbon\Carbon::parse($agenda->created_at)->format('d M Y')}}
+                  {{ \Carbon\Carbon::parse($agenda->tanggal)->format('d M Y')}}
               </div>
             </div>
 

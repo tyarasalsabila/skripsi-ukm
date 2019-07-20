@@ -22,7 +22,6 @@ class CreateAnggotasTable extends Migration
             $table->string('npm');
             $table->string('hp');
             $table->string('email');
-            $table->boolean('status');
             $table->integer('id_ukm')->unsigned();
             $table->timestamps();
 

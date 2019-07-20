@@ -18,7 +18,7 @@ class BeritaController extends Controller
     {
         //
         //ngambil data semua berita
-        $data['beritas'] = Berita::where('confirmed','=',true)->get();
+        $data['beritas'] = Berita::where('confirmed','=',true)->orderBy('created_at', 'DESC')->paginate(6);
         // dd($data);
         return view('berita', $data);
     }

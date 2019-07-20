@@ -21,6 +21,7 @@
 										<th>Hari</th>
 										<th>Jam</th>
 										<th>Tempat</th>
+										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>

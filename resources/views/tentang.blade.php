@@ -6,7 +6,7 @@
 
 
 <!-- Header -->
-<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/ukm/ukm-cover.jpg);">
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('images/unpad/headermini1.png') }});">
 	<h2 class="tit7-ukm">
     TENTANG KAMI
   </h2>
@@ -21,7 +21,7 @@
     Unit Kegiatan Mahasiswa (UKM) UNPAD merupakan organisasi kemahasiswaan 
     di tingkat Universitas yang berfungsi menampung berbagai minat 
     dan bakat dari para mahasiswa Universitas Padjadjaran.
-    Saat ini Universitas Padjadjaran memiliki 35 UKM Aktif.
+    Saat ini Universitas Padjadjaran memiliki 34 UKM Aktif.
   </p>
   
   <div class="flex-c-m m-t-6 p-t-40">

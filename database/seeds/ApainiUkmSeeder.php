@@ -11,13 +11,14 @@ class UkmSeeder extends Seeder
      */
     public function run()
     {
+        //1
         DB::table('ukms')->insert([
             'nama' => "Unit Pramuka Unpad",
             'namapendek' => "UPU",
-            'hari' => "Kamis",
-            'jam' => "10:00",
-            'tempat' => "Ruangan",
-            'profil' => "UPU adalah",
+            'hari' => "Tentatif",
+            'jam' => "00:00",
+            'tempat' => "Tentatif",
+            'profil' => "Pramuka Unpad resmi didirikan pada 30 Agustus 1975. Pramuka Unpad membentuk karakter anggotanya  untuk  siap terjun ke masyarakat. Kegiatan yang dilaksanakan oleh Pramuka Unpad berada di ruang lingkup pengembangan keterampilan anggota berwawasan lingkungan, bakti kepada masyarakat, kegiatan alam bebas, seni dan budaya, kewirausahaan, serta kegiatan lain yang menunjang pengembangan anggota Ambalan-Racana Padjadjaran.",
             'ketua' => "Pandu Budiman",
             'npm' => "200110170047",
             'pembina' => "FMIPA",
@@ -221,7 +222,7 @@ class UkmSeeder extends Seeder
         //17
         DB::table('ukms')->insert([
             'nama' => "Unit Shorinji Kempo Unpad",
-            'namapendek' => "kempo",
+            'namapendek' => "KEMPO",
             'hari' => "Kamis",
             'jam' => "10:00",
             'tempat' => "Ruangan",
@@ -338,7 +339,7 @@ class UkmSeeder extends Seeder
         //26
         DB::table('ukms')->insert([
             'nama' => "Unit Tarung Derajat Unpad",
-            'namapendek' => "utd",
+            'namapendek' => "UTD",
             'hari' => "Kamis",
             'jam' => "10:00",
             'tempat' => "Ruangan",
@@ -364,7 +365,7 @@ class UkmSeeder extends Seeder
         //28
         DB::table('ukms')->insert([
             'nama' => "Unit Fotografi Unpad",
-            'namapendek' => "Spektrum",
+            'namapendek' => "SPEKTRUM",
             'hari' => "Kamis",
             'jam' => "10:00",
             'tempat' => "Ruangan",
@@ -390,7 +391,7 @@ class UkmSeeder extends Seeder
         //30
         DB::table('ukms')->insert([
             'nama' => "Unit Palawa Unpad",
-            'namapendek' => "palawa",
+            'namapendek' => "PALAWA",
             'hari' => "Kamis",
             'jam' => "10:00",
             'tempat' => "Ruangan",

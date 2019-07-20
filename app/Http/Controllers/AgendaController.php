@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Agenda;
 use Illuminate\Http\Request;
+use DB;
+use Carbon\Carbon;
+
 
 class AgendaController extends Controller
 {
@@ -14,7 +17,9 @@ class AgendaController extends Controller
      */
     public function index()
     {
-        $data['agendas'] = Agenda::where('confirmed','=',true)->get();
+        $data['agendas'] = Agenda::where('confirmed','=',true)
+                            ->whereDate('tanggal', '>=', Carbon::now())
+                            ->orderBy(DB::raw('ABS(DATEDIFF(tanggal, NOW()))'))->paginate(6);
         // dd($data);
         return view('agenda', $data);
     }

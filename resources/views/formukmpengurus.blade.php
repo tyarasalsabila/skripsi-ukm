@@ -16,7 +16,7 @@
 						<form action="/updatepengurus/{{$ukm->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
-							<div class="form-group">
+							<div class="form-group" style="padding-top:20px">
 									<label> Ketua </label>
 									<input type="text" name="ketua" class="form-control" value="{{$ukm->ketua}}">
 								</div>
@@ -38,8 +38,8 @@
 								<br>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Save</button>
+								<a href="/dashboardukm" type="button" class="btn btn-default">Kembali</a>
+								<a type="submit" class="btn btn-primary">Save</a>
 							</div>
 						</form>
 						</div>

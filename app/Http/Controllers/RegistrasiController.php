@@ -119,7 +119,6 @@ class RegistrasiController extends Controller
         $anggota->angkatan = $registrasi->angkatan;
         $anggota->hp = $registrasi->hp;
         $anggota->id_ukm = $registrasi->id_ukm;
-        $anggota->status = 1;
 
         $anggota->save();
         $registrasi->delete();

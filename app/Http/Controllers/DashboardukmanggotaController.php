@@ -48,7 +48,6 @@ class DashboardukmanggotaController extends Controller
         $anggota->fakultas = $request->fakultas;
         $anggota->jurusan = $request->jurusan;
         $anggota->angkatan = $request->angkatan;
-        $anggota->status = 1;
         $anggota->id_ukm = Auth::user()->id_ukm;
 
         // dd($ukm);
@@ -98,9 +97,9 @@ class DashboardukmanggotaController extends Controller
         $anggota->jurusan = $request->jurusan;
         $anggota->fakultas = $request->fakultas;
         $anggota->angkatan = $request->angkatan;
-        // $anggota->npm = $request->npm;
-        // $anggota->hp = $request->nohp;
-        // $anggota->email = $request->email;
+        $anggota->npm = $request->npm;
+        $anggota->hp = $request->nohp;
+        $anggota->email = $request->email;
         // dd($anggota);
         $anggota->save();
 

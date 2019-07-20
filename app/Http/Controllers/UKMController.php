@@ -16,9 +16,11 @@ class UKMController extends Controller
      */
     public function index()
     {
-        //
+        //ngambil semua data ukm
         $data['ukms'] = Ukm::all();
         // dd($data);
+
+        //return view ('nama file view', variabel data yang mau ditampilin)
         return view('ukm', $data);
     }
 

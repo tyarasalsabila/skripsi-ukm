@@ -7620,6 +7620,17 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
     text-align: left;
 }
 
+.tit7-namaukm {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+}
+
 .tit8 {
     font-family: Poppins;
     font-weight: 700;
@@ -7670,7 +7681,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	word-spacing: 10px;
-	text-align: left;
+	text-align: center;
 }
 
 .tit13 {
@@ -7681,7 +7692,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	color: white;
 	letter-spacing: 3px;
 	word-spacing: 10px;
-	text-align: left;
+	text-align: center;
 }
 
 /*[ Text ]

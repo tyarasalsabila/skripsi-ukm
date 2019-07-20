@@ -18,7 +18,7 @@ class DashboardukmberitaController extends Controller
     {
         $ukm = Auth::user()->id_ukm; 
         $data['berita'] = Berita::where('id_ukm', $ukm)->get();
-        // dd($ukm);
+        // dd($data);
         return view('dashboardukmberita', $data);
     }
 
@@ -49,14 +49,13 @@ class DashboardukmberitaController extends Controller
         $brt->isi = $request->isi;
         $brt->id_ukm = Auth::user()->id_ukm;
         $brt->id_user = Auth::user()->id;
-        // $brt->confirmed = 0;
         $brt->foto = $path;
 
         // dd($brt);
 
         $brt->save();
 
-        return redirect('dashboardukmberita')->with('success', 'data saved');
+        return redirect('dashboardukmberita');
     }
 
     /**

@@ -11,10 +11,10 @@
 		<div class="slick1">
 			<div class="item-slick1 item1-slick1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/unpad/carousel.png);">
 				<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-					<h2 class="caption2-slide1 tit12 t-center visible-false m-b-15">
+					<h2 class="caption2-slide1 tit12  visible-false m-b-15">
 						UNIT KEGIATAN MAHASISWA
     		        </h2>
-            		<h2 class="caption2-slide1 tit13 t-center visible-false m-b-15">
+            		<h2 class="caption2-slide1 tit13  visible-false m-b-15">
 						Universitas Padjadjaran
 					</h2>
 				</div>
@@ -57,9 +57,11 @@
 </section>
 
 
+<!-- Berita dan Agenda Terbaru -->
 <section>
 	<div class="container">
 		<div class="row">
+			<!-- Berita Terbaru -->
 			<div class="col-md-9 col-lg-9 p-b-80">
 				<h2 class="txttitleagenda p-b-35 p-t-80">
 					Berita Terbaru
@@ -73,6 +75,7 @@
 									<img src="{{url('').'/storage/'.$brt->foto}}" alt="IMG-INTRO">
 								</a>
 								<div class="time-blog">
+									<!-- carbon adalah library tanggal laravel/php lupa aku jg  -->
 									{{ \Carbon\Carbon::parse($brt->created_at)->format('d M Y')}}
 								</div>
 							</div>
@@ -104,7 +107,9 @@
 					</a>
 				</div>
 			</div>
-				
+			
+			
+			<!-- Agenda Terbaru -->
 			<div class="col-md-3 col-lg-3">
           		<h2 class="txtsidebar p-t-30 p-b-27 p-t-80">
             		Agenda Terbaru

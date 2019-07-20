@@ -11,48 +11,50 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-					<div style="overflow:auto">
-						<div class="panel-heading">
-							<h3 class="panel-title">Permintaan Anggota Baru</h3>
-						</div>
-						<div class="panel-body" style="padding-right:10px">
-							<table  class="table table-bordered table-responsive table-hover">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>Nama</th>
-										<th>NPM</th>
-										<th>Email</th>
-										<th>No. HP</th>
-										<th>Fakultas</th>
-										<th>Jurusan</th>
-										<th>Angkatan</th>
-										<th>Action</th>
-									</tr>
-								</thead>
-								<tbody>
-								@php ($x = 0)
-								@foreach($reg as $rgt)
-								@php ($x = $x+1)
-									<tr>
-										<th>{{$x}}</th>
-										<td>{{$rgt->nama}}</td>
-										<td>{{$rgt->npm}}</td>
-										<td>{{$rgt->email}}</td>
-										<td>{{$rgt->hp}}</td>
-										<td>{{$rgt->fakultas}}</td>
-										<td>{{$rgt->jurusan}}</td>
-										<td>{{$rgt->angkatan}}</td>
-										<td>
-											{{-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
-											<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button> --}}
-											<a href="/acceptregistrasi/{{$rgt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima registrasi?')">Accept</a>
-											<a href="/rejectregistrasi/{{$rgt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak registrasi?')">Reject</a>
-										</td>
-									</tr>
-								@endforeach
-								</tbody>
-							</table>
+						<div style="overflow:auto">
+							<div class="panel-heading">
+								<h3 class="panel-title">Permintaan Anggota Baru</h3>
+							</div>
+							<div class="panel-body" style="padding-right:10px">
+								<table  class="table table-bordered table-responsive table-hover">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Nama</th>
+											<th>NPM</th>
+											<th>Email</th>
+											<th>No. HP</th>
+											<th>Fakultas</th>
+											<th>Jurusan</th>
+											<th>Angkatan</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+
+									<tbody>
+									@php ($x = 0)
+									@foreach($reg as $rgt)
+									@php ($x = $x+1)
+										<tr>
+											<th>{{$x}}</th>
+											<td>{{$rgt->nama}}</td>
+											<td>{{$rgt->npm}}</td>
+											<td>{{$rgt->email}}</td>
+											<td>{{$rgt->hp}}</td>
+											<td>{{$rgt->fakultas}}</td>
+											<td>{{$rgt->jurusan}}</td>
+											<td>{{$rgt->angkatan}}</td>
+											<td>
+												{{-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
+												<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button> --}}
+												<a href="/acceptregistrasi/{{$rgt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima registrasi?')">Accept</a>
+												<a href="/rejectregistrasi/{{$rgt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak registrasi?')">Reject</a>
+											</td>
+										</tr>
+									@endforeach
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

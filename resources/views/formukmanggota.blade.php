@@ -16,10 +16,9 @@
 							<h3 class="panel-title">List Anggota</h3>
 						</div>
 						<div class="panel-body">
-						<form action="/dashukmanggotaupd/{{$anggota->id}}" method="POST">
-							@csrf
-							<div class="modal-body">
-							<div class="form-group">
+							<form action="/dashukmanggotaupd/{{$anggota->id}}" method="POST">
+								@csrf
+								<div class="form-group">
 									<label> Nama </label>
 									<input type="text" name="nama" class="form-control" value="{{$anggota->nama}}">
 								</div>
@@ -63,16 +62,16 @@
 								<br>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Update Data</button>
+								<a href="/dashboardukmanggota" type="button" class="btn btn-default">Kembali</a>
+								<a type="submit" class="btn btn-primary">Update Data</a>
 							</div>
 						</form>
-						</div>
-					</div>						
-				</div>
+					</div>
+				</div>						
 			</div>
 		</div>
 	</div>
 </div>
+
 @endsection  
 </html>

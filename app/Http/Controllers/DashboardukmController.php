@@ -18,7 +18,7 @@ class DashboardukmController extends Controller
     public function index()
     {
         //
-        // dd(Auth::user()->id_ukm);
+        // dd(Auth);
         if (Auth::user()->id_ukm == NULL) {
             return redirect('dashboardbem');
         } else {
