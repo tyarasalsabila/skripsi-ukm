@@ -22,16 +22,6 @@ class DashboardbemukmController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -61,17 +51,6 @@ class DashboardbemukmController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -92,19 +71,7 @@ class DashboardbemukmController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        // $this->validate($request,[
-        //     'nama' => 'required',
-        //     'namapendek' => 'required',
-        //     'hari' => 'required',
-        //     'jam' => 'required',
-        //     'tempat' => 'required',
-        //     'profil' => 'required',
-        //     'ketua' => 'required',
-        //     'npm' => 'required',
-        //     'pembina' => 'required',
-        // ]);
-        
+    {        
         $ukm = Ukm::find($id);
 
         // $variabel->nama_kolom = $request->name_input
