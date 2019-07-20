@@ -17,7 +17,7 @@ class DashboardukmprestasiController extends Controller
     public function index()
     {
         //gelap
-        $data['prestasi'] = Prestasi::with('ukm')->get();
+        $data['prestasi'] = Prestasi::where('id_ukm', Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         return view('dashboardukmprestasi', $data);
     }
 
@@ -39,7 +39,7 @@ class DashboardukmprestasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //prestasi->atribut = $request->name
         $prestasi = new Prestasi;
         $prestasi->nama = $request->prestasi;
         $prestasi->anggota = $request->anggota;

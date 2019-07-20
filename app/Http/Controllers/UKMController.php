@@ -32,9 +32,17 @@ class UKMController extends Controller
      */
     public function show($id)
     {
+        $order = "desc";
         // ngambil data ukm, dimana id = $id, + data prestasi dan anggota
-        $data['ukm'] = Ukm::where('id', $id)->with(['prestasi','anggota'])->first();
-        
+        $data['ukm'] = Ukm::where('id', $id)
+                    ->with(['prestasi' => function ($q) use ($order) {
+                        $q->orderBy('created_at', $order);
+                    },
+                    'anggota'=> function ($q) use ($order) {
+                        $q->orderBy('created_at', $order);
+                    }])
+                    ->first();
+        // dd($data);
         return view('perisaidiri', $data);
     }
 }

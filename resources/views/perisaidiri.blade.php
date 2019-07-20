@@ -1,6 +1,6 @@
 @extends ('app')
 
-@section ('title','Unit Perisai Diri Unpad')
+@section ('title','UKM UNPAD')
 
 @section ('content')
 
@@ -8,7 +8,7 @@
 <!-- UKM -->
 <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('images/unpad/headermini1.png') }});">
 	<h2 class="tit7-ukm" style="text-align:center">
-    {{$ukm->nama}}
+    {{$ukm->nama_ukm}}
   </h2>
 </section>
 
@@ -22,7 +22,7 @@
 		<span class="txt29 m-l-10 m-r-10">/</span>
 
 		<a  class="txt29" style="text-decoration:none">
-      {{$ukm->nama}}
+      {{$ukm->nama_ukm}}
 		</a>
 	</div>
 </div>
@@ -36,6 +36,7 @@
       <a class="list-group-item list-group-item-action" id="list-jadwal-list" data-toggle="list" href="#list-jadwal" role="tab" aria-controls="jadwal">Jadwal</a>
       <a class="list-group-item list-group-item-action" id="list-prestasi-list" data-toggle="list" href="#list-prestasi" role="tab" aria-controls="prestasi">Prestasi</a>
       <a class="list-group-item list-group-item-action" id="list-anggota-list" data-toggle="list" href="#list-anggota" role="tab" aria-controls="anggota">Anggota</a>
+      <a class="list-group-item list-group-item-action" id="list-kontak-list" data-toggle="list" href="#list-kontak" role="tab" aria-controls="kontak">Kontak</a>
     </div>
   </div>
   <div class="col-9">
@@ -73,12 +74,11 @@
             @php ($x = 0)
             @php ($member = (object)[])
             @foreach ($ukm->prestasi as $prest)
-            @php ($member = App\Anggota::where('id',$prest->id_anggota)->first())
             @php ($x = $x+1)
             <tr>
               <th scope="row">{{$x}}</th>
               <td>{{$prest->nama}}</td>
-              <td>{{$member->nama}}</td>
+              <td>{{$prest->anggota}}</td>
               <td>{{$prest->tahun}}</td>
             </tr>
             @endforeach
@@ -111,6 +111,31 @@
             @endforeach
           </tbody>
         </table>
+      </div>
+
+      <div class="tab-pane fade" id="list-kontak" role="tabpanel" aria-labelledby="list-kontak-list">
+        <h6> Line </h6>
+        <p> {{$ukm->line}} </p>
+
+        <hr>
+
+        <h6> Facebook </h6>
+        <p> {{$ukm->facebook}} </p>
+        
+        <hr>
+
+        <h6> Twitter </h6>
+        <p> {{$ukm->twitter}} </p>
+
+        <hr>
+
+        <h6> Instagram </h6>
+        <p> {{$ukm->instagram}} </p>
+
+        <hr>
+        
+        <h6> Email </h6>
+        <p> {{$ukm->email}} </p>
       </div>
     </div>
   </div>

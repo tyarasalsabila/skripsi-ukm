@@ -15,7 +15,7 @@ class CreateUkmsTable extends Migration
     {
         Schema::create('ukms', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
+            $table->string('nama_ukm');
             $table->string('namapendek');
             $table->string('hari');
             $table->time('jam');
@@ -24,6 +24,11 @@ class CreateUkmsTable extends Migration
             $table->string('ketua');
             $table->string('npm');
             $table->string('pembina');
+            $table->string('line');
+            $table->string('facebook');
+            $table->string('twitter');
+            $table->string('instagram');
+            $table->string('email');
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Ukm;
 use Auth;
 
-class DashboardukmjadwalController extends Controller
+class DashboardukmkontakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class DashboardukmjadwalController extends Controller
     public function index()
     {
         $data['ukm'] = Ukm::where('id',Auth::user()->id_ukm)->first();
-        return view('dashboardukmjadwal', $data);
+        return view('dashboardukmkontak', $data);
     }
 
     /**
@@ -59,9 +59,8 @@ class DashboardukmjadwalController extends Controller
      */
     public function edit($id)
     {
-        //
         $data['ukm'] = Ukm::find($id);
-        return view('formukmjadwal',$data);
+        return view('formukmkontak',$data);
     }
 
     /**
@@ -73,15 +72,16 @@ class DashboardukmjadwalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $ukm = Ukm::find($id);
 
-        $ukm->hari = $request->hari;
-        $ukm->jam = $request->jam;
-        $ukm->tempat = $request->tempat;
+        $ukm->line = $request->line;
+        $ukm->facebook = $request->facebook;
+        $ukm->twitter = $request->twitter;
+        $ukm->instagram = $request->instagram;
+        $ukm->email = $request->email;
 
         // dd($ukm);
         $ukm->save();
-        return redirect('dashboardukmjadwal');
+        return redirect('dashboardukmkontak');
     }
 }

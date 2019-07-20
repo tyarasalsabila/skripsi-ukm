@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard Pendaftaran UKM')
+@section ('title','Kontak UKM')
 
 @section ('content')
 
@@ -12,26 +12,30 @@
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Jadwal UKM</h3>
+							<h3 class="panel-title">Kontak UKM</h3>
 						</div>
 						<div class="panel-body">
 							<table class="table table-bordered table-hover">
 								<thead>
 									<tr>
-										<th>Hari</th>
-										<th>Jam</th>
-										<th>Tempat</th>
+										<th>Line</th>
+										<th>Facebook</th>
+										<th>Twitter</th>
+										<th>Instagram</th>
+										<th>Email</th>
 										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
 								{{-- @foreach ($ukms as $ukm) --}}
 									<tr>
-										<td>{{$ukm->hari}}</td>
-										<td>{{$ukm->jam}}</td>
-										<td>{{$ukm->tempat}}</td>
+										<td>{{$ukm->line}}</td>
+										<td>{{$ukm->facebook}}</td>
+										<td>{{$ukm->twitter}}</td>
+										<td>{{$ukm->instagram}}</td>
+										<td>{{$ukm->email}}</td>
 										<td>
-										<a href="/editjadwalukm/{{$ukm->id}}" type="button" class="btn btn-warning">Edit</a>
+										<a href="/editkontakukm/{{$ukm->id}}" type="button" class="btn btn-warning">Edit</a>
 										</td>
 									</tr>
 								{{-- @endforeach --}}

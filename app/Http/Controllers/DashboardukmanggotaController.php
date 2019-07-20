@@ -15,7 +15,7 @@ class DashboardukmanggotaController extends Controller
      */
     public function index()
     {
-        $data['anggota'] = Anggota::all();
+        $data['anggota'] = Anggota::where('id_ukm',Auth::user()->id_ukm)->orderBy('created_at', 'DESC')->get();
         // dd($data);
         return view('dashboardukmanggota', $data);
     }

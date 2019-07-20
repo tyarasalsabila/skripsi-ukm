@@ -48,9 +48,9 @@
 											<td>Belum ada kabar</td>
 										@endif
 										<td>
-										<a href="/editberitaukm/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
-										{{-- <button type="button" class="btn btn-danger delete" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}
-										<a href="/dashukmberitadel/{{$brt->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+											<a href="/detailberitaukm/{{$brt->id}}" type="button" class="btn btn-primary">Detail</a>
+											<a href="/editberitaukm/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
+											<a href="/dashukmberitadel/{{$brt->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
 										</td>
 									</tr>
 								@endforeach

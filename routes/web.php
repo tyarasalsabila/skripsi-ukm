@@ -96,6 +96,7 @@ Route::get('/dashboardukmberita', 'DashboardukmberitaController@index')->middlew
 Route::post('/dashukmberita', 'DashboardukmberitaController@store')->name('dashukmberita')->middleware('auth');
 Route::get('/formukmberita', 'ty@formukmberita');
 Route::get('/editberitaukm/{id}', 'DashboardukmberitaController@edit')->middleware('auth');
+Route::get('/detailberitaukm/{id}', 'DashboardukmberitaController@show')->middleware('auth');
 Route::post('/dashukmberitaupd/{id}', 'DashboardukmberitaController@update')->name('dashukmberitaupd')->middleware('auth');
 Route::get('/dashukmberitadel/{id}', 'DashboardukmberitaController@destroy')->name('dashukmberitadel')->middleware('auth');
 
@@ -122,6 +123,11 @@ Route::get('/formukmjadwal', 'ty@formukmjadwal');
 Route::get('/editjadwalukm/{id}', 'DashboardukmjadwalController@edit')->middleware('auth');
 Route::post('/dashukmjadwalupd/{id}', 'DashboardukmjadwalController@update')->middleware('auth');
 
+Route::get('/dashboardukmkontak', 'DashboardukmkontakController@index')->middleware('auth');
+Route::post('/dashukmkontak', 'DashboardukmkontakController@store')->name('dashukmkontak')->middleware('auth');
+Route::get('/formukmkontak', 'ty@formukmkontak');
+Route::get('/editkontakukm/{id}', 'DashboardukmkontakController@edit')->middleware('auth');
+Route::post('/dashukmkontakupd/{id}', 'DashboardukmkontakController@update')->middleware('auth');
 
 Route::get('/acceptregistrasi/{id}', 'RegistrasiController@accept')->name('acceptregistrasi')->middleware('auth');
 Route::get('/rejectregistrasi/{id}', 'RegistrasiController@reject')->name('rejectregistrasi')->middleware('auth');

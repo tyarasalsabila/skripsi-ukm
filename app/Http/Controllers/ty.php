@@ -190,4 +190,9 @@ class ty extends Controller
     {
         return view('formukmjadwal');
     }
+
+    public function formukmkontak()
+    {
+        return view('formukmkontak');
+    }
 }

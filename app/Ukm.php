@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ukm extends Model
 {
     protected $fillable = [
-        'nama',
+        'nama_ukm',
         'namapendek',
         'hari',
         'jam',
@@ -16,6 +16,11 @@ class Ukm extends Model
         'ketua',
         'npm',
         'pembina',
+        'line',
+        'facebook',
+        'twitter',
+        'instagram',
+        'email',
     ];
 
     public function user(){

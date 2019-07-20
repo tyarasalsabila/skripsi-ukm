@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard BEM - Agenda')
+@section ('title','Edit Jadwal UKM')
 
 @section ('content')
 

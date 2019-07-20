@@ -67,6 +67,9 @@ class DashboardukmberitaController extends Controller
     public function show($id)
     {
         //
+        $data['berita'] = Berita::where('id', $id)->first();
+
+        return view('formdetailukmberita', $data);
     }
 
     /**
