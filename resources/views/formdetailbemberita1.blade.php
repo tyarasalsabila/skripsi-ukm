@@ -1,4 +1,4 @@
-@extends ('adminukm')
+@extends ('adminbem')
 
 @section ('title','Detail Berita')
 
@@ -31,7 +31,7 @@
 							<br> 
 
 							<div class="modal-footer">
-								<a href="/dashboardukmberita" type="button" class="btn btn-default">Kembali</a>
+								<a href="/dashboardbemberita" type="button" class="btn btn-default">Kembali</a>
 							</div>
 						</div>
 					</div>						

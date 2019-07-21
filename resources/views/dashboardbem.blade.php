@@ -31,79 +31,95 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Notifikasi Berita</h3>
-						</div>
-						<div class="panel-body">
-							<table class="table table-bordered table-hover" id="datatable">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>UKM</th>
-										<th>Judul</th>
-										<th>Isi</th>
-										<th>Action</th>
-									</tr>
-								</thead>
-								<tbody>
-								@php ($x = 0)
-								@foreach($berita as $brt)
-								@php ($x = $x+1)
-									<tr>
-										<td>{{$x}}</td>
-										<td>{{$brt->ukm->nama_ukm}}</td>
-										<td>{{$brt->judul}}</td>
-										<td>{{$brt->isi}}</td>
-										<td>
-											<!-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button> -->
-											<a href="/acceptberita/{{$brt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima berita?')">Accept</a>
-											<a href="/rejectberita/{{$brt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak berita?')">Reject</a>
-										</td>
-									</tr>
-									@endforeach
-
-								</tbody>
-							</table>
+						<div style="overflow:auto">
+							<div class="panel-heading">
+								<h3 class="panel-title">Notifikasi Berita</h3>
+							</div>
+							<div class="panel-body">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>UKM</th>
+											<th>Judul</th>
+											<th>Foto</th>
+											<th>Isi</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+									@php ($x = 0)
+									@foreach($berita as $brt)
+									@php ($x = $x+1)
+										<tr>
+											<td>{{$x}}</td>
+											<td>{{$brt->ukm->nama_ukm}}</td>
+											<td>{{$brt->judul}}</td>
+											<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
+											<td>{{$brt->isi}}</td>
+											<td>
+												<a href="/detailberitabem/{{$brt->id}}" type="button" class="btn btn-primary">Detail</a>	
+												<a href="/acceptberita/{{$brt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima Berita?')">Accept</a>
+												<a href="/rejectberita/{{$brt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak Berita?')">Reject</a>
+											</td>
+										</tr>
+										@endforeach
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Notifikasi Agenda</h3>
-						</div>
-						<div class="panel-body">
-							<table class="table table-bordered table-hover" id="datatable">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>UKM</th>
-										<th>Judul</th>
-										<th>Isi</th>
-										<th>Action</th>
-									</tr>
-								</thead>
-								<tbody>
-								@php ($x = 0)
-								@foreach($agenda as $agd)
-            					@php ($x = $x+1)
-									<tr>
-										<td>{{$x}}</td>
-										<td>{{$agd->ukm->nama_ukm}}</td>
-										<td>{{$agd->judul}}</td>
-										<td>{{$agd->isi}}</td>
-										<td>
-											<a href="/acceptagenda/{{$agd->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima agenda?')">Accept</a>
-											<a href="/rejectagenda/{{$agd->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak agenda?')">Reject</a>
-										</td>
-									</tr>
-									@endforeach
-
-								</tbody>
-							</table>
+						<div style="overflow:auto">
+							<div class="panel-heading">
+								<h3 class="panel-title">Notifikasi Agenda</h3>
+							</div>
+							<div class="panel-body">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>UKM</th>
+											<th>Judul</th>
+											<th>Foto</th>
+											<th>Isi</th>
+											<th>Link</th>
+											<th>Jam</th>
+											<th>Tanggal Acara</th>
+											<th>Tempat</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+									@php ($x = 0)
+									@foreach($agenda as $agd)
+									@php ($x = $x+1)
+										<tr>
+											<td>{{$x}}</td>
+											<td>{{$agd->ukm->nama_ukm}}</td>
+											<td>{{$agd->judul}}</td>
+											<td><img src="{{ url('').'/storage/'.$agd->foto}}" width="70px" alt=""></td>
+											<td>{{$agd->isi}}</td>
+											<td>{{$agd->link}}</td>
+											<td>{{$agd->waktu}}</td>
+											<td>{{$agd->tanggal}}</td>
+											<td>{{$agd->tempat}}</td>
+											<td>
+												<a href="/detailagendabem/{{$agd->id}}" type="button" class="btn btn-primary">Detail</a>	
+												<a href="/acceptagenda/{{$agd->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima Agenda?')">Accept</a>
+												<a href="/rejectagenda/{{$agd->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak Agenda?')">Reject</a>
+											</td>
+										</tr>
+										@endforeach
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

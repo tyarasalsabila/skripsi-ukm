@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Edit Jadwal UKM')
+@section ('title','Edit Jadwal')
 
 @section ('content')
 
@@ -28,7 +28,7 @@
 
 								<div class="form-group">
 									<label> Jam </label>
-									<input type="text" name="jam" class="form-control" value="{{$ukm->jam}}">
+									<input type="time" name="jam" class="form-control" value="{{$ukm->jam}}">
 								</div>
 
 								<br>
@@ -41,8 +41,8 @@
 								<br>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Save</button>
+								<a href="/dashboardukmjadwal" type="button" class="btn btn-default">Kembali</a>
+								<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>
 						</div>

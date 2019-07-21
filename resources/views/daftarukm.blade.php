@@ -12,81 +12,6 @@
   </h2>
 </section>
 
-<!-- Reservation -->
-<!-- <section class="bg1-pattern p-t-100 p-b-113">
-	<div class="container">
-		<form action="" class="main-form needs-validation">
-			<div class="form-group">
-				<label for="nama">Nama</label>
-				<input type="text" name="nama" id="nama" class="form-control">
-				<div class="invalid-feedback"> Ok! </div>
-			</div>
-
-			<div class="form-group">
-				<label for="npm">NPM</label>
-				<input type="text" name="npm" id="npm" class="form-control">
-			</div>
-
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="text" name="email" id="email" class="form-control">
-			</div>
-
-			<button type="submit"> Submit </button>
-		</form>
-	</div>
-</section> -->
-
-<!-- <section class="bg1-pattern p-t-100 p-b-113">
-	<div class="container">
-		<div class="row">
-			<div class="card-body">
-				<form>
-					<div class="form-group">
-    				<label>Nama</label>
-						<input class="form-control" id="nama" placeholder="Nama" type="text" required>
-					</div>
-
-					<div class="form-group">
-    				<label>NPM</label>
-						<input class="form-control" id="npm" placeholder="NPM" type="text" required>
-					</div>
-
-					<div class="form-group">
-    				<label>Email</label>
-						<input class="form-control" id="email" placeholder="Email" type="text" required>
-					</div>
-
-					<div class="form-group">
-    				<label>No. HP</label>
-						<input class="form-control" id="nohp" placeholder="No. HP" type="text" required>
-					</div>
-					
-					<div class="form-group">
-    				<label>Fakultas</label>
-						<input class="form-control" id="fakultas" placeholder="Fakultas" type="text" required>
-					</div>
-
-					<div class="form-group">
-    				<label>Jurusan</label>
-						<input class="form-control" id="jurusan" placeholder="Jurusan" type="text" required>
-					</div>
-
-					<div class="form-group">
-    				<label>Angkatan</label>
-						<input class="form-control" id="angkatan" placeholder="Angkatan" type="text" required>
-					</div>
-
-					<div class="form-group">
-    				<label>Pilih UKM</label>
-						<input class="form-control" id="pilih ukm" placeholder="Angkatan" type="text" required>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>	
-</section> -->
-
 <section class="section-reservation bg1-pattern p-t-100 p-b-113">
 		<div class="container">
 		@if($message!=NULL)
@@ -203,52 +128,55 @@
 	<div id="dropDownSelect1"></div>
 
 	<script>
-		function populate(a1,a2){
-			var a1 = document.getElementById(a1);
-			var a2 = document.getElementById(a2);
-			a2.innerHTML = "";
-			if(a1.value == "FEB"){
-				var optionArray = ["|","D4AP|D4 Akuntansi Perpajakan","A|Akuntansi","EP|Ekonomi Pembangunan", "M|Manajemen", "EI|Ekonomi Islam", "BD|Bisnis Digital"];
-			}
-			else if(a1.value == "FF"){
-				var optionArray = ["|","F|Farmasi"];
-			} else if(a1.value == "FH"){
-				var optionArray = ["|","IH|Ilmu Hukum"];
-			} else if(a1.value == "FIB"){
-				var optionArray = ["|","D4BBT|D4 Bahasa dan Budaya Tiongkok", "SI|Sastra Indonesia", "SS|Sastra Sunda", "IS|Ilmu Sejarah", "BBJ|Bahasa dan Budaya Jepang", "SIng|Sastra Inggris", "SP|Sastra Perancis", "SJ|Sastra Jerman", "SA|Sastra Arab", "SR|Sastra Rusia"];
-			} else if(a1.value == "FIKOM"){
-				var optionArray = ["|", "D3HM|D3 Hubungan Masyarakat", "D4MPM|D4 Manajemen Produksi Media", "IK|Ilmu Komunikasi", "IP|Ilmu Perpustakaan", "J|Jurnalistik", "MK|Manajemen Komunikasi", "TF|Televisi dan Film"];
-			} else if(a1.value == "FISIP"){
-				var optionArray = ["|","D3A|D3 Administrasi", "D3AP|D3 Administrasi Pemerintahan", "D4AP|D4 Administrasi Pemerintahan", "D4APu|D4 Administrasi Publik", "AP|Administrasi Publik", "IHI|Ilmu Hubungan Internasional", "IKS|Ilmu Kesejahteraan Sosial", "IP|Ilmu Pemerintahan", "IAB| Ilmu Administrasi Bisnis", "S|Sosiologi", "A|Antropologi", "Ilpo|Ilmu Politik"];
-			} else if(a1.value == "FK"){
-				var optionArray = ["|","D4K|D4 Kebidanan", "K|Kedokteran", "KH|Kedokteran Hewan"];
-			} else if(a1.value == "FKep"){
-				var optionArray = ["|","Kep|Keperawatan"];
-			} else if(a1.value == "FMIPA"){
-				var optionArray = ["|","M|Matematika", "K|Kimia", "F|Fisika", "B|Biologi", "G|Geofisika", "TI|Teknik Informatika", "TE|Teknik Elektro"];
-			} else if(a1.value == "FPIK"){
-				var optionArray = ["|","P|Perikanan", "IK|Ilmu Kelautan"];
-			} else if(a1.value == "FAPERTA"){
-				var optionArray = ["|","Agro|Agroteknologi", "Agri|Agribisnis"];
-			} else if(a1.value == "FAPET"){
-				var optionArray = ["|","P|Peternakan"];
-			} else if(a1.value == "FAPSI"){
-				var optionArray = ["|","P|Psikologi"];
-			} else if(a1.value == "FTG"){
-				var optionArray = ["|","TG|Teknik Geologi"];
-			} else if(a1.value == "FTIP"){
-				var optionArray = ["|","TP|Teknik Pertanian", "TekP|Teknologi Pangan", "TIP|Teknologi Industri Pertanian"];
-			}
-
-			for(var option in optionArray){
-				var pair = optionArray[option].split("|");
-				var newOption = document.createElement("option");
-				newOption.value = pair[0];
-				newOption.innerHTML = pair[1];
-				a2.options.add(newOption);
-			}
+	function populate(a1,a2){
+		var a1 = document.getElementById(a1);
+		var a2 = document.getElementById(a2);
+		a2.innerHTML = "";
+	
+		if(a1.value == "FEB"){
+			var optionArray = ["|","D4 Akuntansi Perpajakan|D4 Akuntansi Perpajakan","Akuntansi|Akuntansi","Ekonomi Pembangunan|Ekonomi Pembangunan", "Manajemen|Manajemen", "Ekonomi Islam|Ekonomi Islam", "Bisnis Digital|Bisnis Digital"];
 		}
-	</script>
+		else if(a1.value == "FF"){
+			var optionArray = ["|","Farmasi|Farmasi"];
+		} else if(a1.value == "FH"){
+			var optionArray = ["|","Ilmu Hukum|Ilmu Hukum"];
+		} else if(a1.value == "FIB"){
+			var optionArray = ["|","D4 Bahasa dan Budaya Tiongkok|D4 Bahasa dan Budaya Tiongkok", "Sastra Indonesia|Sastra Indonesia", "Sastra Sunda|Sastra Sunda", "Ilmu Sejarah|Ilmu Sejarah", "Bahasa dan Budaya Jepang|Bahasa dan Budaya Jepang", "Sastra Inggris|Sastra Inggris", "Sastra Perancis|Sastra Perancis", "Sastra Jerman|Sastra Jerman", "Sastra Arab|Sastra Arab", "Sastra Rusia|Sastra Rusia"];
+		} else if(a1.value == "FIKOM"){
+			var optionArray = ["|", "D3 Hubungan Masyarakat|D3 Hubungan Masyarakat", "D4 Manajemen Produksi Media|D4 Manajemen Produksi Media", "Ilmu Komunikasi|Ilmu Komunikasi", "Ilmu Perpustakaan|Ilmu Perpustakaan", "Jurnalistik|Jurnalistik", "Manajemen Komunikasi|Manajemen Komunikasi", "Televisi dan Film|Televisi dan Film"];
+		} else if(a1.value == "FISIP"){
+			var optionArray = ["|","D3 Administrasi|D3 Administrasi", "D3 Administrasi Pemerintahan|D3 Administrasi Pemerintahan", "D4 Administrasi Pemerintahan|D4 Administrasi Pemerintahan", "D4 Administrasi Publik|D4 Administrasi Publik", "Administrasi Publik|Administrasi Publik", "Ilmu Hubungan Internasional|Ilmu Hubungan Internasional", "Ilmu Kesejahteraan Sosial|Ilmu Kesejahteraan Sosial", "Ilmu Pemerintahan|Ilmu Pemerintahan", "Ilmu Administrasi Bisnis|Ilmu Administrasi Bisnis", "Sosiologi|Sosiologi", "Antropologi|Antropologi", "Ilmu Politik|Ilmu Politik"];
+		} else if(a1.value == "FK"){
+			var optionArray = ["|","D4 Kebidanan|D4 Kebidanan", "Kedokteran|Kedokteran", "Kedokteran Hewan|Kedokteran Hewan"];
+		} else if(a1.value == "FKG"){
+			var optionArray = ["|","Kedokteran Gigi|Kedokteran Gigi"];
+		} else if(a1.value == "FKep"){
+			var optionArray = ["|","Keperawatan|Keperawatan"];
+		} else if(a1.value == "FMIPA"){
+			var optionArray = ["|","Matematika|Matematika", "Kimia|Kimia", "Fisika|Fisika", "Biologi|Biologi", "Geofisika|Geofisika", "Teknik Informatika|Teknik Informatika", "Teknik Elektro|Teknik Elektro"];
+		} else if(a1.value == "FPIK"){
+			var optionArray = ["|","Perikanan|Perikanan", "Ilmu Kelautan|Ilmu Kelautan"];
+		} else if(a1.value == "FAPERTA"){
+			var optionArray = ["|","Agroteknologi|Agroteknologi", "Agribisnis|Agribisnis"];
+		} else if(a1.value == "FAPET"){
+			var optionArray = ["|","Peternakan|Peternakan"];
+		} else if(a1.value == "FAPSI"){
+			var optionArray = ["|","Psikologi|Psikologi"];
+		} else if(a1.value == "FTG"){
+			var optionArray = ["|","Teknik Geologi|Teknik Geologi"];
+		} else if(a1.value == "FTIP"){
+			var optionArray = ["|","Teknik Pertanian|Teknik Pertanian", "Teknologi Pangan|Teknologi Pangan", "Teknologi Industri Pertanian|Teknologi Industri Pertanian"];
+		}
+
+		for(var option in optionArray){
+			var pair = optionArray[option].split("|");
+			var newOption = document.createElement("option");
+			newOption.value = pair[0];
+			newOption.innerHTML = pair[1];
+			a2.options.add(newOption);
+		}
+	}
+</script>
 
 	<script>
 		var form = document.querySelector('.needs-validation');

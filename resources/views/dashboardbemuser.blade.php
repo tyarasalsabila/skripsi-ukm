@@ -1,6 +1,6 @@
 @extends ('adminbem')
 
-@section ('title','Dashboard BEM - UKM')
+@section ('title','BEM - User')
 
 @section ('content')
 
@@ -8,16 +8,15 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Dashboard UKM</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">List UKM</h3>
+							<h3 class="panel-title">List User UKM</h3>
 						</div>
 					<div class="panel-body table-responsive">
 						<p class="demo-button">
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add UKM</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add User UKM</button>
 						</p>
 
 						<table id="datatable" class="table table-bordered table-hover">
@@ -34,7 +33,7 @@
             				@php ($x = $x+1)
 								<tr>
 									<td>{{$x}}</td>
-									<td>{{$acc->ukm->nama}}</td>
+									<td>{{$acc->ukm->nama_ukm}}</td>
 									<td>{{$acc->name}}</td>
 									</td>
 								</tr>
@@ -60,7 +59,7 @@
 						<form action="{{route('dashbemuser')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-							<span class="txt9">
+							<!-- <span class="txt9">
 								Pilih UKM
 							</span>
 							<div class="size12 bo-rad-10 m-t-3 m-b-23">
@@ -72,7 +71,7 @@
 									@endforeach
 									
 								</select>
-							</div>
+							</div> -->
 
 								<br>
 

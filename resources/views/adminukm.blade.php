@@ -43,8 +43,8 @@
 							<ul class="dropdown-menu">
 								<form action="{{route('logout')}}" method="POST" id="logout-form">
 									@csrf
-									<button type="submit" value="Logout">Logout</button>
-									</form>
+									<button class="btn btn-default" type="submit" value="Logout"><span>Logout</span></button>
+								</form>
 							</ul>
 						</li>
 					</ul>
@@ -83,6 +83,12 @@
 	<script src="{{asset('assets/scripts/klorofil-common.js')}}"></script>
 	<script src="{{asset('https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js')}}"></script>
 	<script src="{{asset('https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js')}}"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var table = $('#datatable').DataTable();
+		});
+	</script>
 	
 </body>
 

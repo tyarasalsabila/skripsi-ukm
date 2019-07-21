@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard BEM - Agenda')
+@section ('title','Edit Galeri')
 
 @section ('content')
 
@@ -8,18 +8,15 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Galeri</h3>
+			<h3 class="page-title">Edit Galeri</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">List Galeri</h3>
-						</div>
 						<div class="panel-body">
 						<form action="/dashukmgaleriupd/{{$galeri->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
-								<div class="form-group">
+								<div class="form-group" style="padding-top:20px">
 									<label> Judul </label>
 								<input type="text" name="judul" class="form-control" value="{{$galeri->judul}}">
 								</div>
@@ -32,7 +29,7 @@
 								<br>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<a href="/dashboardukmgaleri" type="button" class="btn btn-default">Kembali</a>
 								<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>

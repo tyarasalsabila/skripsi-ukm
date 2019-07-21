@@ -41,13 +41,10 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/user/bem.png" class="img-circle" alt="Avatar"> <span>{{Auth::user()->name}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								{{-- <li><a href="/logout"><span>Logout</span></a></li> --}}
-								<li>
 								<form action="{{route('logout')}}" method="POST" id="logout-form">
 								@csrf
-								<button type="submit" value="Logout">Logout</button>
+								<button class="btn btn-default" type="submit" value="Logout"><span>Logout</span></button>
 								</form>
-								</li>
 							</ul>
 						</li>
 					</ul>

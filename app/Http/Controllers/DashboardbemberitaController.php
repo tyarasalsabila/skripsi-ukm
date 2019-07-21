@@ -55,7 +55,7 @@ class DashboardbemberitaController extends Controller
 
         $brt->save();
 
-        return redirect('dashboardbemberita')->with('success', 'data saved');
+        return redirect('dashboardbemberita');
     }
 
     /**
@@ -66,7 +66,9 @@ class DashboardbemberitaController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['berita'] = Berita::where('id', $id)->first();
+
+        return view('formdetailbemberita1', $data);
     }
 
     /**

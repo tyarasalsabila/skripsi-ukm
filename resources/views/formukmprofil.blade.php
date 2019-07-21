@@ -1,4 +1,4 @@
-@extends ('adminbem')
+@extends ('adminukm')
 
 @section ('title','Edit Profil')
 
@@ -22,12 +22,13 @@
 										<!-- <input type="text" name="profil" class="form-control" value="{{$ukm->profil}}"> -->
 										<textarea class="form-control" name="profil" id="profil" cols="110%" rows="10"> {{$ukm->profil}} </textarea>
 									</div>
-
-									<br>
 								</div>
+								
+								<br>
+
 								<div class="modal-footer">
 									<a href="/dashboardukm" type="button" class="btn btn-default">Kembali</a>
-									<button type="submit" class="btn btn-primary">Save</button>
+									<button type="submit" class="btn btn-primary">Update Data</button>
 								</div>
 							</form>
 						</div>
@@ -37,5 +38,6 @@
 		</div>
 	</div>
 </div>
+
 @endsection  
 </html>

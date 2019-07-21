@@ -44,7 +44,9 @@
 							<br>
 							<p>{{Str::limit($ukm->profil,200)}}</p>
 							<br> 
-							<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-warning">Edit</a>
+							<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-warning">
+								Edit
+							</a>
 						</div>
 					</div>
 				</div>

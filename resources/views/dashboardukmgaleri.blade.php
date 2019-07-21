@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard UKM - Galeri')
+@section ('title','UKM - Galeri')
 
 @section ('content')
 
@@ -11,43 +11,43 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">Galeri UKM</h3>
-						</div>
-					<div class="panel-body">
-						<p class="demo-button">
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Photo</button>
-						</p>
-						<table class="table table-bordered table-hover">
-							<thead>
-								<tr>
-									<th>No</th>
-									<th>Judul</th>
-									<th>Foto</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								@php ($x = 0)
-								@foreach ($galeri as $glr)
-								@php ($x = $x+1)
-								<tr>
-									<td>{{$x}}</td>
-								<td>{{$glr->judul}}</td>
-								<td><img src="{{ url('').'/storage/'.$glr->link_foto }}" width="70px;" alt=""></td>
-									<td>
-									<a href="/editgaleriukm/{{$glr->id}}" type="button" class="btn btn-warning">Edit</a>
-										{{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button> --}}
-									<a href="/dashukmgaleridel/{{$glr->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+						<div style="overflow:auto">
+							<div class="panel-heading">
+								<h3 class="panel-title">Galeri UKM</h3>
+							</div>
+							<div class="panel-body">
+								<p class="demo-button">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Photo</button>
+								</p>
+								<table class="table table-bordered table-hover" id="datatable">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Judul</th>
+											<th>Foto</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										@php ($x = 0)
+										@foreach ($galeri as $glr)
+										@php ($x = $x+1)
+										<tr>
+											<td>{{$x}}</td>
+										<td>{{$glr->judul}}</td>
+										<td><img src="{{ url('').'/storage/'.$glr->link_foto }}" width="70px;" alt=""></td>
+											<td>
+											<a href="/editgaleriukm/{{$glr->id}}" type="button" class="btn btn-warning">Edit</a>
+											<a href="/dashukmgaleridel/{{$glr->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Data?')">Delete</a>
 
-									</td>
-								</tr>
-								@endforeach
-							</tbody>
-						</table>
-					</div>						
-				</div>
-			</div>
+											</td>
+										</tr>
+										@endforeach
+									</tbody>
+								</table>
+							</div>						
+						</div>
+					</div>
 
 
 			<!-- Add -->

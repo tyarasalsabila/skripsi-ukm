@@ -62,6 +62,9 @@ class DashboardukmprestasiController extends Controller
     public function show($id)
     {
         //
+        $data['prestasi'] = Prestasi::where('id', $id)->first();
+
+        return view('formdetailukmprestasi', $data);
     }
 
     /**

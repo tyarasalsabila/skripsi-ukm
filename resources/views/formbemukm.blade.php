@@ -1,6 +1,6 @@
 @extends ('adminbem')
 
-@section ('title','Dashboard BEM - Agenda')
+@section ('title','Edit UKM')
 
 @section ('content')
 
@@ -8,13 +8,10 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">UKM</h3>
+			<h3 class="page-title">Edit UKM</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">List UKM</h3>
-						</div>
 						<div class="panel-body">
 						<form action="/updateukm/{{$ukm->id}}" method="POST" id="editForm">
 							{{ csrf_field() }}
@@ -22,7 +19,7 @@
 							<div class="modal-body">
 							<div class="form-group">
 									<label> UKM </label>
-									<input type="text" name="nama" id="nama" class="form-control" value="{{$ukm->nama}}">
+									<input type="text" name="nama" id="nama" class="form-control" value="{{$ukm->nama_ukm}}">
 								</div>
 
 								<br>
@@ -63,7 +60,8 @@
 
 								<div class="form-group">
 									<label> Profil </label>
-									<input type="text" name="profil" id="profil" class="form-control" value="{{$ukm->profil}}">
+									<!-- <input type="text" name="profil" id="profil" class="form-control" value="{{$ukm->profil}}"> -->
+									<textarea class="form-control" name="profil" id="profil" cols="110%" rows="10"> {{$ukm->profil}} </textarea>
 								</div>
 		
 								<br>
@@ -87,8 +85,8 @@
 								<br>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Update Data</button>
+								<a href="/dashboardbemukm" type="button" class="btn btn-default">Kembali</a>
+									<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>
 						</div>

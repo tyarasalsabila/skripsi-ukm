@@ -36,6 +36,7 @@ Route::post('/dashbemukm', 'DashboardbemukmController@store')->name('dashbemukm'
 Route::get('/editukm/{id}', 'DashboardbemukmController@edit')->middleware('auth');
 Route::put('/updateukm/{id}', 'DashboardbemukmController@update');
 Route::get('/deleteukm/{id}', 'DashboardbemukmController@destroy')->name('deleteukm')->middleware('auth');
+Route::get('/detailukmbem/{id}', 'DashboardbemukmController@show')->middleware('auth');
 
 Route::get('/dashboardbemberita', 'DashboardbemberitaController@index')->middleware('auth');
 Route::post('/dashbemberita', 'DashboardbemberitaController@store')->name('dashbemberita')->middleware('auth');
@@ -45,6 +46,8 @@ Route::post('/updateberita/{id}', 'DashboardbemberitaController@update');
 Route::get('/deleteberita/{id}', 'DashboardbemberitaController@destroy')->name('deleteberita')->middleware('auth');
 Route::get('/acceptberita/{id}', 'BeritaController@accept')->name('acceptberita')->middleware('auth');
 Route::get('/rejectberita/{id}', 'BeritaController@reject')->name('rejectberita')->middleware('auth');
+Route::get('/detailberitabem/{id}', 'DashboardbemController@show1')->middleware('auth');
+Route::get('/detailberitabem/{id}', 'DashboardbemberitaController@show')->middleware('auth');
 
 
 Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index')->middleware('auth');
@@ -55,6 +58,8 @@ Route::post('/updateagenda/{id}', 'DashboardbemagendaController@update');
 Route::get('/deleteagenda/{id}', 'DashboardbemagendaController@destroy')->name('deleteagenda')->middleware('auth');
 Route::get('/acceptagenda/{id}', 'AgendaController@accept')->name('acceptagenda')->middleware('auth');
 Route::get('/rejectagenda/{id}', 'AgendaController@reject')->name('rejectagenda')->middleware('auth');
+Route::get('/detailagendabem/{id}', 'DashboardbemController@show')->middleware('auth');
+Route::get('/detailagendabem/{id}', 'DashboardbemagendaController@show')->middleware('auth');
 
 Route::get('/dashboardbemuser', 'DashboardbemuserController@index')->middleware('auth');
 Route::post('/dashbemuser', 'DashboardbemuserController@store')->name('dashbemuser')->middleware('auth');
@@ -102,12 +107,15 @@ Route::get('/detailberitaukm/{id}', 'DashboardukmberitaController@show')->middle
 Route::post('/dashukmberitaupd/{id}', 'DashboardukmberitaController@update')->name('dashukmberitaupd')->middleware('auth');
 Route::get('/dashukmberitadel/{id}', 'DashboardukmberitaController@destroy')->name('dashukmberitadel')->middleware('auth');
 
+
 Route::get('/dashboardukmagenda', 'DashboardukmagendaController@index')->middleware('auth');
 Route::post('/dashukmagenda', 'DashboardukmagendaController@store')->name('dashukmagenda')->middleware('auth');
 Route::get('/formukmagenda', 'ty@formukmagenda');
 Route::get('/editagendaukm/{id}', 'DashboardukmagendaController@edit')->middleware('auth');
-Route::post('/dashukmagendaupd/{id}', 'DashboardukmagendaController@update')->middleware('auth');
+Route::get('/detailagendaukm/{id}', 'DashboardukmagendaController@show')->middleware('auth');
+Route::post('/dashukmagendaupd/{id}', 'DashboardukmagendaController@update')->name('dashukmagendaupd')->middleware('auth');
 Route::get('/dashukmagendadel/{id}', 'DashboardukmagendaController@destroy')->name('dashukmagendadel')->middleware('auth');
+
 
 
 
@@ -115,7 +123,8 @@ Route::get('/dashboardukmprestasi', 'DashboardukmprestasiController@index')->mid
 Route::post('/dashukmprestasi', 'DashboardukmprestasiController@store')->name('dashukmprestasi')->middleware('auth');
 Route::get('/formukmprestasi', 'ty@formukmprestasi');
 Route::get('/editprestasiukm/{id}', 'DashboardukmprestasiController@edit')->middleware('auth');
-Route::post('/dashukmprestasiupd/{id}', 'DashboardukmprestasiController@update')->middleware('auth');
+Route::get('/detailprestasiukm/{id}', 'DashboardukmprestasiController@show')->middleware('auth');
+Route::post('/dashukmprestasiupd/{id}', 'DashboardukmprestasiController@update')->name('dashukmprestasiupd')->middleware('auth');
 Route::get('/dashukmprestasidel/{id}', 'DashboardukmprestasiController@destroy')->name('dashukmprestasidel')->middleware('auth');
 
 

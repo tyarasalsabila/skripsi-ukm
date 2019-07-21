@@ -74,7 +74,9 @@ class DashboardbemagendaController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['agenda'] = Agenda::where('id', $id)->first();
+
+        return view('formdetailbemagenda1', $data);
     }
 
     /**

@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard BEM - Agenda')
+@section ('title','Edit Berita')
 
 @section ('content')
 
@@ -8,13 +8,10 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Berita</h3>
+			<h3 class="page-title">Edit Berita</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
-						<div class="panel-heading">
-							<h3 class="panel-title">List Berita</h3>
-						</div>
 						<div class="panel-body">
 						<form action="/dashukmberitaupd/{{$berita->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
@@ -30,7 +27,8 @@
 									<label> Isi </label>
 									<br>
 								<!-- <input type="text" name="isi" class="form-control" value="{{$berita->isi}}"> -->
-								<textarea name="isi" id="isi" cols="100%" rows="10">{{$berita->isi}}</textarea>
+								<!-- <textarea name="isi" id="isi" cols="100%" rows="10">{{$berita->isi}}</textarea> -->
+								<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10"> {{$berita->isi}} </textarea>
 								</div>
 
 								<br>
@@ -43,8 +41,8 @@
 								<br>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Save</button>
+								<a href="/dashboardukmberita" type="button" class="btn btn-default">Kembali</a>
+								<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>
 						</div>

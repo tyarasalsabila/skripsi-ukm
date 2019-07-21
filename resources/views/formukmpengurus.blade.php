@@ -1,6 +1,6 @@
-@extends ('adminbem')
+@extends ('adminukm')
 
-@section ('title','Dashboard BEM - Agenda')
+@section ('title','Edit Pengurus')
 
 @section ('content')
 
@@ -34,12 +34,13 @@
 									<label> Pembina </label>
 									<input type="text" name="pembina" class="form-control" value="{{$ukm->pembina}}">
 								</div>
-
-								<br>
 							</div>
+
+							<br>
+
 							<div class="modal-footer">
 								<a href="/dashboardukm" type="button" class="btn btn-default">Kembali</a>
-								<a type="submit" class="btn btn-primary">Save</a>
+								<button type="submit" class="btn btn-primary">Update Data</button>
 							</div>
 						</form>
 						</div>

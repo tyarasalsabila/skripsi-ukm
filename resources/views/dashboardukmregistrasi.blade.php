@@ -16,7 +16,7 @@
 								<h3 class="panel-title">Permintaan Anggota Baru</h3>
 							</div>
 							<div class="panel-body" style="padding-right:10px">
-								<table  class="table table-bordered table-responsive table-hover">
+								<table class="table table-bordered table-hover" id="datatable">
 									<thead>
 										<tr>
 											<th>No</th>

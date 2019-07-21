@@ -60,7 +60,7 @@ class DashboardukmagendaController extends Controller
         // dd($agenda);
         $agenda->save();
 
-        return redirect('dashboardukmagenda')->with('success', 'data saved');
+        return redirect('dashboardukmagenda');
 
     }
 
@@ -73,6 +73,9 @@ class DashboardukmagendaController extends Controller
     public function show($id)
     {
         //
+        $data['agenda'] = Agenda::where('id', $id)->first();
+
+        return view('formdetailukmagenda', $data);
     }
 
     /**

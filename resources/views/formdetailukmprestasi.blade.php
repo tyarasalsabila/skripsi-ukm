@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Detail Berita')
+@section ('title','Detail Prestasi')
 
 @section ('content')
 
@@ -8,30 +8,33 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<h3 class="page-title">Detail Berita</h3>
+			<h3 class="page-title">Detail Prestasi</h3>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-body">
 							<br>
-							<h4>
-								{{$berita->judul}}
-							</h4>
 							
-							<br>
-							
-							<img src="{{  url('').'/storage/'.$berita->foto }}" alt="">		
-							
-							<br><br>
-
 							<p class="p-t-20">
-								{{$berita->isi}}
+								Prestasi : {{$prestasi->nama}}
 							</p>
 
-							<br> 
+							<br>
+
+							<p class="p-t-20">
+								Anggota : {{$prestasi->anggota}}
+							</p>
+
+							<br>
+
+							<p class="p-t-20">
+								Tahun : {{$prestasi->tahun}}
+							</p>
+
+							<br>
 
 							<div class="modal-footer">
-								<a href="/dashboardukmberita" type="button" class="btn btn-default">Kembali</a>
+								<a href="/dashboardukmprestasi" type="button" class="btn btn-default">Kembali</a>
 							</div>
 						</div>
 					</div>						

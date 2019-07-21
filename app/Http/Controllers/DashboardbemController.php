@@ -43,4 +43,19 @@ class DashboardbemController extends Controller
             return view('dashboardbem',$data);
         }
     }
+
+    public function show($id)
+    {
+        $data['agenda'] = Agenda::where('id', $id)->first();
+
+        return view('formdetailbemagenda', $data);
+    }
+
+    public function show1($id)
+    {
+        $data['berita'] = Berita::where('id', $id)->first();
+
+        return view('formdetailbemberita', $data);
+        
+    }
 }
