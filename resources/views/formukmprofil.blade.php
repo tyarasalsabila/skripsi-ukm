@@ -1,6 +1,6 @@
 @extends ('adminbem')
 
-@section ('title','Dashboard BEM - Agenda')
+@section ('title','Edit Profil')
 
 @section ('content')
 
@@ -27,7 +27,7 @@
 								</div>
 								<div class="modal-footer">
 									<a href="/dashboardukm" type="button" class="btn btn-default">Kembali</a>
-									<a type="submit" class="btn btn-primary">Save</a>
+									<button type="submit" class="btn btn-primary">Save</button>
 								</div>
 							</form>
 						</div>

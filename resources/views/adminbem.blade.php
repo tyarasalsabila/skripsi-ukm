@@ -39,7 +39,7 @@
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>{{Auth::user()->name}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/user/bem.png" class="img-circle" alt="Avatar"> <span>{{Auth::user()->name}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								{{-- <li><a href="/logout"><span>Logout</span></a></li> --}}
 								<li>
@@ -89,77 +89,72 @@
 		$(document).ready(function () {
 			var table = $('#datatable').DataTable();
 
-			//Edit
-			table.on('click', '.edit', function () {
-				$tr = $(this).closest('tr');
-				if($($tr).hasClass('child')) {
-					$tr = $tr.prev('.parent');
-				}
+			// //Edit
+			// table.on('click', '.edit', function () {
+			// 	$tr = $(this).closest('tr');
+			// 	if($($tr).hasClass('child')) {
+			// 		$tr = $tr.prev('.parent');
+			// 	}
 
-				var data = table.row($tr).data();
-				console.log(data);
+			// 	var data = table.row($tr).data();
+			// 	console.log(data);
 
-				$('#nama').val(data[1]);
-				$('#namapendek').val(data[2]);
-				$('#hari').val(data[3]);
-				$('#jam').val(data[4]);
-				$('#tempat').val(data[5]);
-				$('#profil').val(data[6]);
-				$('#ketua').val(data[7]);
-				$('#npm').val(data[8]);
-				$('#pembina').val(data[9]);
+			// 	$('#nama').val(data[1]);
+			// 	$('#namapendek').val(data[2]);
+			// 	$('#hari').val(data[3]);
+			// 	$('#jam').val(data[4]);
+			// 	$('#tempat').val(data[5]);
+			// 	$('#profil').val(data[6]);
+			// 	$('#ketua').val(data[7]);
+			// 	$('#npm').val(data[8]);
+			// 	$('#pembina').val(data[9]);
 
-				$('#editForm').attr('action', '/dashbemukmupdate/'+data[0]);
+			// 	$('#editForm').attr('action', '/dashbemukmupdate/'+data[0]);
 				
-				// $('#editModal').modal('show');
-			});
+			// 	// $('#editModal').modal('show');
+			// });
 
 
-			//Delete
-			table.on('click', '.delete', function () {
-				$tr = $(this).closest('tr');
-				if($($tr).hasClass('child')) {
-					$tr = $tr.prev('.parent');
-				}
+			// //Delete
+			// table.on('click', '.delete', function () {
+			// 	$tr = $(this).closest('tr');
+			// 	if($($tr).hasClass('child')) {
+			// 		$tr = $tr.prev('.parent');
+			// 	}
 
-				var data = table.row($tr).data();
-				console.log(data);
+			// 	var data = table.row($tr).data();
+			// 	console.log(data);
 
-				$('#id').val(data[0]);
+			// 	$('#id').val(data[0]);
 
-				$('#deleteForm').attr('action', '/dashbemukmdelete/'+data[0]);
+			// 	$('#deleteForm').attr('action', '/dashbemukmdelete/'+data[0]);
 				
-				// $('#deleteModal').modal('show');
-			});
+			// 	// $('#deleteModal').modal('show');
+			// });
 
-			table.on('click', '.accept', function () {
-				$tr = $(this).closest('tr');
-				if($($tr).hasClass('child')) {
-					$tr = $tr.prev('.parent');
-				}
+			// table.on('click', '.accept', function () {
+			// 	$tr = $(this).closest('tr');
+			// 	if($($tr).hasClass('child')) {
+			// 		$tr = $tr.prev('.parent');
+			// 	}
 
-				var data = table.row($tr).data();
-				console.log(data);
+			// 	var data = table.row($tr).data();
+			// 	console.log(data);
 				
-				$('#judul').val(data[1]);
-				$('#isi').val(data[2]);
-				$('#id_ukm').val(data[3]);
-				$('#id_user').val(data[4]);
-				$('#foto').val(data[5]);
-				$('#confirmed').val(data[6]);
-				$('#created_at').val(data[7]);
+			// 	$('#judul').val(data[1]);
+			// 	$('#isi').val(data[2]);
+			// 	$('#id_ukm').val(data[3]);
+			// 	$('#id_user').val(data[4]);
+			// 	$('#foto').val(data[5]);
+			// 	$('#confirmed').val(data[6]);
+			// 	$('#created_at').val(data[7]);
 				
-				$('#editForm').attr('action', '/dashbemukmupdate/'+data[0]);
+			// 	$('#editForm').attr('action', '/dashbemukmupdate/'+data[0]);
 				
-				// $('#editModal').modal('show');
-			});
+			// 	// $('#editModal').modal('show');
+			// });
 		});
 	</script>
-
-
-	
-
-	
 
 </body>
 

@@ -28,7 +28,7 @@
 										<th>Isi</th>
 										<th>Link</th>
 										<th>Jam</th>
-										<th>Tanggal</th>
+										<th>Tanggal Acara</th>
 										<th>Tempat</th>
 										<th>Status</th>
 										<th>Action</th>

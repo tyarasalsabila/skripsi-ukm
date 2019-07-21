@@ -1,6 +1,6 @@
 @extends ('adminukm')
 
-@section ('title','Dashboard Berita')
+@section ('title','UKM - Berita')
 
 @section ('content')
 

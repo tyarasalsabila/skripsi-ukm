@@ -15,244 +15,244 @@ class UsersTableSeeder extends Seeder
     {
         //
         DB::table('users')->insert([
-            'name' => 'bem',
+            'name' => 'BEM',
             'email' => 'adminbem@ukm.unpad',
             'password' => bcrypt('adminbem'),
         ]);
 
         DB::table('users')->insert([
-            'name' => 'upu',
+            'name' => 'UPU',
             'email' => 'upu@ukm.unpad',
             'password' => bcrypt('ukmupu'),
             'id_ukm' => 1,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'softball',
+            'name' => 'SOFTBALL',
             'email' => 'softball@ukm.unpad',
             'password' => bcrypt('ukmsoftball'),
             'id_ukm' => 2,
         ]);
         
         DB::table('users')->insert([
-            'name' => 'ubvu',
+            'name' => 'UBVU',
             'email' => 'ubvu@ukm.unpad',
             'password' => bcrypt('ukmubvu'),
             'id_ukm' => 3,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'gsstf',
+            'name' => 'GSSTF',
             'email' => 'gsstf@ukm.unpad',
             'password' => bcrypt('ukmgsstf'),
             'id_ukm' => 4,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'kpm',
+            'name' => 'KPM',
             'email' => 'kpm@ukm.unpad',
             'password' => bcrypt('ukmkpm'),
             'id_ukm' => 5,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'pd',
+            'name' => 'PD',
             'email' => 'pd@ukm.unpad',
             'password' => bcrypt('ukmperisai'),
             'id_ukm' => 6,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ubu',
+            'name' => 'UBU',
             'email' => 'ubu@ukm.unpad',
             'password' => bcrypt('ukmubu'),
             'id_ukm' => 7,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'aiesec',
+            'name' => 'AIESEC',
             'email' => 'aiesec@ukm.unpad',
             'password' => bcrypt('ukmaiesec'),
             'id_ukm' => 8,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'menwa',
+            'name' => 'MENWA',
             'email' => 'menwa@ukm.unpad',
             'password' => bcrypt('ukmmenwa'),
             'id_ukm' => 9,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'usbu',
+            'name' => 'USBU',
             'email' => 'usbu@ukm.unpad',
             'password' => bcrypt('ukmusbu'),
             'id_ukm' => 10,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'psm',
+            'name' => 'PSM',
             'email' => 'psm@ukm.unpad',
             'password' => bcrypt('ukmpsm'),
             'id_ukm' => 11,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ucmu',
+            'name' => 'UCMU',
             'email' => 'ucmu@ukm.unpad',
             'password' => bcrypt('ukmucmu'),
             'id_ukm' => 12,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'upmb',
+            'name' => 'UPMB',
             'email' => 'upmb@ukm.unpad',
             'password' => bcrypt('ukmupmb'),
             'id_ukm' => 13,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'uffu',
+            'name' => 'UFFU',
             'email' => 'uffu@ukm.unpad',
             'password' => bcrypt('ukmuffu'),
             'id_ukm' => 14,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ksrpmi',
+            'name' => 'KSRPMI',
             'email' => 'ksrpmi@ukm.unpad',
             'password' => bcrypt('ukmksrpmi'),
             'id_ukm' => 15,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'utkd',
+            'name' => 'UTKD',
             'email' => 'utkd@ukm.unpad',
             'password' => bcrypt('ukmutkd'),
             'id_ukm' => 16,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'kempo',
+            'name' => 'KEMPO',
             'email' => 'kempo@ukm.unpad',
             'password' => bcrypt('ukmkempo'),
             'id_ukm' => 17,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'lises',
+            'name' => 'LISES',
             'email' => 'lises@ukm.unpad',
             'password' => bcrypt('ukmlises'),
             'id_ukm' => 18,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'lppmd',
+            'name' => 'LPPMD',
             'email' => 'lppmd@ukm.unpad',
             'password' => bcrypt('ukmlppmd'),
             'id_ukm' => 19,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'uku',
+            'name' => 'UKU',
             'email' => 'uku@ukm.unpad',
             'password' => bcrypt('ukmuku'),
             'id_ukm' => 20,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'iaas',
+            'name' => 'IAAS',
             'email' => 'iaas@ukm.unpad',
             'password' => bcrypt('ukmiaas'),
             'id_ukm' => 21,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ubbu',
+            'name' => 'UBBU',
             'email' => 'ubbu@ukm.unpad',
             'password' => bcrypt('ukmubbu'),
             'id_ukm' => 22,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'spdc',
+            'name' => 'SPDC',
             'email' => 'spdc@ukm.unpad',
             'password' => bcrypt('ukmspdc'),
             'id_ukm' => 23,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'merpati',
+            'name' => 'MERPATI',
             'email' => 'merpati@ukm.unpad',
             'password' => bcrypt('ukmmerpati'),
             'id_ukm' => 24,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'sar',
+            'name' => 'SAR',
             'email' => 'sar@ukm.unpad',
             'password' => bcrypt('ukmsar'),
             'id_ukm' => 25,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'utd',
+            'name' => 'UTD',
             'email' => 'utd@ukm.unpad',
             'password' => bcrypt('ukmutd'),
             'id_ukm' => 26,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'ubtu',
+            'name' => 'UBTU',
             'email' => 'ubtu@ukm.unpad',
             'password' => bcrypt('ukmubtu'),
             'id_ukm' => 27,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'spektrum',
+            'name' => 'SPEKTRUM',
             'email' => 'spektrum@ukm.unpad',
             'password' => bcrypt('ukmspektrum'),
             'id_ukm' => 28,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'uru',
+            'name' => 'URU',
             'email' => 'uru@ukm.unpad',
             'password' => bcrypt('ukmuru'),
             'id_ukm' => 29,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'palawa',
+            'name' => 'PALAWA',
             'email' => 'palawa@ukm.unpad',
             'password' => bcrypt('ukmpalawa'),
             'id_ukm' => 30,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'esu',
+            'name' => 'ESU',
             'email' => 'esu@ukm.unpad',
             'password' => bcrypt('ukmesu'),
             'id_ukm' => 31,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'uhu',
+            'name' => 'UHU',
             'email' => 'uhu@ukm.unpad',
             'password' => bcrypt('ukmuhu'),
             'id_ukm' => 32,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'utmu',
+            'name' => 'UTMU',
             'email' => 'utmu@ukm.unpad',
             'password' => bcrypt('ukmutmu'),
             'id_ukm' => 33,
         ]);
 
         DB::table('users')->insert([
-            'name' => 'pec',
+            'name' => 'PEC',
             'email' => 'pec@ukm.unpad',
             'password' => bcrypt('ukmpec'),
             'id_ukm' => 34,

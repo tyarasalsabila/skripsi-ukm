@@ -195,4 +195,14 @@ class ty extends Controller
     {
         return view('formukmkontak');
     }
+
+    public function formukmprofil()
+    {
+        return view('formukmprofil');
+    }
+
+    public function formukmpengurus()
+    {
+        return view('formukmpengurus');
+    }
 }

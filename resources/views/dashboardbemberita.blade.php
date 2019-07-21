@@ -1,6 +1,6 @@
 @extends ('adminbem')
 
-@section ('title','Dashboard BEM - Berita')
+@section ('title','BEM - Berita')
 
 @section ('content')
 
@@ -101,81 +101,6 @@
 				</div>
 			</div>
 			<!-- Add -->
-
-
-			<!-- Edit -->
-			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<!-- <h5 class="modal-title" id="addModalLabel"></h5> -->
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
-						<form action="{{route('dashbem')}}" method="POST">
-							@csrf
-							<div class="modal-body">
-							<div class="form-group">
-									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
-								</div>
-
-								<br>
-
-
-								<label> Upload Foto </label>
-								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
-								</div>
-
-								<br>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Save</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Edit -->
-
-
-			<!-- Delete -->
-			<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
-						<form action="{{route('dashbem')}}" method="POST">
-							@csrf
-							<div class="modal-body">
-								<input type="hidden" name="judul">
-								<p> Hapus Data? </p>
-							</div>
-
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-								<button type="submit" class="btn btn-primary">Ya</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Delete -->
 			</div>
 		</div>
 	</div>

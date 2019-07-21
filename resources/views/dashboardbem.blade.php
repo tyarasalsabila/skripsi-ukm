@@ -51,7 +51,7 @@
 								@php ($x = $x+1)
 									<tr>
 										<td>{{$x}}</td>
-										<td>{{$brt->ukm->nama}}</td>
+										<td>{{$brt->ukm->nama_ukm}}</td>
 										<td>{{$brt->judul}}</td>
 										<td>{{$brt->isi}}</td>
 										<td>
@@ -76,7 +76,7 @@
 							<h3 class="panel-title">Notifikasi Agenda</h3>
 						</div>
 						<div class="panel-body">
-							<table class="table table-bordered table-hover">
+							<table class="table table-bordered table-hover" id="datatable">
 								<thead>
 									<tr>
 										<th>No</th>
@@ -92,7 +92,7 @@
             					@php ($x = $x+1)
 									<tr>
 										<td>{{$x}}</td>
-										<td>{{$agd->ukm->nama}}</td>
+										<td>{{$agd->ukm->nama_ukm}}</td>
 										<td>{{$agd->judul}}</td>
 										<td>{{$agd->isi}}</td>
 										<td>
@@ -214,7 +214,7 @@
 </div>
 
 
-{{-- <script>
+<!-- {{-- <script>
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -225,7 +225,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-body input').val(recipient)
 })
 </script> --}}
-<!-- 
+ 
 {{-- <script>
 $(document).on("click", ".editDialog", function () {
 	console.log(dataId); 
@@ -235,7 +235,7 @@ $(document).on("click", ".editDialog", function () {
      // As pointed out in comments, 
      // it is unnecessary to have to manually call the modal.
      // $('#addBookDialog').modal('show');
-});</script> --}} -->
+});</script> --}} 
 
 <script type="text/javascript">
 	$(document).ready(function () {
@@ -259,11 +259,9 @@ $(document).on("click", ".editDialog", function () {
 
 				$('#deleteForm').attr('action', '/dashbemukmdelete/'+data[0]);
 				
-				// $('#deleteModal').modal('show');
 			});
 		});
-</script>
+</script> -->
 
 @endsection  
 </html>
-

@@ -21,7 +21,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset ('assets/img/apple-icon.png')}}">
 	<link rel="icon" type="image/png" sizes="96x96" href="{{ asset ('assets/img/favicon.png')}}">
 
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="{{ asset ('https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css')}}">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"><span>Admin UKM</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src=" {{ asset ('images/user/ukm.png')}}" class="img-circle" alt="Avatar"><span>{{Auth::user()->name}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<form action="{{route('logout')}}" method="POST" id="logout-form">
 									@csrf
@@ -83,29 +83,6 @@
 	<script src="{{asset('assets/scripts/klorofil-common.js')}}"></script>
 	<script src="{{asset('https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js')}}"></script>
 	<script src="{{asset('https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js')}}"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var table = $('#datatable').DataTable();
-
-			table.on('click', '.delete', function () {
-				$tr = $(this).closest('tr');
-				if($($tr).hasClass('child')) {
-					$tr = $tr.prev('.parent');
-				}
-
-				var data = table.row($tr).data();
-				console.log(data[2]);
-
-				$('#judul').val(data[2]);
-				$('#isi').val(data[4]);
-
-				$('#deleteForm').attr('action', '/dashukmbrtdelete/'+data[2]);
-				
-				// $('#deleteModal').modal('show');
-			});
-		})
-	</script>
 	
 </body>
 

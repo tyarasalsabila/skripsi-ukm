@@ -30,14 +30,13 @@
 <div class="wrap-gallery isotope-grid flex-w p-l-30 p-b-100">
 	@foreach($galeris as $galeri)
 	<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom">
-		<img src="{{url('').'/storage/'.$galeri->link_foto }}"  data-lightbox="gallery" alt="IAAS">
+		<img src="{{url('').'/storage/'.$galeri->link_foto }}"  data-lightbox="gallery" alt="IMG-BLOG">
 		<div class="overlay-item-gallery trans-0-4 flex-c-m">
 			<a class="btn-show-gallery flex-c-m fa fa-search" style="text-decoration: none" href="{{url('').'/storage/'.$galeri->link_foto }}" data-lightbox="gallery"></a>
 		</div>
 	</div>
 	@endforeach
 </div>
-
 
 
 

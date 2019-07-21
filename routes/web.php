@@ -67,6 +67,8 @@ Route::get('/adminukm', 'ty@adminukm')->middleware('auth');
 
 Route::get('/dashboardukm', 'DashboardukmController@index')->middleware('auth')->name('dashboardukm');
 Route::post('/dashukm', 'DashboardukmController@store')->name('dashukm')->middleware('auth');
+Route::get('/formukmprofil', 'ty@formukmprofil');
+Route::get('/formukmpengurus', 'ty@formukmpengurusa');
 Route::get('/editprofil/{id}', 'DashboardukmController@editProfil');
 Route::post('/updateprofil/{id}', 'DashboardukmController@updateProfil')->middleware('auth');
 Route::get('/editpengurus/{id}', 'DashboardukmController@editPengurus');

@@ -8,11 +8,10 @@
 <div class="main">
 	<div class="main-content">
 		<div class="container-fluid">
-			<!-- BEM -->
 			<div class="panel panel-headline">
 				<div class="panel-heading">
 					<h3 class="panel-title">Dashboard</h3>
-					<p class="panel-subtitle">{{$ukm->nama}} - {{$ukm->namapendek}}</p>
+					<p class="panel-subtitle">{{$ukm->nama_ukm}} - {{$ukm->namapendek}}</p>
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -45,21 +44,21 @@
 							<br>
 							<p>{{Str::limit($ukm->profil,200)}}</p>
 							<br> 
-							<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-primary">Edit</a>
+							<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-warning">Edit</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-6">
 					<div class="panel panel-headline">
-						<div class="panel-heading">
+					<div class="panel-heading">
 							<h3 class="panel-title">Pengurus</h3>
 							<br>
 							<p>Ketua : {{$ukm->ketua}} </p>
 							<p>NPM : {{$ukm->npm}}</p>
 							<p> Pembina :  {{$ukm->pembina}} </p>
 							<br>
-							<a href="/editpengurus/{{$ukm->id}}" type="button" class="btn btn-primary">
+							<a href="/editpengurus/{{$ukm->id}}" type="button" class="btn btn-warning">
 								Edit
 							</a>
 						</div>
