@@ -33,6 +33,11 @@
 											<th>Ketua</th>
 											<th>NPM</th>
 											<th>Pembina</th>
+											<th>Line</th>
+											<th>Facebook</th>
+											<th>Twitter</th>
+											<th>Instagram</th>
+											<th>Email</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -51,6 +56,11 @@
 											<td>{{Str::limit($ukm->ketua,10)}}</td>
 											<td>{{$ukm->npm}}</td>
 											<td>{{$ukm->pembina}}</td>
+											<td>{{$ukm->line}}</td>
+											<td>{{$ukm->facebook}}</td>
+											<td>{{$ukm->twitter}}</td>
+											<td>{{$ukm->instagram}}</td>
+											<td>{{$ukm->email}}</td>
 											<td>
 												<a href="/detailukmbem/{{$ukm->id}}" type="button" class="btn btn-primary">Detail</a>	
 												<a href="/editukm/{{$ukm->id}}" type="button" class="btn btn-warning edit">Edit</a>
@@ -83,7 +93,7 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> UKM </label>
-									<input type="text" name="nama" class="form-control" placeholder="Masukkan Nama UKM">
+									<input type="text" name="nama_ukm" class="form-control" placeholder="Masukkan Nama UKM">
 								</div>
 
 								<br>
@@ -135,10 +145,47 @@
 									<label> NPM </label>
 									<input type="text" name="npm" class="form-control" placeholder="Masukkan NPM Ketua">
 								</div>
+								
+								<br>
 
 								<div class="form-group">
 									<label> Pembina </label>
 									<input type="text" name="pembina" class="form-control" placeholder="Masukkan Pembina UKM">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Line </label>
+									<input type="text" name="line" class="form-control" placeholder="Masukkan Kontak Line">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Facebook </label>
+									<input type="text" name="facebook" class="form-control" placeholder="Masukkan Kontak Facebook">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Twitter </label>
+									<input type="text" name="twitter" class="form-control" placeholder="Masukkan Kontak Twitter">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Instagram </label>
+									<input type="text" name="instagram" class="form-control" placeholder="Masukkan Kontak Instagram">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Email </label>
+									<input type="text" name="email" class="form-control" placeholder="Masukkan Email UKM">
 								</div>
 
 								<br>

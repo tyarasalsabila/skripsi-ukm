@@ -59,7 +59,7 @@
 						<form action="{{route('dashbemuser')}}" method="POST">
 							@csrf
 							<div class="modal-body">
-							<!-- <span class="txt9">
+							<span class="txt9">
 								Pilih UKM
 							</span>
 							<div class="size12 bo-rad-10 m-t-3 m-b-23">
@@ -67,11 +67,11 @@
 									<option disabled="disabled" selected="selected">Pilih UKM</option>
 									@foreach($ukms as $ukm)
 
-									<option value="{{$ukm->id}}">{{$ukm->nama}}</option>
+									<option value="{{$ukm->id}}">{{$ukm->nama_ukm}}</option>
 									@endforeach
 									
 								</select>
-							</div> -->
+							</div>
 
 								<br>
 

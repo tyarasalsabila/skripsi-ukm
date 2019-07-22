@@ -33,7 +33,7 @@ class DashboardbemukmController extends Controller
         $ukm = new Ukm;
 
         // $variabel->nama_kolom = $request->name_input
-        $ukm->nama = $request->nama;
+        $ukm->nama_ukm = $request->nama_ukm;
         $ukm->namapendek = $request->namapendek;
         $ukm->hari = $request->hari;
         $ukm->jam = $request->jam;
@@ -42,12 +42,17 @@ class DashboardbemukmController extends Controller
         $ukm->ketua = $request->ketua;
         $ukm->npm = $request->npm;
         $ukm->pembina = $request->pembina;
+        $ukm->line = $request->line;
+        $ukm->facebook = $request->facebook;
+        $ukm->twitter = $request->twitter;
+        $ukm->instagram = $request->instagram;
+        $ukm->email = $request->email;
 
         // dd($ukm);
 
         $ukm->save();
 
-        return redirect('dashboardbemukm')->with('success', 'data saved');
+        return redirect('dashboardbemukm');
     }
 
     /**
@@ -75,7 +80,7 @@ class DashboardbemukmController extends Controller
         $ukm = Ukm::find($id);
 
         // $variabel->nama_kolom = $request->name_input
-        $ukm->nama = $request->nama;
+        $ukm->nama_ukm = $request->nama_ukm;
         $ukm->namapendek = $request->namapendek;
         $ukm->hari = $request->hari;
         $ukm->jam = $request->jam;
@@ -84,12 +89,17 @@ class DashboardbemukmController extends Controller
         $ukm->ketua = $request->ketua;
         $ukm->npm = $request->npm;
         $ukm->pembina = $request->pembina;
+        $ukm->line = $request->line;
+        $ukm->facebook = $request->facebook;
+        $ukm->twitter = $request->twitter;
+        $ukm->instagram = $request->instagram;
+        $ukm->email = $request->email;
 
         // dd($ukm);
 
         $ukm->save();
 
-        return redirect('dashboardbemukm')->with('success', 'data updated');   
+        return redirect('dashboardbemukm');   
     }
 
     /**
@@ -104,6 +114,6 @@ class DashboardbemukmController extends Controller
         // dd($ukm);
         $ukm->delete();
 
-        return redirect('dashboardbemukm')->with('success', 'data deleted');   
+        return redirect('dashboardbemukm');   
     }
 }
