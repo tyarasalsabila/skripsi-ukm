@@ -13,6 +13,7 @@ class Anggota extends Model
         'angkatan',
         'status',
         'id_ukm',
+        'id_reg',
     ];
 
     public function ukm(){

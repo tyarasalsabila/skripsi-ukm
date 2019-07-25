@@ -107,7 +107,7 @@
 								<option disabled="disabled" selected="selected">Pilih UKM</option>
 								@foreach($ukms as $ukm)
 
-								<option value="{{$ukm->id}}">{{$ukm->nama}}</option>
+								<option value="{{$ukm->id}}">{{$ukm->nama_ukm}}</option>
 								@endforeach
 								
 							</select>

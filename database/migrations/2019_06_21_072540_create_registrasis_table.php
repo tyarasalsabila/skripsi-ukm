@@ -16,13 +16,14 @@ class CreateRegistrasisTable extends Migration
         Schema::create('registrasis', function (Blueprint $table) {
             $table->increments('id');
             $table->text('nama');
-            $table->integer('npm');
+            $table->string('npm');
             $table->string('email');
             $table->string('hp');
             $table->string('fakultas');
             $table->string('jurusan');
             $table->integer('angkatan');
             $table->integer('id_ukm')->unsigned();
+            $table->string('status');
             $table->timestamps();
 
             $table->foreign('id_ukm')

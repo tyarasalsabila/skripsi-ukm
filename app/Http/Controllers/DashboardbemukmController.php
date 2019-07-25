@@ -116,4 +116,13 @@ class DashboardbemukmController extends Controller
 
         return redirect('dashboardbemukm');   
     }
+
+
+    public function show($id)
+    {
+        //
+        $data['ukm'] = Ukm::where('id', $id)->first();
+
+        return view('formdetailbemukm', $data);
+    }
 }

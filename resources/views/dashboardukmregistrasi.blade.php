@@ -27,12 +27,14 @@
 											<th>Fakultas</th>
 											<th>Jurusan</th>
 											<th>Angkatan</th>
+											<th>Status</th>
 											<th>Action</th>
 										</tr>
 									</thead>
 
 									<tbody>
 									@php ($x = 0)
+									
 									@foreach($reg as $rgt)
 									@php ($x = $x+1)
 										<tr>
@@ -44,11 +46,12 @@
 											<td>{{$rgt->fakultas}}</td>
 											<td>{{$rgt->jurusan}}</td>
 											<td>{{$rgt->angkatan}}</td>
+											<td>{{$rgt->status}}</td>
 											<td>
-												{{-- <button type="button" class="btn btn-primary btn-toastr" data-toggle="modal" data-target="#acceptModal">Accept</button>
-												<button type="button" class="btn btn-danger btn-toastr" data-toggle="modal" data-target="#rejectModal">Reject</button> --}}
+											@if($rgt->status === 'Belum dikonfirmasi')
 												<a href="/acceptregistrasi/{{$rgt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima registrasi?')">Accept</a>
 												<a href="/rejectregistrasi/{{$rgt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak registrasi?')">Reject</a>
+											@endif
 											</td>
 										</tr>
 									@endforeach

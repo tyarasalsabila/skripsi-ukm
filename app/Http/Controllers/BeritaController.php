@@ -42,34 +42,7 @@ class BeritaController extends Controller
      * @param  \App\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Berita $berita)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Berita  $berita
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Berita $berita)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Berita  $berita
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Berita $berita)
-    {
-        //
-    }
-
+    
     public function accept($id)
     {
         $berita = Berita::find($id);

@@ -15,6 +15,7 @@ class Registrasi extends Model
         'jurusan',
         'angkatan',
         'id_ukm',
+        'status',
     ];
 
     public function ukm(){

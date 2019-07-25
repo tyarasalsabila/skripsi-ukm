@@ -9,16 +9,7 @@ use Illuminate\Http\Request;
 
 class RegistrasiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -30,8 +21,6 @@ class RegistrasiController extends Controller
         $data['message'] = NULL;
         // dd($data);
         return view('daftarukm',$data);
-
-
     }
 
     /**
@@ -52,6 +41,7 @@ class RegistrasiController extends Controller
         $registrasi->jurusan = $request->jurusan;
         $registrasi->angkatan = $request->angkatan;
         $registrasi->id_ukm = $request->pilihukm;
+        $registrasi->status = 'Belum dikonfirmasi';
         
         // dd($registrasi);
         $registrasi->save();
@@ -60,56 +50,15 @@ class RegistrasiController extends Controller
         return view('daftarukm',$data);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Registrasi  $registrasi
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Registrasi $registrasi)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Registrasi  $registrasi
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Registrasi $registrasi)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Registrasi  $registrasi
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Registrasi $registrasi)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Registrasi  $registrasi
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Registrasi $registrasi)
-    {
-        //
-    }
+    
 
     public function accept($id)
     {
         $registrasi = Registrasi::find($id);
 
         $anggota = new Anggota();
+
+        // dd($registrasi);
 
         $anggota->nama = $registrasi->nama;
         $anggota->npm = $registrasi->npm;
@@ -119,9 +68,12 @@ class RegistrasiController extends Controller
         $anggota->angkatan = $registrasi->angkatan;
         $anggota->hp = $registrasi->hp;
         $anggota->id_ukm = $registrasi->id_ukm;
-
+        $anggota->id_reg  = $registrasi->id;
+        
         $anggota->save();
-        $registrasi->delete();
+
+        $registrasi->status = 'Diterima';
+        $registrasi->save();
 
         return redirect('dashboardukmregistrasi');
 
@@ -131,7 +83,9 @@ class RegistrasiController extends Controller
     {
         $registrasi = Registrasi::find($id);
 
-        $registrasi->delete();
+        $registrasi->status = 'Ditolak';
+
+        $registrasi->save();
 
         return redirect('dashboardukmregistrasi');
 

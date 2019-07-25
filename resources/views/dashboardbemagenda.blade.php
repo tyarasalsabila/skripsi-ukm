@@ -29,7 +29,7 @@
 											<th>Isi</th>
 											<th>Link</th>
 											<th>Hari</th>
-											<th>Tanggal</th>
+											<th>Tanggal Acara</th>
 											<th>Tempat</th>
 											<th>Action</th>
 										</tr>
