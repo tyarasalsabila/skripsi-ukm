@@ -22,6 +22,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="{{ asset ('assets/img/favicon.png')}}">
 
 	<link rel="stylesheet" href="{{ asset ('https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css')}}">
+	<link rel= "icon" href = "assets/img/logo.png">
 </head>
 
 <body>

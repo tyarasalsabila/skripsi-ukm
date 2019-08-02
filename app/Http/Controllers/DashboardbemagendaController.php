@@ -29,6 +29,7 @@ class DashboardbemagendaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //masukin db
     public function store(Request $request)
     {
         //
@@ -39,6 +40,7 @@ class DashboardbemagendaController extends Controller
 
         $agenda->judul = $request->judul;
         $agenda->isi = $request->isi;
+        //auth nyimpen data user yg login
         $agenda->id_ukm = Auth::user()->id_ukm;
         $agenda->id_user = Auth::user()->id;
         $agenda->foto = $path;
@@ -52,7 +54,7 @@ class DashboardbemagendaController extends Controller
         // dd($agenda);
         $agenda->save();
 
-        return redirect('dashboardbemagenda')->with('success', 'data saved');
+        return redirect('dashboardbemagenda');
 
 
     }

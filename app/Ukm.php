@@ -50,4 +50,9 @@ class Ukm extends Model
     public function registrasi(){
         return $this->hasMany('App\Registrasi');
     }
+
+    public function kategori()
+    {
+        return $this->belongsTo('App\Kategori', 'id_kategori');
+    }
 }

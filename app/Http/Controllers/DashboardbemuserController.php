@@ -15,6 +15,8 @@ class DashboardbemuserController extends Controller
      */
     public function index()
     {
+        //ngambil dari model user, dimana id ukmnya
+        //with ukm fungsi relation
         $data['accs'] = User::where('id_ukm', '!=', NULL)->with('ukm')->get();
         $data['ukms'] = Ukm::all();
         // dd($data);
@@ -32,6 +34,7 @@ class DashboardbemuserController extends Controller
         //
         $user = new User;
 
+        //atribut | name
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);

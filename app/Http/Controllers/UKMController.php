@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Ukm;
 use App\Prestasi;
 use App\Anggota;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 class UKMController extends Controller
@@ -17,7 +18,8 @@ class UKMController extends Controller
     public function index()
     {
         //ngambil semua data ukm
-        $data['ukms'] = Ukm::all();
+        //Ukm nama modelnya
+        $data['ukms'] = Ukm::with('kategori')->get();
         // dd($data);
 
         //return view ('nama file view', variabel data yang mau ditampilin)

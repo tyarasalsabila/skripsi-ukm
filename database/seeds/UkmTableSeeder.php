@@ -31,6 +31,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@PramukaUnpad",
             'instagram' => "@pramukaunpad",
             'email' => "pramuka.unpad75@gmail.com",
+            'id_kategori' => 3,
         ]);   
 
         //2
@@ -59,6 +60,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@basesoftunpad",
             'instagram' => "@unpad.softball",
             'email' => "basesoft.unpad@gmail.com",
+            'id_kategori' => 1,
         ]); 
 
         //3
@@ -79,6 +81,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@voliunpad",
             'instagram' => "@voliunpad",
             'email' => "unitbolavoliunpad@gmail.com",
+            'id_kategori' => 1,
         ]); 
 
         //4
@@ -103,6 +106,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@GSSTFUNPAD",
             'instagram' => "@gsstfunpad",
             'email' => "gelangganggs@gmail.com",
+            'id_kategori' => 4,
         ]); 
         
         //5
@@ -127,6 +131,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@kpmunpad",
             'instagram' => "@kpmunpad",
             'email' => "kpmunpad@gmail.com",
+            'id_kategori' => 3,
         ]);
         
         //6
@@ -157,6 +162,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@UnpadDiri",
             'instagram' => "@perisaidiriunpad",
             'email' => "upofficial@gmail.com",
+            'id_kategori' => 2,
         ]);
 
         //7
@@ -180,6 +186,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@birdgeunpad",
             'instagram' => "-",
             'email' => "bridgeunpad@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //8
@@ -207,6 +214,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@aiesecbandung",
             'instagram' => "@aiesecbandung",
             'email' => "-",
+            'id_kategori' => 4,
         ]);
 
         //9
@@ -229,6 +237,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@MENWA_YON2",
             'instagram' => "@menwayon2unpad",
             'email' => "menwayon2@gmail.com",
+            'id_kategori' => 3,
         ]);
 
         //10
@@ -254,6 +263,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@futsalunpad, @soccerunpad",
             'instagram' => "futsalunpad, soccerunpad",
             'email' => "futsalunpad@gmail.com, soccerunpad@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //11
@@ -280,6 +290,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@unpadchoir",
             'instagram' => "@unpadchoir",
             'email' => "unpadchoir@yahoo.com",
+            'id_kategori' => 4,
         ]);
 
         //12
@@ -303,6 +314,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@catur.unpad",
             'email' => "-",
+            'id_kategori' => 1,
         ]);
 
         //13
@@ -327,6 +339,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@upbmunpad",
             'instagram' => "@upbmunpad",
             'email' => "ukm.upbmunpad@gmail.com",
+            'id_kategori' => 4,
         ]);
 
         //14
@@ -351,6 +364,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@ff_unpad",
             'instagram' => "@ff_unpad",
             'email' => "flagfootballunpad@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //15
@@ -373,6 +387,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@KSRUnpad",
             'instagram' => "@ksr_pmiunpad",
             'email' => "ksr_pmiunpad@yahoo.com",
+            'id_kategori' => 3,
         ]);
 
         //16
@@ -391,6 +406,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@taekwondo_unpad",
             'email' => "-",
+            'id_kategori' => 1,
         ]);
 
         //17
@@ -417,6 +433,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@Kempounpad",
             'instagram' => "@kempo_unpad",
             'email' => "shorinjikempo.unpad@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //18
@@ -439,6 +456,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@Lisesunpad",
             'instagram' => "@lises_unpad",
             'email' => "-",
+            'id_kategori' => 4,
         ]);
 
         //19
@@ -458,6 +476,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@lppmdunpad",
             'instagram' => "-",
             'email' => "-",
+            'id_kategori' => 3,
         ]);
 
         //20
@@ -480,6 +499,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "-",
             'email' => "-",
+            'id_kategori' => 1,
         ]);
 
         //21
@@ -501,6 +521,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@IAASUnpad",
             'instagram' => "iass_unpad",
             'email' => "-",
+            'id_kategori' => 3,
         ]);
 
         //22
@@ -523,6 +544,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@unpadbasketball",
             'email' => "timbasketunpad@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //23
@@ -544,6 +566,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@spdc_unpad",
             'email' => "humas.spdc@gmail.com",
+            'id_kategori' => 4,
         ]);
 
         //24
@@ -566,6 +589,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@MP_unpad",
             'instagram' => "@mpunpad",
             'email' => "ukm.merpatiputih@unpad.ac.id",
+            'id_kategori' => 2,
         ]);
 
         //25
@@ -587,6 +611,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@sarunpad",
             'instagram' => "@unitsarunpad",
             'email' => "unitsarpadjadjaran@gmail.com",
+            'id_kategori' => 3,
         ]);
 
         //26
@@ -610,6 +635,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@satlatunpad",
             'email' => "satlatunpad@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //27
@@ -631,6 +657,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@ubtu_holic",
             'instagram' => "@ubtu_holic",
             'email' => "ubtuholic@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //28
@@ -652,6 +679,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@spektrum_unpad",
             'email' => "unit.fotografi.unpad@gmail.com",
+            'id_kategori' => 4,
         ]);
 
         //29
@@ -674,6 +702,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "-",
             'instagram' => "@unitrenangunpad",
             'email' => "unitrenangunpad1988@gmail.com",
+            'id_kategori' => 1,
         ]);
 
         //30
@@ -697,6 +726,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@Palawa_unpad",
             'instagram' => "@palawa_unpad",
             'email' => "palawaunpad.km21@gmail.com",
+            'id_kategori' => 3,
         ]);
 
         //31
@@ -720,6 +750,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@Esu_unpad",
             'instagram' => "-",
             'email' => "unpadesu@gmail.com",
+            'id_kategori' => 4,
         ]);
 
         //32
@@ -749,6 +780,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@unithokiunpad",
             'instagram' => "@unithokiunpad",
             'email' => "unithokiunpad@yahoo.com",
+            'id_kategori' => 1,
         ]);
 
         //33
@@ -768,6 +800,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@UTMUnpad",
             'instagram' => "@tenismejaunpad",
             'email' => "-",
+            'id_kategori' => 1,
         ]);
 
         //34
@@ -787,6 +820,7 @@ class UkmTableSeeder extends Seeder
             'twitter' => "@EnsembleUnpad",
             'instagram' => "@padjadjaranensemble",
             'email' => "unpadpec@gmail.com",
+            'id_kategori' => 4,
         ]);
     }
 }

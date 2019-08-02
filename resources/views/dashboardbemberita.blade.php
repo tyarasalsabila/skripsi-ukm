@@ -78,7 +78,7 @@
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10" placeholder="Masukkan Isi Berita"></textarea>
 								</div>
 
 								<br>

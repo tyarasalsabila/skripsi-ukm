@@ -17,7 +17,8 @@ class DashboardbemberitaController extends Controller
      */
     public function index()
     {
-        $data['berita'] = Berita::where('id_ukm','=',NULL)->get();
+        // $data['berita'] = Berita::where('id_ukm','=',NULL)->get();
+        $data['berita'] = Berita::where('id_ukm',Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         // dd($data);
         return view('dashboardbemberita', $data);
     }

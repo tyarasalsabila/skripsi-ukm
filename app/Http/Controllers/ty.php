@@ -205,4 +205,9 @@ class ty extends Controller
     {
         return view('formukmpengurus');
     }
+
+    public function formdetailbemberita()
+    {
+        return view('formdetailbemberita');
+    }
 }

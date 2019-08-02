@@ -29,7 +29,12 @@ class CreateUkmsTable extends Migration
             $table->string('twitter');
             $table->string('instagram');
             $table->string('email');
+            $table->integer('id_kategori')->unsigned();
             $table->timestamps();
+
+            $table->foreign('id_kategori')
+            ->references('id')
+            ->on('kategoris');
         });
     }
 

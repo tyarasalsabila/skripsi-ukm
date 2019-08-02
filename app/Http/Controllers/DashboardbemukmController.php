@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 // use App\Dashboardbemukm;
+use Auth;   
 use App\Ukm;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 
@@ -34,10 +36,11 @@ class DashboardbemukmController extends Controller
 
         // $variabel->nama_kolom = $request->name_input
         $ukm->nama_ukm = $request->nama_ukm;
+        $ukm->id_kategori = $request->kategori;
         $ukm->namapendek = $request->namapendek;
         $ukm->hari = $request->hari;
         $ukm->jam = $request->jam;
-        $ukm->tempat = $request->hari;
+        $ukm->tempat = $request->tempat;
         $ukm->profil = $request->profil;
         $ukm->ketua = $request->ketua;
         $ukm->npm = $request->npm;
@@ -81,6 +84,7 @@ class DashboardbemukmController extends Controller
 
         // $variabel->nama_kolom = $request->name_input
         $ukm->nama_ukm = $request->nama_ukm;
+        $ukm->id_kategori = $request->id_kategori;
         $ukm->namapendek = $request->namapendek;
         $ukm->hari = $request->hari;
         $ukm->jam = $request->jam;

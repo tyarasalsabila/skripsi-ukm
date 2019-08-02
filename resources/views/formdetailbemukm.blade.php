@@ -13,55 +13,61 @@
 				<div class="col-md-12">
 					<div class="panel">
 						<div class="panel-body" style="padding-top:20px">
-							<p class="p-t-20">
+							<p style="padding-top:10px">
 								UKM : {{$ukm->nama_ukm}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
+								Kategori : {{$ukm->kategori->kategori}}
+							</p>
+
+							<br>
+							
+							<p>
 								Nama Pendek : {{$ukm->namapendek}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								Hari : {{$ukm->hari}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								Jam : {{$ukm->jam}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								Tempat : {{$ukm->tempat}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								Profil : {{$ukm->profil}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								Ketua : {{$ukm->ketua}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								NPM : {{$ukm->npm}}
 							</p>
 
 							<br>
 
-							<p class="p-t-20">
+							<p>
 								Pembina : {{$ukm->pembina}}
 							</p>
 

@@ -85,7 +85,7 @@
 
 								<div class="form-group">
 									<label> Tahun </label>
-									<input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun Prestasi">
+									<input type="number" name="tahun" class="form-control" placeholder="Masukkan Tahun Prestasi">
 								</div>
 
 								<br>

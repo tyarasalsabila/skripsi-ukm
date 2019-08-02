@@ -33,6 +33,7 @@ class AgendaController extends Controller
      */
     public function show($id)
     {
+        
         $data['agenda'] = Agenda::where('id', $id)->with(['ukm','user'])->first();
         // dd($data);
         return view('agendaisi', $data);

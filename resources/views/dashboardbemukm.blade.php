@@ -15,6 +15,7 @@
 							<div class="panel-heading">
 								<h3 class="panel-title">List UKM</h3>
 							</div>
+							
 							<div class="panel-body table-responsive">
 								<p class="demo-button">
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add UKM</button>
@@ -25,6 +26,7 @@
 										<tr>
 											<th>No</th>
 											<th>UKM</th>
+											<th>Kategori</th>
 											<th>Nama Pendek</th>
 											<th>Hari</th>
 											<th>Jam</th>
@@ -48,6 +50,7 @@
 										<tr>
 											<td>{{$x}}</td>
 											<td>{{$ukm->nama_ukm}}</td>
+											<td>{{$ukm->kategori->kategori}}</td>
 											<td>{{$ukm->namapendek}}</td>
 											<td>{{$ukm->hari}}</td>
 											<td>{{$ukm->jam}}</td>
@@ -64,7 +67,7 @@
 											<td>
 												<a href="/detailukmbem/{{$ukm->id}}" type="button" class="btn btn-primary">Detail</a>	
 												<a href="/editukm/{{$ukm->id}}" type="button" class="btn btn-warning edit">Edit</a>
-												<a href="/deleteukm/{{$ukm->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Data?')">Delete</a>
+												<a href="/deleteukm/{{$ukm->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus UKM?')">Delete</a>
 											</td>
 										</tr>
 									@endforeach
@@ -78,11 +81,10 @@
 
 			
 			<!-- Add -->
-		<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+			<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<!-- <h5 class="modal-title" id="addModalLabel"></h5> -->
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 							</button>
@@ -94,6 +96,19 @@
 								<div class="form-group">
 									<label> UKM </label>
 									<input type="text" name="nama_ukm" class="form-control" placeholder="Masukkan Nama UKM">
+								</div>
+
+								<br>
+
+								<div class="form-group">
+									<label> Kategori </label>
+									<select class="form-control" id="kategori" name="kategori" required>
+										<option disabled="disabled" selected="selected">Masukkan Kategori UKM</option>
+										<option value="1">Olah Raga</option>
+										<option value="2">Bela Diri</option>
+										<option value="3">Sosial</option>
+										<option value="4">Seni dan Budaya</option>
+									</select>
 								</div>
 
 								<br>
@@ -128,7 +143,7 @@
 
 								<div class="form-group">
 									<label> Profil </label>
-									<input type="text" name="profil" class="form-control" placeholder="Masukkan Profil">
+									<textarea class="form-control" name="profil" id="profil" cols="110%" rows="10" placeholder="Masukkan Profil"></textarea>
 								</div>
 		
 								<br>
@@ -202,10 +217,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-
 
 @endsection  
 </html>

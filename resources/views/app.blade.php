@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/animate/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/css-hamburgers/hamburgers.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/animsition/css/animsition.min.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/animsition/css/animsition.min.css')}}"> -->
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/select2/select2.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/daterangepicker/daterangepicker.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('vendor/slick/slick.css')}}">
@@ -68,7 +68,7 @@
                     <a href="/tentang">Tentang</a>
                   </li>
                   <li>
-                    <a href="/registrasi">Daftar UKM</a>
+                    <a href="/registrasi">Pendaftaran</a>
                   </li>
                 </ul>
               </nav>
