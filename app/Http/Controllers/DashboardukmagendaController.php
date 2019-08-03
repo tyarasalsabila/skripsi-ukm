@@ -17,7 +17,8 @@ class DashboardukmagendaController extends Controller
     public function index()
     {
         $ukm = Auth::user()->id_ukm; 
-        $data['agenda'] = Agenda::where('id_ukm', $ukm)->get();
+        // $data['agenda'] = Agenda::where('id_ukm', $ukm)->get();
+        $data['agenda'] = Agenda::where('id_ukm', Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         // dd($data);
         return view('dashboardukmagenda', $data);
     }

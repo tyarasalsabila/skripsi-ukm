@@ -73,6 +73,36 @@
 
 							<br>
 
+							<p>
+								Line : {{$ukm->line}}
+							</p>
+
+							<br>
+
+							<p>
+								Facebook : {{$ukm->facebook}}
+							</p>
+
+							<br>
+
+							<p>
+								Twitter : {{$ukm->twitter}}
+							</p>
+
+							<br>
+
+							<p>
+								Instagram : {{$ukm->instagram}}
+							</p>
+
+							<br>
+
+							<p>
+								Email : {{$ukm->email}}
+							</p>
+
+							<br>
+
 							<div class="modal-footer">
 								<a href="/dashboardbemukm" type="button" class="btn btn-default">Kembali</a>
 							</div>

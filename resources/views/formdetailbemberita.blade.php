@@ -11,7 +11,6 @@
 			<h3 class="page-title">Detail Berita</h3>
 			<div class="row">
 				<div class="col-md-12">
-					<div style="overflow:auto">
 						<div class="panel">
 							<div class="panel-body">
 								<br>
@@ -21,9 +20,7 @@
 								
 								<br>
 								
-								<div>
-								<img src="{{  url('').'/storage/'.$berita->foto }}" alt="">		
-								</div>
+								<img src="{{  url('').'/storage/'.$berita->foto }}" width="70px" alt="">
 								
 								<br><br>
 
@@ -37,8 +34,7 @@
 									<a href="/dashboardbem" type="button" class="btn btn-default">Kembali</a>
 								</div>
 							</div>
-						</div>						
-					</div>
+						</div>	
 				</div>
 			</div>
 		</div>

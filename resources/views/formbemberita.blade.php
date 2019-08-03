@@ -25,7 +25,7 @@
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" value="{{$berita->isi}}">
+									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10"> {{$berita->isi}} </textarea>
 								</div>
 
 								<br>

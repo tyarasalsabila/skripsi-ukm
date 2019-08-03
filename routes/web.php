@@ -46,8 +46,8 @@ Route::post('/updateberita/{id}', 'DashboardbemberitaController@update');
 Route::get('/deleteberita/{id}', 'DashboardbemberitaController@destroy')->name('deleteberita')->middleware('auth');
 Route::get('/acceptberita/{id}', 'BeritaController@accept')->name('acceptberita')->middleware('auth');
 Route::get('/rejectberita/{id}', 'BeritaController@reject')->name('rejectberita')->middleware('auth');
-Route::get('/detailberitabem/{id}', 'DashboardbemController@show1')->middleware('auth');
-Route::get('/detailberitabem/{id}', 'DashboardbemberitaController@show')->middleware('auth');
+Route::get('/detailberitabem/{id}', 'DashboardbemController@showberitadash')->middleware('auth');
+Route::get('/detailberitabem1/{id}', 'DashboardbemberitaController@show')->middleware('auth');
 
 
 Route::get('/dashboardbemagenda', 'DashboardbemagendaController@index')->middleware('auth');
@@ -58,8 +58,8 @@ Route::post('/updateagenda/{id}', 'DashboardbemagendaController@update');
 Route::get('/deleteagenda/{id}', 'DashboardbemagendaController@destroy')->name('deleteagenda')->middleware('auth');
 Route::get('/acceptagenda/{id}', 'AgendaController@accept')->name('acceptagenda')->middleware('auth');
 Route::get('/rejectagenda/{id}', 'AgendaController@reject')->name('rejectagenda')->middleware('auth');
-Route::get('/detailagendabem/{id}', 'DashboardbemController@show')->middleware('auth');
-Route::get('/detailagendabem/{id}', 'DashboardbemagendaController@show')->middleware('auth');
+Route::get('/detailagendabem/{id}', 'DashboardbemController@showagendadash')->middleware('auth');
+Route::get('/detailagendabem1/{id}', 'DashboardbemagendaController@show')->middleware('auth');
 
 Route::get('/dashboardbemuser', 'DashboardbemuserController@index')->middleware('auth');
 Route::post('/dashbemuser', 'DashboardbemuserController@store')->name('dashbemuser')->middleware('auth');

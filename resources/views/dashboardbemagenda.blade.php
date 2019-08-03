@@ -42,14 +42,14 @@
 											<td>{{$x}}</td>
 											<td>{{$agd->created_at}}</td>
 											<td>{{$agd->judul}}</td>
-											<td><img src="{{  url('').'/storage/'.$agd->foto }}" width="70px"></td>
+											<td class="fototable"><img src="{{  url('').'/storage/'.$agd->foto }}" width="70px"></td>
 											<td>{{$agd->isi}}</td>
 											<td>{{$agd->link}}</td>
 											<td>{{$agd->waktu}}</td>
 											<td>{{$agd->tanggal}}</td>
 											<td>{{$agd->tempat}}</td>
 											<td>
-												<a href="/detailagendabem/{{$agd->id}}" type="button" class="btn btn-primary">Detail</a>		
+												<a href="/detailagendabem1/{{$agd->id}}" type="button" class="btn btn-primary">Detail</a>		
 												<a href="/editagenda/{{$agd->id}}" type="button" class="btn btn-warning">Edit</a>
 												<a href="/deleteagenda/{{$agd->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
 											</td>
@@ -79,49 +79,49 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Agenda" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10" placeholder="Masukkan Isi Agenda" required></textarea>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Link </label>
-									<input type="text" name="link" class="form-control" placeholder="Masukkan Link Pendaftaran">
+									<input type="text" name="link" class="form-control" placeholder="Masukkan Link Pendaftaran (Optional)" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Waktu </label>
-									<input type="time" name="waktu" class="form-control" placeholder="Masukkan Waktu">
+									<input type="time" name="waktu" class="form-control" placeholder="Masukkan Waktu" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
-									<label> Tanggal </label>
-									<input type="date" name="tanggal" class="form-control" placeholder="Masukkan Tanggal">
+									<label> Tanggal Acara </label>
+									<input type="date" name="tanggal" class="form-control" placeholder="Masukkan Tanggal" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tempat </label>
-									<input type="text" name="tempat" class="form-control" placeholder="Masukkan Tempat">
+									<input type="text" name="tempat" class="form-control" placeholder="Masukkan Tempat" required>
 								</div>
 
 								<br>
 
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
+									<input type="file" name="image" class="custom-file-input" required>
 								</div>
 
 								<br>
@@ -153,14 +153,14 @@
 							<div class="modal-body">
 							<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Berita">
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Agenda">
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita">
+									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Agenda">
 								</div>
 
 								<br>

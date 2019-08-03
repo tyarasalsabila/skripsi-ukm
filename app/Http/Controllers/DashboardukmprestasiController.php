@@ -16,7 +16,7 @@ class DashboardukmprestasiController extends Controller
      */
     public function index()
     {
-        //gelap
+        
         $data['prestasi'] = Prestasi::where('id_ukm', Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         return view('dashboardukmprestasi', $data);
     }

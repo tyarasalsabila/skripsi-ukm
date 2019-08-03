@@ -2350,3 +2350,6 @@ ul.activity-timeline > li:last-child:after {
 }
 
 /*# sourceMappingURL=main.css.map */
+.fototable img {
+    width: 70px;
+}

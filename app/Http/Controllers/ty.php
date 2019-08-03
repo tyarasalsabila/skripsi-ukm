@@ -89,6 +89,11 @@ class ty extends Controller
         return view('formbemukm');
     }
 
+    public function formbem()
+    {
+        return view('formbem');
+    }
+
     public function bemagenda()
     {
         return view('bemagenda');
@@ -209,5 +214,20 @@ class ty extends Controller
     public function formdetailbemberita()
     {
         return view('formdetailbemberita');
+    }
+
+    public function formdetailbemberita1()
+    {
+        return view('formdetailbemberita1');
+    }
+
+    public function formdetailbemagenda()
+    {
+        return view('formdetailbemagenda');
+    }
+
+    public function formdetailbemagenda1()
+    {
+        return view('formdetailbemagenda1');
     }
 }

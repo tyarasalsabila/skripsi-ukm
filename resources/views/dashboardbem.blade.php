@@ -40,6 +40,7 @@
 									<thead>
 										<tr>
 											<th>No</th>
+											<th>Tanggal</th>
 											<th>UKM</th>
 											<th>Judul</th>
 											<th>Foto</th>
@@ -53,9 +54,10 @@
 									@php ($x = $x+1)
 										<tr>
 											<td>{{$x}}</td>
+											<td>{{$brt->created_at}}</td>
 											<td>{{$brt->ukm->nama_ukm}}</td>
 											<td>{{$brt->judul}}</td>
-											<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
+											<td class="fototable"><img src="{{  url('').'/storage/'.$brt->foto }}" alt=""></td>
 											<td>{{$brt->isi}}</td>
 											<td>
 												<a href="/detailberitabem/{{$brt->id}}" type="button" class="btn btn-primary">Detail</a>	
@@ -85,6 +87,7 @@
 									<thead>
 										<tr>
 											<th>No</th>
+											<th>Tanggal</th>
 											<th>UKM</th>
 											<th>Judul</th>
 											<th>Foto</th>
@@ -102,9 +105,10 @@
 									@php ($x = $x+1)
 										<tr>
 											<td>{{$x}}</td>
+											<td>{{$agd->created_at}}</td>
 											<td>{{$agd->ukm->nama_ukm}}</td>
 											<td>{{$agd->judul}}</td>
-											<td><img src="{{ url('').'/storage/'.$agd->foto}}" width="70px" alt=""></td>
+											<td class="fototable"><img src="{{ url('').'/storage/'.$agd->foto}}" alt=""></td>
 											<td>{{$agd->isi}}</td>
 											<td>{{$agd->link}}</td>
 											<td>{{$agd->waktu}}</td>

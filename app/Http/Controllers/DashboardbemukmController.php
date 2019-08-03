@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 // use App\Dashboardbemukm;
-use Auth;   
+use Auth; 
+use App\User;
 use App\Ukm;
 use App\Kategori;
 use Illuminate\Http\Request;
+
 
 
 class DashboardbemukmController extends Controller
@@ -18,7 +20,10 @@ class DashboardbemukmController extends Controller
      */
     public function index()
     {   
-        $data['ukms'] = Ukm::all();
+        // $data['ukms'] = Ukm::all();
+        $ukm = Auth::user()->id; 
+        $data['ukms'] = Ukm::orderBy('created_at', 'DESC')->get();
+        
         // dd($data);
         return view('dashboardbemukm', $data);
     }
@@ -68,6 +73,7 @@ class DashboardbemukmController extends Controller
     {
         //
         $data['ukm'] = Ukm::find($id);
+
         return view('formbemukm',$data);
     }
 

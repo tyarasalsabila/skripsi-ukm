@@ -23,7 +23,8 @@ class DashboardukmregistrasiController extends Controller
         
         
         $ukm = Auth::user()->id_ukm;
-        $data['reg'] = Registrasi::where('id_ukm', $ukm)->get();
+        // $data['reg'] = Registrasi::where('id_ukm', $ukm)->get();
+        $data['reg'] = Registrasi::where('id_ukm', Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         // dd($data);
         return view('dashboardukmregistrasi', $data);
         }   

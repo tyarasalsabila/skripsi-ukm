@@ -19,7 +19,7 @@
 								<div class="modal-body">
 									<div class="form-group">
 										<label> UKM </label>
-										<input type="text" name="nama" id="nama" class="form-control" value="{{$ukm->nama_ukm}}">
+										<input type="text" name="nama_ukm" id="nama" class="form-control" value="{{$ukm->nama_ukm}}">
 									</div>
 
 									<br>
@@ -27,6 +27,13 @@
 									<div class="form-group">
 										<label> Kategori </label>
 										<input type="text" name="kategori" id="kategori" class="form-control" value="{{$ukm->kategori->kategori}}">
+										<!-- <select class="form-control" id="kategori" name="kategori" required>
+											<option value="" disabled="disabled" selected="selected" >Masukkan Kategori UKM</option>
+											<option value="1" >Olah Raga</option>
+											<option value="2" >Bela Diri</option>
+											<option value="3" >Sosial</option>
+											<option value="4" >Seni dan Budaya</option>
+										</select> -->
 									</div>
 									
 									<br>
@@ -82,10 +89,35 @@
 										<label> Pembina </label>
 										<input type="text" name="pembina"id="pembina" class="form-control" value="{{$ukm->pembina}}">
 									</div>
+
+									<div class="form-group">
+										<label> Line </label>
+										<input type="text" name="line"id="line" class="form-control" value="{{$ukm->line}}">
+									</div>
+
+									<div class="form-group">
+										<label> Facebook </label>
+										<input type="text" name="facebook"id="facebook" class="form-control" value="{{$ukm->facebook}}">
+									</div>
+
+									<div class="form-group">
+										<label> Twitter </label>
+										<input type="text" name="twitter"id="twitter" class="form-control" value="{{$ukm->twitter}}">
+									</div>
+
+									<div class="form-group">
+										<label> Instagram </label>
+										<input type="text" name="instagram"id="instagram" class="form-control" value="{{$ukm->instagram}}">
+									</div>
+
+									<div class="form-group">
+										<label> Email </label>
+										<input type="text" name="email"id="email" class="form-control" value="{{$ukm->email}}">
+									</div>
 									<br>
 								</div>
 								<div class="modal-footer">
-									<a href="/dashboardbemukm" type="button" class="btn btn-default">Kembali</a>
+										<a href="/dashboardbemukm" type="button" class="btn btn-default">Kembali</a>
 										<button type="submit" class="btn btn-primary">Update Data</button>
 								</div>
 							</form>
