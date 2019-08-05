@@ -35,7 +35,7 @@
           <a class="list-group-item list-group-item-action" id="list-olahraga-list" data-toggle="list" href="#list-olahraga" role="tab" aria-controls="olahraga">Olah Raga</a>
           <a class="list-group-item list-group-item-action" id="list-beladiri-list" data-toggle="list" href="#list-beladiri" role="tab" aria-controls="beladiri">Bela Diri</a>
           <a class="list-group-item list-group-item-action" id="list-sosial-list" data-toggle="list" href="#list-sosial" role="tab" aria-controls="sosial">Sosial</a>
-          <a class="list-group-item list-group-item-action" id="list-senibudaya-list" data-toggle="list" href="#list-senibudaya" role="tab" aria-controls="senibudaya">Seni dan Budaya</a>
+          <a class="list-group-item list-group-item-action" id="list-senibahasa-list" data-toggle="list" href="#list-senibahasa" role="tab" aria-controls="senibahasa">Seni dan Bahasa</a>
         </div>
       </div>
 
@@ -119,7 +119,7 @@
             </div>
           </div>
 
-          <div class="tab-pane fade" id="list-senibudaya" role="tabpanel" aria-labelledby="list-senibudaya-list">
+          <div class="tab-pane fade" id="list-senibahasa" role="tabpanel" aria-labelledby="list-senibahasa-list">
             <div class="row">
               @foreach($ukms as $ukm)
               @if($ukm->id_kategori == 4)

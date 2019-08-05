@@ -23,6 +23,7 @@
 									<thead>
 										<tr>
 											<th>No</th>
+											<th>Tanggal</th>
 											<th>Judul</th>
 											<th>Foto</th>
 											<th>Action</th>
@@ -34,11 +35,12 @@
 										@php ($x = $x+1)
 										<tr>
 											<td>{{$x}}</td>
-										<td>{{$glr->judul}}</td>
-										<td><img src="{{ url('').'/storage/'.$glr->link_foto }}" width="70px;" alt=""></td>
+											<td>{{$glr->created_at}}</td>
+											<td>{{$glr->judul}}</td>
+											<td class="fototable"><img src="{{ url('').'/storage/'.$glr->link_foto }}" alt=""></td>
 											<td>
 											<a href="/editgaleriukm/{{$glr->id}}" type="button" class="btn btn-warning">Edit</a>
-											<a href="/dashukmgaleridel/{{$glr->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Data?')">Delete</a>
+											<a href="/dashukmgaleridel/{{$glr->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Foto?')">Delete</a>
 
 											</td>
 										</tr>
@@ -66,12 +68,12 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Foto">
+									<input type="text" name="judul" class="form-control" placeholder="Masukkan Judul Foto" required>
 								</div>
 								<br>
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
+									<input type="file" name="image" class="custom-file-input" required>
 								</div>
 
 								<br>

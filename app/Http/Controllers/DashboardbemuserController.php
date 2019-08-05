@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Ukm;
+use Auth;
 
 class DashboardbemuserController extends Controller
 {
@@ -14,11 +15,12 @@ class DashboardbemuserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
         //ngambil dari model user, dimana id ukmnya
         //with ukm fungsi relation
-        $data['accs'] = User::where('id_ukm', '!=', NULL)->with('ukm')->get();
-        $data['ukms'] = Ukm::all();
+        $data['accs'] = User::where('id_ukm', '!=', NULL)->with('ukm')->orderBy('created_at', 'DESC')->get();
+        // $data['ukms'] = Ukm::all();
+        $data['ukms'] = Ukm::orderBy('created_at', 'DESC')->get();
         // dd($data);
         return view('dashboardbemuser', $data);
     }

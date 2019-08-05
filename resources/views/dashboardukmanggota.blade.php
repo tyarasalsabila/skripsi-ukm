@@ -48,7 +48,7 @@
 											<td>{{$ang->angkatan}}</td>
 											<td>
 												<a href="/editanggotaukm/{{$ang->id}}" type="button" class="btn btn-warning">Edit</a>
-												<a href="/dashukmanggotadel/{{$ang->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Data?')">Delete</a>
+												<a href="/dashukmanggotadel/{{$ang->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Anggota?')">Delete</a>
 											</td>
 										</tr>
 									@endforeach
@@ -91,7 +91,7 @@
 
 								<div class="form-group">
 									<label> Email </label>
-									<input type="text" name="email" class="form-control" placeholder="Masukkan Email" required>
+									<input type="email" name="email" class="form-control" placeholder="Masukkan Email" required>
 								</div>
 
 								<br>
@@ -105,7 +105,7 @@
 									<label> Fakultas </label>
 									<!-- <input type="text" name="fakultas" class="form-control" placeholder="Pilih Fakultas"> -->
 									<select class="form-control" id="fakultas" name="fakultas" onchange="populate(this.id, 'jurusan')" required>
-										<option disabled="disabled" selected="selected">Pilih Fakultas</option>
+										<option value="" disabled="disabled" selected="selected">Pilih Fakultas</option>
 										<option value="FEB">Ekonomi & Bisnis</option>
 										<option value="FF">Farmasi</option>
 										<option value="FH">Hukum</option>
@@ -129,7 +129,7 @@
 									<label> Jurusan </label>
 									<!-- <input type="text" name="jurusan" class="form-control" placeholder="Pilih Jurusan" required> -->
 									<select class="form-control" id="jurusan" name="jurusan" required>
-										<option disabled="disabled" selected="selected">Pilih Jurusan</option>
+										<option value="" disabled="disabled" selected="selected">Pilih Jurusan</option>
 									</select>
 								</div>
 

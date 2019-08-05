@@ -51,7 +51,7 @@
 											<td>
 												<a href="/detailagendabem1/{{$agd->id}}" type="button" class="btn btn-primary">Detail</a>		
 												<a href="/editagenda/{{$agd->id}}" type="button" class="btn btn-warning">Edit</a>
-												<a href="/deleteagenda/{{$agd->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus data?')">Delete</a>
+												<a href="/deleteagenda/{{$agd->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Agenda?')">Delete</a>
 											</td>
 										</tr>
 									@endforeach

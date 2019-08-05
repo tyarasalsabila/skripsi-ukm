@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Anggota;
+use App\Registrasi;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -45,7 +46,7 @@ class DashboardukmanggotaController extends Controller
 
         $anggota->save();
 
-        return redirect('dashboardukmanggota')->with('success', 'data saved');
+        return redirect('dashboardukmanggota');
     }
 
     

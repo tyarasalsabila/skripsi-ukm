@@ -23,7 +23,7 @@ class CreateAnggotasTable extends Migration
             $table->string('hp');
             $table->string('email');
             $table->integer('id_ukm')->unsigned();
-            $table->integer('id_reg')->unsigned();
+            $table->integer('id_reg')->unsigned()->nullable();
             $table->timestamps();
 
             $table->foreign('id_ukm')

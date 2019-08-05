@@ -39,7 +39,7 @@
 											<td>{{$x}}</td>
 											<td>{{$brt->created_at}}</td>
 											<td>{{$brt->judul}}</td>
-											<td><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
+											<td class="fototable"><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
 											<td>{{Str::limit($brt->isi,10)}}</td>
 											@if($brt->confirmed == 1)
 												<td>Diterima</td>
@@ -51,7 +51,7 @@
 											<td>
 												<a href="/detailberitaukm/{{$brt->id}}" type="button" class="btn btn-primary">Detail</a>
 												<a href="/editberitaukm/{{$brt->id}}" type="button" class="btn btn-warning">Edit</a>
-												<a href="/dashukmberitadel/{{$brt->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Data?')">Delete</a>
+												<a href="/dashukmberitadel/{{$brt->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Berita?')">Delete</a>
 											</td>
 										</tr>
 									@endforeach
@@ -86,7 +86,7 @@
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" placeholder="Masukkan Isi Berita" required>
+									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10" placeholder="Masukkan Isi Berita" required></textarea>
 								</div>
 
 								<br>

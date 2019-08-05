@@ -18,21 +18,21 @@
 							<div class="modal-body">
 							<div class="form-group" style="padding-top:20px">
 									<label> Ketua </label>
-									<input type="text" name="ketua" class="form-control" value="{{$ukm->ketua}}">
+									<input type="text" name="ketua" class="form-control" value="{{$ukm->ketua}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" value="{{$ukm->npm}}">
+									<input type="text" name="npm" class="form-control" value="{{$ukm->npm}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Pembina </label>
-									<input type="text" name="pembina" class="form-control" value="{{$ukm->pembina}}">
+									<input type="text" name="pembina" class="form-control" value="{{$ukm->pembina}}" required>
 								</div>
 							</div>
 

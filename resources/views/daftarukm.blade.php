@@ -43,7 +43,7 @@
 							Email
 						</span>
 						<div class="size12 bo-rad-10 m-t-3 m-b-23">
-							<input id="email"class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email" required>
+							<input id="email"class="bo-rad-10 sizefull txt10 p-l-20" type="email" name="email" placeholder="Email" required>
 						</div>
 
 
@@ -95,7 +95,7 @@
 							Angkatan
 						</span>
 						<div class="size12 bo-rad-10 m-t-3 m-b-23">
-							<input id="angkatan" class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="angkatan" placeholder="Angkatan" required>
+							<input id="angkatan" class="bo-rad-10 sizefull txt10 p-l-20" type="number" name="angkatan" placeholder="Angkatan" required>
 						</div>
 
 						

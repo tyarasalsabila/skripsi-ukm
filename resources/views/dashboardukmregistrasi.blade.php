@@ -20,6 +20,7 @@
 									<thead>
 										<tr>
 											<th>No</th>
+											<th>Tanggal</th>
 											<th>Nama</th>
 											<th>NPM</th>
 											<th>Email</th>
@@ -39,6 +40,7 @@
 									@php ($x = $x+1)
 										<tr>
 											<th>{{$x}}</th>
+											<td>{{$rgt->created_at}}</td>
 											<td>{{$rgt->nama}}</td>
 											<td>{{$rgt->npm}}</td>
 											<td>{{$rgt->email}}</td>
@@ -49,8 +51,8 @@
 											<td>{{$rgt->status}}</td>
 											<td>
 											@if($rgt->status === 'Belum dikonfirmasi')
-												<a href="/acceptregistrasi/{{$rgt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima registrasi?')">Accept</a>
-												<a href="/rejectregistrasi/{{$rgt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak registrasi?')">Reject</a>
+												<a href="/acceptregistrasi/{{$rgt->id}}" type="button" class="btn btn-primary accept"  onclick="return confirm('Terima Anggota?')">Accept</a>
+												<a href="/rejectregistrasi/{{$rgt->id}}" type="button" class="btn btn-danger reject" onclick="return confirm('Tolak Anggota?')">Reject</a>
 											@endif
 											</td>
 										</tr>

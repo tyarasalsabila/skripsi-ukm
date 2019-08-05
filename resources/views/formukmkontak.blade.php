@@ -18,35 +18,35 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Line </label>
-									<input type="text" name="line" class="form-control" value="{{$ukm->line}}">
+									<input type="text" name="line" class="form-control" value="{{$ukm->line}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Facebook </label>
-									<input type="text" name="facebook" class="form-control" value="{{$ukm->facebook}}">
+									<input type="text" name="facebook" class="form-control" value="{{$ukm->facebook}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Twitter </label>
-									<input type="text" name="twitter" class="form-control" value="{{$ukm->twitter}}">
+									<input type="text" name="twitter" class="form-control" value="{{$ukm->twitter}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Instagram </label>
-									<input type="text" name="instagram" class="form-control" value="{{$ukm->instagram}}">
+									<input type="text" name="instagram" class="form-control" value="{{$ukm->instagram}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Email </label>
-									<input type="text" name="email" class="form-control" value="{{$ukm->email}}">
+									<input type="email" name="email" class="form-control" value="{{$ukm->email}}" required>
 								</div>
 
 								<br>

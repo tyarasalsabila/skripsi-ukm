@@ -19,7 +19,7 @@ class DashboardukmgaleriController extends Controller
      */
     public function index()
     {
-        $data['galeri'] = Galeri::all();
+        $data['galeri'] = Galeri::orderBy('created_at', 'DESC')->get();
         // dd($data);
         return view('dashboardukmgaleri', $data);
     }
@@ -47,7 +47,7 @@ class DashboardukmgaleriController extends Controller
         $galeri->save(); 
             
           
-    
+     
         session()->flash('success_message');
         return redirect('dashboardukmgaleri');
     }
@@ -86,6 +86,7 @@ class DashboardukmgaleriController extends Controller
             $galeri->link_foto  = $path;
         }
         // dd($galeri->foto);
+
 
         $galeri->judul = $request->judul;
         

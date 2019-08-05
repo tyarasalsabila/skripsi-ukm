@@ -17,35 +17,35 @@
 								@csrf
 								<div class="form-group" style="padding-top:20px">
 									<label> Nama </label>
-									<input type="text" name="nama" class="form-control" value="{{$anggota->nama}}">
+									<input type="text" name="nama" class="form-control" value="{{$anggota->nama}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> NPM </label>
-									<input type="text" name="npm" class="form-control" value="{{$anggota->npm}}">
+									<input type="text" name="npm" class="form-control" value="{{$anggota->npm}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Email </label>
-									<input type="text" name="email" class="form-control" value="{{$anggota->email}}">
+									<input type="email" name="email" class="form-control" value="{{$anggota->email}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> No. HP </label>
-									<input type="text" name="nohp" class="form-control" value="{{$anggota->hp}}">
+									<input type="text" name="nohp" class="form-control" value="{{$anggota->hp}}" required>
 								</div>
 
 								<div class="form-group">
 									<label> Fakultas </label>
 									<!-- <input type="text" name="fakultas" class="form-control" value="{{$anggota->fakultas}}"> -->
 									<select class="form-control" id="fakultas" name="fakultas" onchange="populate(this.id, 'jurusan')" required>
-										<option selected="selected"> {{$anggota->fakultas}} </option>
+										<option  selected="selected"> {{$anggota->fakultas}} </option>
 										<option value="FEB">Ekonomi & Bisnis</option>
 										<option value="FF">Farmasi</option>
 										<option value="FH">Hukum</option>
@@ -69,13 +69,13 @@
 									<label> Jurusan </label>
 									<!-- <input type="text" name="jurusan" class="form-control" value="{{$anggota->jurusan}}"> -->
 									<select class="form-control" id="jurusan" name="jurusan" required>
-										<option selected="selected"> {{$anggota->jurusan}} </option>
+										<option  selected="selected"> {{$anggota->jurusan}} </option>
 									</select>
 								</div>
 
 								<div class="form-group">
 									<label> Angkatan </label>
-									<input type="text" name="angkatan" class="form-control" value="{{$anggota->angkatan}}">
+									<input type="text" name="angkatan" class="form-control" value="{{$anggota->angkatan}}" required>
 								</div>
 
 								<br>

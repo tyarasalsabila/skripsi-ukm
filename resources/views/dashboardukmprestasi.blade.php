@@ -42,7 +42,7 @@
 											<td>
 												<a href="/detailprestasiukm/{{$prest->id}}" type="button" class="btn btn-primary">Detail</a>	
 												<a href="/editprestasiukm/{{$prest->id}}" type="button" class="btn btn-warning">Edit</a>
-												<a href="/dashukmprestasidel/{{$prest->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Data?')">Delete</a>
+												<a href="/dashukmprestasidel/{{$prest->id}}" type="button" class="btn btn-danger" onclick="return confirm('Hapus Prestasi?')">Delete</a>
 											</td>
 										</tr>
 									@endforeach
@@ -71,21 +71,21 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Prestasi </label>
-									<input type="text" name="prestasi" class="form-control" placeholder="Masukkan Prestasi">
+									<input type="text" name="prestasi" class="form-control" placeholder="Masukkan Prestasi" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Anggota </label>
-									<input type="text" name="anggota" class="form-control" placeholder="Masukkan Nama Peraih Prestasi">
+									<input type="text" name="anggota" class="form-control" placeholder="Masukkan Nama Peraih Prestasi" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tahun </label>
-									<input type="number" name="tahun" class="form-control" placeholder="Masukkan Tahun Prestasi">
+									<input type="number" name="tahun" class="form-control" placeholder="Masukkan Tahun Prestasi" required>
 								</div>
 
 								<br>

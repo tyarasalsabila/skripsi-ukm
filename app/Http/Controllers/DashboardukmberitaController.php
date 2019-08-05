@@ -17,7 +17,7 @@ class DashboardukmberitaController extends Controller
     public function index()
     {
         $ukm = Auth::user()->id_ukm; 
-        $data['berita'] = Berita::where('id_ukm', $ukm)->get();
+        $data['berita'] = Berita::where('id_ukm',Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         // dd($data);
         return view('dashboardukmberita', $data);
     }

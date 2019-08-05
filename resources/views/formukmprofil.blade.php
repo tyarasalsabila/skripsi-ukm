@@ -20,7 +20,7 @@
 										<label style="padding-bottom:10px"> Profil </label>
 										<br>
 										<!-- <input type="text" name="profil" class="form-control" value="{{$ukm->profil}}"> -->
-										<textarea class="form-control" name="profil" id="profil" cols="110%" rows="10"> {{$ukm->profil}} </textarea>
+										<textarea class="form-control" name="profil" id="profil" cols="110%" rows="10" required> {{$ukm->profil}} </textarea>
 									</div>
 								</div>
 								

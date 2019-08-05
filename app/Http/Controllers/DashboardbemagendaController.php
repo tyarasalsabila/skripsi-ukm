@@ -17,7 +17,8 @@ class DashboardbemagendaController extends Controller
      */
     public function index()
     {
-        $data['agenda'] = Agenda::where('id_ukm','=',NULL)->get();
+        // $data['agenda'] = Agenda::where('id_ukm','=',NULL)->get();
+        $data['agenda'] = Agenda::where('id_ukm',Auth::user()->id_ukm)->with('ukm')->orderBy('created_at','desc')->get();
         // dd($data);
         return view('dashboardbemagenda', $data);
     }

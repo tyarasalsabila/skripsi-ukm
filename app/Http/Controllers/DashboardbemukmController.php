@@ -90,7 +90,7 @@ class DashboardbemukmController extends Controller
 
         // $variabel->nama_kolom = $request->name_input
         $ukm->nama_ukm = $request->nama_ukm;
-        $ukm->id_kategori = $request->id_kategori;
+        $ukm->id_kategori = $request->kategori;
         $ukm->namapendek = $request->namapendek;
         $ukm->hari = $request->hari;
         $ukm->jam = $request->jam;

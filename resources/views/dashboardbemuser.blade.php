@@ -63,8 +63,8 @@
 								Pilih UKM
 							</span>
 							<div class="size12 bo-rad-10 m-t-3 m-b-23">
-								<select id="pilih-ukm" class="selection-1 bo-rad-10 sizefull txt10 p-l-20" name="pilihukm" required>
-									<option disabled="disabled" selected="selected">Pilih UKM</option>
+								<select id="pilih-ukm" class="form-control" name="pilihukm" required>
+									<option value="" disabled="disabled" selected="selected">Pilih UKM</option>
 									@foreach($ukms as $ukm)
 
 									<option value="{{$ukm->id}}">{{$ukm->nama_ukm}}</option>
@@ -77,21 +77,21 @@
 
 								<div class="form-group">
 									<label> Username </label>
-									<input type="text" name="name" class="form-control" placeholder="Masukkan Username">
+									<input type="text" name="name" class="form-control" placeholder="Masukkan Username" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Email </label>
-									<input type="text" name="email" class="form-control" placeholder="Masukkan Email">
+									<input type="email" name="email" class="form-control" placeholder="Masukkan Email" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Password </label>
-									<input type="password" name="password" class="form-control" placeholder="Masukkan Password">
+									<input type="password" name="password" class="form-control" placeholder="Masukkan Password" required>
 								</div>
 
 								<br>

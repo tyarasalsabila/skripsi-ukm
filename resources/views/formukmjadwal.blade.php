@@ -21,21 +21,21 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label> Hari </label>
-									<input type="text" name="hari" class="form-control" value="{{$ukm->hari}}">
+									<input type="text" name="hari" class="form-control" value="{{$ukm->hari}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Jam </label>
-									<input type="time" name="jam" class="form-control" value="{{$ukm->jam}}">
+									<input type="time" name="jam" class="form-control" value="{{$ukm->jam}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tempat </label>
-									<input type="text" name="tempat" class="form-control" value="{{$ukm->tempat}}">
+									<input type="text" name="tempat" class="form-control" value="{{$ukm->tempat}}" required>
 								</div>
 
 								<br>

@@ -18,49 +18,49 @@
 							<div class="modal-body">
 							<div class="form-group">
 									<label> Judul </label>
-							<input type="text" name="judul" class="form-control" value="{{$agenda->judul}}">
+							<input type="text" name="judul" class="form-control" value="{{$agenda->judul}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<input type="text" name="isi" class="form-control" value="{{$agenda->isi}}">
+									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10" required> {{$agenda->isi}} </textarea>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Link </label>
-									<input type="text" name="link" class="form-control" value="{{$agenda->link}}">
+									<input type="text" name="link" class="form-control" value="{{$agenda->link}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Waktu </label>
-									<input type="time" name="waktu" class="form-control" value="{{$agenda->waktu}}">
+									<input type="time" name="waktu" class="form-control" value="{{$agenda->waktu}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tanggal </label>
-									<input type="date" name="tanggal" class="form-control" value="{{$agenda->tanggal}}">
+									<input type="date" name="tanggal" class="form-control" value="{{$agenda->tanggal}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tempat </label>
-									<input type="text" name="tempat" class="form-control" value="{{$agenda->tempat}}">
+									<input type="text" name="tempat" class="form-control" value="{{$agenda->tempat}}" required>
 								</div>
 
 								<br>
 
 								<label> Upload Foto </label>
 								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input" value="{{$agenda->foto}}">
+									<input type="file" name="image" class="custom-file-input" value="{{$agenda->foto}}" required>
 								</div>
 
 								<br>
