@@ -23,12 +23,11 @@
 									</div>
 
 									<br>
-
 								<div class="form-group">
 										<label> Kategori </label>
 										<!-- <input type="text" name="kategori" id="kategori" class="form-control" value="{{$ukm->kategori->kategori}}"> -->
-										<select class="form-control" id="kategori" name="kategori" required>
-											<option value="" disabled="disabled" selected="selected">Pilih Kategori UKM</option>
+										<select class="form-control" id="kategori" name="kategori">
+											<option value="{{$ukm->id_kategori}}"  selected="selected">{{$ukm->kategori->kategori}}</option>
 											<option value="1">Olah Raga</option>
 											<option value="2">Bela Diri</option>
 											<option value="3">Sosial</option>

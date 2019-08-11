@@ -82,6 +82,6 @@ class DashboardukmkontakController extends Controller
 
         // dd($ukm);
         $ukm->save();
-        return redirect('dashboardukmkontak');
+        return redirect('dashboardukmkontak')->with('status', 'Kontak Berhasil Diubah!');
     }
 }

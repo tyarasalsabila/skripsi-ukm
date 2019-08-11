@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class DashboardbemberitaController extends Controller
 {
     /**
@@ -47,7 +48,7 @@ class DashboardbemberitaController extends Controller
 
         $brt->save();
 
-        return redirect('dashboardbemberita');
+        return redirect('dashboardbemberita')->with('status', 'Berita Berhasil Ditambah!');
     }
 
     /**
@@ -72,6 +73,9 @@ class DashboardbemberitaController extends Controller
     public function edit($id)
     {
         //
+
+        
+
         $data['berita'] = Berita::find($id);
         return view('formbemberita',$data);
     }
@@ -86,6 +90,13 @@ class DashboardbemberitaController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $request->validate([
+            'judul' => 'required',
+            'isi' => 'required',
+            'foto' => 'mimes:jpg,jpef,png,fig,bmp'
+        ]);
+        
         $berita = Berita::find($id);
 
         if (isset($request->image)) {
@@ -100,7 +111,7 @@ class DashboardbemberitaController extends Controller
         // dd($berita);
 
         $berita->save();
-        return redirect('dashboardbemberita');
+        return redirect('dashboardbemberita')->with('status', 'Berita Berhasil Diubah!');
     }
 
     /**
@@ -118,6 +129,6 @@ class DashboardbemberitaController extends Controller
 
         $berita->delete();
 
-        return redirect('dashboardbemberita');
+        return redirect('dashboardbemberita')->with('status', 'Berita Berhasil Dihapus!');
     }
 }

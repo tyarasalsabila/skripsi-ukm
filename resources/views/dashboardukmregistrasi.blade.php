@@ -34,12 +34,12 @@
 									</thead>
 
 									<tbody>
-									@php ($x = 0)
+									<!-- @php ($x = 0) -->
 									
 									@foreach($reg as $rgt)
-									@php ($x = $x+1)
+									<!-- @php ($x = $x+1) -->
 										<tr>
-											<th>{{$x}}</th>
+											<td>{{$loop->iteration}}</td>
 											<td>{{$rgt->created_at}}</td>
 											<td>{{$rgt->nama}}</td>
 											<td>{{$rgt->npm}}</td>
@@ -125,7 +125,7 @@
 </div>
 
 
-{{-- <script>
+<!-- {{-- <script>
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -157,7 +157,7 @@ var dataId = $(e.relatedTarget).data('id');
 //populate the textbox
 $(e.currentTarget).find('input[name="bookId"]').val(dataId);
 });
-</script>
+</script> -->
 
 
 @endsection  

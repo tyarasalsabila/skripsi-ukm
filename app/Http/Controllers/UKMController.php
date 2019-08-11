@@ -19,7 +19,7 @@ class UKMController extends Controller
     {
         //ngambil semua data ukm
         //Ukm nama modelnya
-        $data['ukms'] = Ukm::with('kategori')->get();
+        $data['ukms'] = Ukm::with('kategori')->orderBy('created_at', 'DESC')->get();
         // dd($data);
 
         //return view ('nama file view', variabel data yang mau ditampilin)

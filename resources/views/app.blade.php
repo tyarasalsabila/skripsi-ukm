@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset ('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T')}}" crossorigin="anonymous">
 
     <!-- Font -->
-    <link href="{{ asset ('https://fonts.googleapis.com/css?family=Montserrat:400,700')}}" rel="stylesheet">
+    <!-- <link href="{{ asset ('https://fonts.googleapis.com/css?family=Montserrat:400,700')}}" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="{{ asset ('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset ('fonts/themify/themify-icons.css')}}">
     
@@ -73,9 +73,8 @@
                 </ul>
               </nav>
             </div>
-            
 
-            <!-- Social -->
+            <!-- Hamburger -->
             <div class="social flex-w flex-l-m p-r-20">
               <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
             </div>
@@ -114,8 +113,6 @@
         </li>
       </ul>
     </aside>
-
-
   
   @yield('content')
 
@@ -124,7 +121,6 @@
 		<div class="container p-t-40 p-b-20">
 			<div class="row">
 				<div class="col-sm-6 col-md-4 p-t-50">
-					<!-- - -->
 					<h4 class="txt13 m-b-33">
 						Kontak Kami
 					</h4>
@@ -164,18 +160,6 @@
 							UKM UNPAD
 						</li>
 					</ul>
-				</div>
-
-				<div class="col-sm-6 col-md-4 p-t-50">
-					<!-- - -->
-					<h4 class="txt13 m-b-38">
-						Made By
-          </h4>
-          <p class="txt14 m-b-18">
-            Tyara Salsabila <br>
-            Teknik Informatika, 2015
-					</p>
-
 				</div>
 			</div>
 		</div>

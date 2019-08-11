@@ -46,7 +46,7 @@ class DashboardukmanggotaController extends Controller
 
         $anggota->save();
 
-        return redirect('dashboardukmanggota');
+        return redirect('dashboardukmanggota')->with('status', 'Anggota Berhasil Ditambah!');
     }
 
     
@@ -85,7 +85,7 @@ class DashboardukmanggotaController extends Controller
         // dd($anggota);
         $anggota->save();
 
-        return redirect('dashboardukmanggota');
+        return redirect('dashboardukmanggota')->with('status', 'Anggota Berhasil Diubah!');
     }
 
     /**
@@ -103,6 +103,6 @@ class DashboardukmanggotaController extends Controller
 
         $anggota->delete();
 
-        return redirect('dashboardukmanggota');
+        return redirect('dashboardukmanggota')->with('status', 'Anggota Berhasil Dihapus!');
     }
 }

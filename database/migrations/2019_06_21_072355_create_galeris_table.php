@@ -22,7 +22,7 @@ class CreateGalerisTable extends Migration
 
             $table->foreign('id_ukm')
             ->references('id')
-            ->on('ukms');
+            ->on('ukms')->onDelete('cascade');
         });
     }
 

@@ -60,7 +60,7 @@ class DashboardbemukmController extends Controller
 
         $ukm->save();
 
-        return redirect('dashboardbemukm');
+        return redirect('dashboardbemukm')->with('status', 'UKM Berhasil Ditambah!');
     }
 
     /**
@@ -72,8 +72,8 @@ class DashboardbemukmController extends Controller
     public function edit($id)
     {
         //
-        $data['ukm'] = Ukm::find($id);
-
+        $data['ukm'] = Ukm::where('id',$id)->with('kategori')->first();
+        // dd($data);
         return view('formbemukm',$data);
     }
 
@@ -87,6 +87,8 @@ class DashboardbemukmController extends Controller
     public function update(Request $request, $id)
     {        
         $ukm = Ukm::find($id);
+        // dd($ukm);
+        // dd($request->kategori);
 
         // $variabel->nama_kolom = $request->name_input
         $ukm->nama_ukm = $request->nama_ukm;
@@ -109,7 +111,7 @@ class DashboardbemukmController extends Controller
 
         $ukm->save();
 
-        return redirect('dashboardbemukm');   
+        return redirect('dashboardbemukm')->with('status', 'UKM Berhasil Diubah!');
     }
 
     /**
@@ -124,7 +126,7 @@ class DashboardbemukmController extends Controller
         // dd($ukm);
         $ukm->delete();
 
-        return redirect('dashboardbemukm');   
+        return redirect('dashboardbemukm')->with('status', 'UKM Berhasil Dihapus!');
     }
 
 

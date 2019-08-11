@@ -18,21 +18,21 @@
 							<div class="modal-body">
 							<div class="form-group">
 									<label> Prestasi </label>
-							<input type="text" name="prestasi" class="form-control" value="{{$prestasi->nama}}">
+							<input type="text" name="prestasi" class="form-control" value="{{$prestasi->nama}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Anggota </label>
-									<input type="text" name="anggota" class="form-control" value="{{$prestasi->anggota}}">
+									<input type="text" name="anggota" class="form-control" value="{{$prestasi->anggota}}" required>
 								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Tahun </label>
-								<input type="number" name="tahun" class="form-control" value="{{$prestasi->tahun}}">
+								<input type="number" name="tahun" class="form-control" value="{{$prestasi->tahun}}" required>
 								</div>
 
 								<br>

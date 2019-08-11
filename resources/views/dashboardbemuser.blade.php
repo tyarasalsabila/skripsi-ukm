@@ -19,6 +19,13 @@
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add User UKM</button>
 						</p>
 
+						@if (session('status'))
+							<div class="alert alert-success alert-dismissible" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<i class="fa fa-check-circle"></i> {{ session('status') }}
+							</div>
+						@endif
+
 						<table id="datatable" class="table table-bordered table-hover">
 							<thead>
 								<tr>
@@ -28,11 +35,11 @@
 								</tr>
 							</thead>
 							<tbody>
-						 	@php ($x = 0)
+						 	<!-- @php ($x = 0) -->
 							@foreach($accs as $acc)
-            				@php ($x = $x+1)
+            				<!-- @php ($x = $x+1) -->
 								<tr>
-									<td>{{$x}}</td>
+									<td>{{$loop->iteration}}</td>
 									<td>{{$acc->ukm->nama_ukm}}</td>
 									<td>{{$acc->name}}</td>
 									</td>
@@ -107,138 +114,9 @@
 				</div>
 			</div>
 			<!-- Add -->
-
-
-			<!-- Edit -->
-			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<!-- <h5 class="modal-title" id="addModalLabel"></h5> -->
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
-					<form action="'/dashbemukmupdate'" method="POST" id="editForm">
-							{{ csrf_field() }}
-							{{ method_field('PUT') }}
-							<div class="modal-body">
-							<div class="form-group">
-									<label> UKM </label>
-									<input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama UKM">
-								</div>
-
-								<br>
-
-								{{-- <div class="form-group">
-									<label> ID </label>
-									<input type="text" name="id" id="id" class="form-control" placeholder="Masukkan Nama Pendek UKM">
-								</div>
-								<br> --}}
-
-								<div class="form-group">
-									<label> Nama Pendek </label>
-									<input type="text" name="namapendek" id="namapendek" class="form-control" placeholder="Masukkan Nama Pendek UKM">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> Hari </label>
-									<input type="text" name="hari" id="hari" class="form-control" placeholder="Masukkan Hari">
-								</div>
-		
-								<br>
-
-								<div class="form-group">
-									<label> Jam </label>
-									<input type="time" name="jam" id="jam" class="form-control" placeholder="Masukkan Jam">
-								</div>
-		
-								<br>
-
-								<div class="form-group">
-									<label> Tempat </label>
-									<input type="text" name="tempat" id="tempat" class="form-control" placeholder="Masukkan Tempat">
-								</div>
-		
-								<br>
-
-								<div class="form-group">
-									<label> Profil </label>
-									<input type="text" name="profil" id="profil" class="form-control" placeholder="Masukkan Profil">
-								</div>
-		
-								<br>
-
-								<div class="form-group">
-									<label> Ketua </label>
-									<input type="text" name="ketua" id="ketua" class="form-control" placeholder="Masukkan Nama Ketua">
-								</div>
-
-								<br>
-
-								<div class="form-group">
-									<label> NPM </label>
-									<input type="text" name="npm" id="npm" class="form-control" placeholder="Masukkan NPM Ketua">
-								</div>
-
-								<div class="form-group">
-									<label> Pembina </label>
-									<input type="text" name="pembina"id="pembina" class="form-control" placeholder="Masukkan Pembina UKM">
-								</div>
-								<br>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Update Data</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Edit -->
-
-
-
-
-			<!-- Delete -->
-			<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
-						<form action="'/dashbemukmdelete'" method="POST" id="deleteForm">
-							{{ csrf_field() }}
-							{{ method_field('DELETE') }}
-							<div class="modal-body">
-								<input type="hidden" name="_method" value="DELETE">
-								<p> Hapus Data? </p>
-							</div>
-
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-								<button type="submit" class="btn btn-primary">Ya</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Delete -->
-
-
-
 		</div>
 	</div>
 </div>
-
-
-
 
 
 @endsection  

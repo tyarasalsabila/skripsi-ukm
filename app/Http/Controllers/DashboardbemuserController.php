@@ -46,6 +46,6 @@ class DashboardbemuserController extends Controller
 
         $user->save();
 
-        return redirect('dashboardbemuser');
+        return redirect('dashboardbemuser')->with('status', 'User Berhasil Ditambah!');
     }
 }

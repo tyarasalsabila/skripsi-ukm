@@ -46,7 +46,7 @@ class DashboardukmberitaController extends Controller
 
         $brt->save();
 
-        return redirect('dashboardukmberita');
+        return redirect('dashboardukmberita')->with('status', 'Berita Berhasil Ditambah!');
     }
 
     /**
@@ -103,7 +103,7 @@ class DashboardukmberitaController extends Controller
         // dd($berita);
 
         $berita->save();
-        return redirect('dashboardukmberita');
+        return redirect('dashboardukmberita')->with('status', 'Berita Berhasil Di!');
 
     }
 
@@ -122,6 +122,6 @@ class DashboardukmberitaController extends Controller
 
         $berita->delete();
 
-        return redirect('dashboardukmberita');
+        return redirect('dashboardukmberita')->with('status', 'Berita Berhasil Dihapus!');
     }
 }

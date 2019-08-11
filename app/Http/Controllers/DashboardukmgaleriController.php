@@ -49,7 +49,8 @@ class DashboardukmgaleriController extends Controller
           
      
         session()->flash('success_message');
-        return redirect('dashboardukmgaleri');
+
+        return redirect('dashboardukmgaleri')->with('status', 'Foto Berhasil Ditambah!');
     }
 
     
@@ -93,7 +94,7 @@ class DashboardukmgaleriController extends Controller
         // dd($galeri);
 
         $galeri->save();
-        return redirect('dashboardukmgaleri');
+        return redirect('dashboardukmgaleri')->with('status', 'Foto Berhasil Diubah!');
     }
 
     /**
@@ -111,6 +112,6 @@ class DashboardukmgaleriController extends Controller
 
         $galeri->delete();
 
-        return redirect('dashboardukmgaleri');
+        return redirect('dashboardukmgaleri')->with('status', 'Foto Berhasil Dihapus!');
     }
 }

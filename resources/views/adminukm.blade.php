@@ -58,7 +58,7 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-                        <li><a href="/dashboardukm" class="active"><span>Dashboard</span></a></li>
+                        <li><a href="/dashboardukm" class=""><span>Dashboard</span></a></li>
                         <li><a href="/dashboardukmanggota" class=""><span>Anggota</span></a></li>
 						<li><a href="/dashboardukmgaleri" class=""><span>Galeri</span></a></li>
 						<li><a href="/dashboardukmberita" class=""><span>Berita</span></a></li>

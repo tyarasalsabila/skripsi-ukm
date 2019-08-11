@@ -61,7 +61,7 @@ class DashboardukmagendaController extends Controller
         // dd($agenda);
         $agenda->save();
 
-        return redirect('dashboardukmagenda');
+        return redirect('dashboardukmagenda')->with('status', 'Agenda Berhasil Ditambah!');
 
     }
 
@@ -123,7 +123,7 @@ class DashboardukmagendaController extends Controller
         // dd($agenda);
 
         $agenda->save();
-        return redirect('dashboardukmagenda');
+        return redirect('dashboardukmagenda')->with('status', 'Agenda Berhasil Diubah!');
 
     }
 
@@ -142,6 +142,6 @@ class DashboardukmagendaController extends Controller
 
         $agenda->delete();
 
-        return redirect('dashboardukmagenda');
+        return redirect('dashboardukmagenda')->with('status', 'Agenda Berhasil Dihapus!');
     }
 }

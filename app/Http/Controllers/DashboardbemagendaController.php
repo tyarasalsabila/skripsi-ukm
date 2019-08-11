@@ -33,7 +33,6 @@ class DashboardbemagendaController extends Controller
     //masukin db
     public function store(Request $request)
     {
-        //
         $agenda = new Agenda;
 
         $path = $request->image->storeAs('', time().'.'.$request->image->getClientOriginalExtension(), 'public');
@@ -55,7 +54,7 @@ class DashboardbemagendaController extends Controller
         // dd($agenda);
         $agenda->save();
 
-        return redirect('dashboardbemagenda');
+        return redirect('dashboardbemagenda')->with('status', 'Agenda Berhasil Ditambah!');
 
 
     }
@@ -95,7 +94,8 @@ class DashboardbemagendaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //isset : ngecek ada isinyaato ga
+        //untuk upload futu baru
         $agenda = Agenda::find($id);
         if (isset($request->image)) {
             # code...
@@ -113,7 +113,7 @@ class DashboardbemagendaController extends Controller
         // dd($agenda);
 
         $agenda->save();
-        return redirect('dashboardbemagenda');
+        return redirect('dashboardbemagenda')->with('status', 'Agenda Berhasil Diubah!');
     }
 
     /**
@@ -131,6 +131,6 @@ class DashboardbemagendaController extends Controller
 
         $agenda->delete();
 
-        return redirect('dashboardbemagenda');
+        return redirect('dashboardbemagenda')->with('status', 'Agenda Berhasil Dihapus!');
     }
 }

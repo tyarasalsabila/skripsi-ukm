@@ -64,7 +64,7 @@ class DashboardukmController extends Controller
 
         $ukm->save();
 
-        return redirect('dashboardukm');
+        return redirect('dashboardukm')->with('status', 'Profil Berhasil Diubah!');
     }
 
     public function editPengurus($id)
@@ -85,6 +85,6 @@ class DashboardukmController extends Controller
 
         $ukm->save();
 
-        return redirect('dashboardukm');
+        return redirect('dashboardukm')->with('status', 'Pengurus Berhasil Diubah!');
     }
 }

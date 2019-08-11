@@ -40,11 +40,17 @@
 				<div class="col-md-6">
 					<div class="panel panel-headline">
 						<div class="panel-heading">
+							@if (session('status'))
+								<div class="alert alert-success alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<i class="fa fa-check-circle"></i> {{ session('status') }}
+								</div>
+							@endif
 							<h3 class="panel-title">Profil</h3>
 							<br>
 							<p>{{Str::limit($ukm->profil,200)}}</p>
 							<br> 
-							<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-warning">
+							<a href="/editprofil/{{$ukm->id}}" type="button" class="btn btn-warning" required>
 								Edit
 							</a>
 						</div>
@@ -53,14 +59,20 @@
 
 				<div class="col-md-6">
 					<div class="panel panel-headline">
-					<div class="panel-heading">
+						<div class="panel-heading">
+							@if (session('status'))
+								<div class="alert alert-success alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<i class="fa fa-check-circle"></i> {{ session('status') }}
+								</div>
+							@endif
 							<h3 class="panel-title">Pengurus</h3>
 							<br>
 							<p>Ketua : {{$ukm->ketua}} </p>
 							<p>NPM : {{$ukm->npm}}</p>
 							<p> Pembina :  {{$ukm->pembina}} </p>
 							<br>
-							<a href="/editpengurus/{{$ukm->id}}" type="button" class="btn btn-warning">
+							<a href="/editpengurus/{{$ukm->id}}" type="button" class="btn btn-warning" required>
 								Edit
 							</a>
 						</div>
@@ -73,4 +85,3 @@
 
 @endsection 
 </html>
-

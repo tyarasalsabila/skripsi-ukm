@@ -40,7 +40,7 @@ class DashboardukmprestasiController extends Controller
 
         $prestasi->save();
 
-        return redirect('dashboardukmprestasi');
+        return redirect('dashboardukmprestasi')->with('status', 'Prestasi Berhasil Ditambah!');
     }
 
     /**
@@ -88,7 +88,7 @@ class DashboardukmprestasiController extends Controller
 
         // dd($prestasi);
         $prestasi->save();
-        return redirect('dashboardukmprestasi');
+        return redirect('dashboardukmprestasi')->with('status', 'Prestasi Berhasil Diubah!');
     }
 
     /**
@@ -104,6 +104,6 @@ class DashboardukmprestasiController extends Controller
 
         $prestasi->delete();
 
-        return redirect('dashboardukmprestasi');
+        return redirect('dashboardukmprestasi')->with('status', 'Prestasi Berhasil Dihapus!');
     }
 }

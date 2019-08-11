@@ -82,6 +82,6 @@ class DashboardukmjadwalController extends Controller
 
         // dd($ukm);
         $ukm->save();
-        return redirect('dashboardukmjadwal');
+        return redirect('dashboardukmjadwal')->with('status', 'Jadwal Berhasil Diubah!');
     }
 }

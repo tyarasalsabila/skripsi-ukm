@@ -31,9 +31,11 @@ class AgendaController extends Controller
      * @param  \App\Agenda  $agenda
      * @return \Illuminate\Http\Response
      */
+    //ditambah karna biar spesifik apa yg mau ditampilin
+    //agendaisi
     public function show($id)
     {
-        
+        //with itu relatiom
         $data['agenda'] = Agenda::where('id', $id)->with(['ukm','user'])->first();
         // dd($data);
         return view('agendaisi', $data);

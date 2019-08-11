@@ -19,6 +19,14 @@
 								<p class="demo-button">
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Photo</button>
 								</p>
+
+								@if (session('status'))
+									<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<i class="fa fa-check-circle"></i> {{ session('status') }}
+									</div>
+								@endif
+								
 								<table class="table table-bordered table-hover" id="datatable">
 									<thead>
 										<tr>
@@ -30,11 +38,11 @@
 										</tr>
 									</thead>
 									<tbody>
-										@php ($x = 0)
+										<!-- @php ($x = 0) -->
 										@foreach ($galeri as $glr)
-										@php ($x = $x+1)
+										<!-- @php ($x = $x+1) -->
 										<tr>
-											<td>{{$x}}</td>
+											<td>{{$loop->iteration}}</td>
 											<td>{{$glr->created_at}}</td>
 											<td>{{$glr->judul}}</td>
 											<td class="fototable"><img src="{{ url('').'/storage/'.$glr->link_foto }}" alt=""></td>
@@ -87,66 +95,6 @@
 				</div>
 			</div>
 			<!-- Add -->
-
-
-			<!-- Edit -->
-			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<!-- <h5 class="modal-title" id="addModalLabel"></h5> -->
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
-						<form action="{{route('dashbem')}}" method="POST">
-							@csrf
-							<div class="modal-body">
-								<label> Upload Foto </label>
-								<div class="custom-file">
-									<input type="file" name="image" class="custom-file-input">
-								</div>
-
-								<br>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary">Update Data</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Edit -->
-
-
-			<!-- Delete -->
-			<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-
-						<form action="{{route('dashbem')}}" method="POST">
-							@csrf
-							<div class="modal-body">
-								<input type="hidden" name="judul">
-								<p> Hapus Data? </p>
-							</div>
-
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-								<button type="submit" class="btn btn-primary">Ya</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Delete -->
 		</div>
 	</div>
 </div>

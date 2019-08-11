@@ -16,16 +16,15 @@
 						<form action="/updateberita/{{$berita->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
-							<div class="form-group">
+								<div class="form-group">
 									<label> Judul </label>
-									<input type="text" name="judul" class="form-control" value="{{$berita->judul}}" required>
-								</div>
+								<input id="judul" type="text" name="judul" class="form-control @error('judul') is-invalid @enderror" value="{{$berita->judul}}" required>								</div>
 
 								<br>
 
 								<div class="form-group">
 									<label> Isi </label>
-									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10" required> {{$berita->isi}} </textarea>
+									<textarea id="isi" class="form-control @error('judul') is-invalid @enderror" name="isi" id="isi" cols="110%" rows="10" required> {{$berita->isi}} </textarea>
 								</div>
 
 								<br>

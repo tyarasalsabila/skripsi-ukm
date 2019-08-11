@@ -16,9 +16,9 @@
 						<form action="/dashukmberitaupd/{{$berita->id}}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="modal-body">
-							<div class="form-group">
+								<div class="form-group">
 									<label> Judul </label>
-							<input type="text" name="judul" class="form-control" value="{{$berita->judul}}">
+									<input type="text" name="judul" class="form-control" value="{{$berita->judul}}" required>
 								</div>
 
 								<br>
@@ -28,7 +28,7 @@
 									<br>
 								<!-- <input type="text" name="isi" class="form-control" value="{{$berita->isi}}"> -->
 								<!-- <textarea name="isi" id="isi" cols="100%" rows="10">{{$berita->isi}}</textarea> -->
-								<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10"> {{$berita->isi}} </textarea>
+									<textarea class="form-control" name="isi" id="isi" cols="110%" rows="10" required> {{$berita->isi}} </textarea>
 								</div>
 
 								<br>

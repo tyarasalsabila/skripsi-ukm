@@ -19,6 +19,14 @@
 								<p class="demo-button">
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Anggota</button>
 								</p>
+
+								@if (session('status'))
+									<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<i class="fa fa-check-circle"></i> {{ session('status') }}
+									</div>
+								@endif
+								
 								<table class="table table-bordered table-hover" id="datatable" style="text-align:left">
 									<thead>
 										<tr>
@@ -34,11 +42,11 @@
 										</tr>
 									</thead>
 									<tbody>
-									@php ($x = 0)
+									<!-- @php ($x = 0) -->
 									@foreach ($anggota as $ang)
-									@php ($x = $x+1)
+									<!-- @php ($x = $x+1) -->
 										<tr>
-											<td>{{$x}}</td>
+											<td>{{$loop->iteration}}</td>
 											<td>{{$ang->nama}}</td>
 											<td>{{$ang->npm}}</td>
 											<td>{{$ang->email}}</td>

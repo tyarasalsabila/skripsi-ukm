@@ -23,7 +23,7 @@ class CreatePrestasisTable extends Migration
 
             $table->foreign('id_ukm')
             ->references('id')
-            ->on('ukms');
+            ->on('ukms')->onDelete('cascade');
 
             // $table->foreign('id_anggota')
             // ->references('id')

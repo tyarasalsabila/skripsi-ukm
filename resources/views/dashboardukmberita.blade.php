@@ -19,6 +19,14 @@
 								<p class="demo-button">
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Berita</button>
 								</p>
+
+								@if (session('status'))
+									<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<i class="fa fa-check-circle"></i> {{ session('status') }}
+									</div>
+								@endif
+								
 								<table class="table table-bordered table-hover" id="datatable">
 									<thead>
 										<tr>
@@ -32,11 +40,11 @@
 										</tr>
 									</thead>
 									<tbody>
-									@php ($x = 0)
+									<!-- @php ($x = 0) -->
 									@foreach ($berita as $brt)
-									@php ($x = $x+1)
+									<!-- @php ($x = $x+1) -->
 										<tr>
-											<td>{{$x}}</td>
+											<td>{{$loop->iteration}}</td>
 											<td>{{$brt->created_at}}</td>
 											<td>{{$brt->judul}}</td>
 											<td class="fototable"><img src="{{  url('').'/storage/'.$brt->foto }}" width="70px" alt=""></td>
